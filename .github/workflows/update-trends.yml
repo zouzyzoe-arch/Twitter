@@ -2,11 +2,11 @@ name: Update Twitter Trends
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # 每 30 分钟运行一次
-  workflow_dispatch: # 允许手动触发测试
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write # 允许提交文件
+  contents: write
 
 jobs:
   update-trends:
@@ -26,7 +26,6 @@ jobs:
         run: |
           node << 'EOF'
           const fs = require('fs');
-          // WOEID: 全球=1, 泰国=23424960, 新加坡=23424948
           const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
 
           async function fetchTrends() {
@@ -39,19 +38,16 @@ jobs:
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 const data = await res.json();
                 
-                // 调试输出（你可以去 Actions 日志里看真实返回结构）
                 console.log(`--- API Response for ${name} ---`);
                 console.log(JSON.stringify(data, null, 2));
                 
-                // 兼容不同层级的返回
                 const rawTrends = data.trends || data.data?.trends || data.data || [];
                 const trends = Array.isArray(rawTrends) ? rawTrends : [];
 
                 result[name] = trends.slice(0, 50).map((t, index) => ({
                   rank: t.rank || index + 1,
-                  // 兼容 name、trend、query 等不同字段名
                   name: t.name || t.trend || t.query || t.hashtag || ''
-                })).filter(t => t.name !== ''); // 过滤掉空名字
+                })).filter(t => t.name !== '');
                 
               } catch (e) {
                 console.error(`Fetch ${name} failed:`, e.message);
@@ -64,7 +60,12 @@ jobs:
           EOF
 
       - name: Commit and push
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: 'Auto-update trends [skip ci]'
-          file_pattern: trends.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add trends.json
+          git commit -m "Auto-update trends [skip ci]" || echo "No changes to commit"
+          git pull origin main --rebase
+          git push origin main
