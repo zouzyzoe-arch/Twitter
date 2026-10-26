@@ -1,37 +1,909 @@
 {
-  "lastUpdated": 1793040444173,
+  "lastUpdated": 1793040973686,
   "global": [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
+    {
+      "rank": 0,
+      "name": {
+        "name": "#GSvFB",
+        "target": {
+          "query": "#GSvFB"
+        },
+        "rank": 1
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#BallonDor",
+        "target": {
+          "query": "#BallonDor"
+        },
+        "rank": 2
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Harry Kane",
+        "target": {
+          "query": "\"Harry Kane\""
+        },
+        "rank": 3
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#الاهلي_الغرافه",
+        "target": {
+          "query": "#الاهلي_الغرافه"
+        },
+        "rank": 4
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "BLEACH",
+        "target": {
+          "query": "BLEACH"
+        },
+        "rank": 5
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#ExercitoDoLula",
+        "target": {
+          "query": "#ExercitoDoLula"
+        },
+        "rank": 6
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Skriniar",
+        "target": {
+          "query": "Skriniar"
+        },
+        "rank": 7
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#FonzedeYokSayılıyor",
+        "target": {
+          "query": "#FonzedeYokSayılıyor"
+        },
+        "rank": 8
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Walter Koenig",
+        "target": {
+          "query": "\"Walter Koenig\""
+        },
+        "rank": 9
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "الكره الذهبيه",
+        "target": {
+          "query": "\"الكره الذهبيه\""
+        },
+        "rank": 10
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Brazil",
+        "target": {
+          "query": "Brazil"
+        },
+        "rank": 11
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "هاري كين",
+        "target": {
+          "query": "\"هاري كين\""
+        },
+        "rank": 12
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Balón de Oro",
+        "target": {
+          "query": "\"Balón de Oro\""
+        },
+        "rank": 13
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Mbappe",
+        "target": {
+          "query": "Mbappe"
+        },
+        "rank": 14
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "GPT-6.1 Terra",
+        "target": {
+          "query": "\"GPT-6.1 Terra\""
+        },
+        "rank": 15
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Rize",
+        "target": {
+          "query": "Rize"
+        },
+        "rank": 16
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Chekov",
+        "target": {
+          "query": "Chekov"
+        },
+        "rank": 17
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Star Trek",
+        "target": {
+          "query": "\"Star Trek\""
+        },
+        "rank": 18
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "KHOM KHLANG EP8",
+        "target": {
+          "query": "\"KHOM KHLANG EP8\""
+        },
+        "rank": 19
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Komanche",
+        "target": {
+          "query": "Komanche"
+        },
+        "rank": 20
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Yamal",
+        "target": {
+          "query": "Yamal"
+        },
+        "rank": 21
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Galatasaray - Fenerbahçe",
+        "target": {
+          "query": "\"Galatasaray - Fenerbahçe\""
+        },
+        "rank": 22
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "ميسي",
+        "target": {
+          "query": "ميسي"
+        },
+        "rank": 23
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Brown",
+        "target": {
+          "query": "Brown"
+        },
+        "rank": 24
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "iOS 27.2",
+        "target": {
+          "query": "\"iOS 27.2\""
+        },
+        "rank": 25
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Muçi",
+        "target": {
+          "query": "Muçi"
+        },
+        "rank": 26
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "BüyükBuluşmaya HazırMısınız",
+        "target": {
+          "query": "\"BüyükBuluşmaya HazırMısınız\""
+        },
+        "rank": 27
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "31Ekim AdanaMimarSinandayız",
+        "target": {
+          "query": "\"31Ekim AdanaMimarSinandayız\""
+        },
+        "rank": 28
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Vlahovic",
+        "target": {
+          "query": "Vlahovic"
+        },
+        "rank": 29
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Babylon 5",
+        "target": {
+          "query": "\"Babylon 5\""
+        },
+        "rank": 30
+      }
+    }
   ],
-  "thailand": [],
-  "singapore": []
+  "thailand": [
+    {
+      "rank": 0,
+      "name": {
+        "name": "#ข่มขลังตอนที่8",
+        "target": {
+          "query": "#ข่มขลังตอนที่8"
+        },
+        "rank": 1
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "KHOM KHLANG EP8",
+        "target": {
+          "query": "\"KHOM KHLANG EP8\""
+        },
+        "rank": 2
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#ตี๋ตี๋ป๋อป้ายยาวาวาป้ายเปย์",
+        "target": {
+          "query": "#ตี๋ตี๋ป๋อป้ายยาวาวาป้ายเปย์"
+        },
+        "rank": 3
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#SFxJesBible",
+        "target": {
+          "query": "#SFxJesBible"
+        },
+        "rank": 4
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "JESBIBLE X TAME",
+        "target": {
+          "query": "\"JESBIBLE X TAME\""
+        },
+        "rank": 5
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#ตะวันลวงEP6",
+        "target": {
+          "query": "#ตะวันลวงEP6"
+        },
+        "rank": 6
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "BENEATH THE LIES EP6",
+        "target": {
+          "query": "\"BENEATH THE LIES EP6\""
+        },
+        "rank": 7
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#EVEANDBOYxLenaMiu",
+        "target": {
+          "query": "#EVEANDBOYxLenaMiu"
+        },
+        "rank": 8
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "PNB THE UNDERGROUND",
+        "target": {
+          "query": "\"PNB THE UNDERGROUND\""
+        },
+        "rank": 9
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "MATRIX LIVE WITH JUNIOR",
+        "target": {
+          "query": "\"MATRIX LIVE WITH JUNIOR\""
+        },
+        "rank": 10
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "MizuMi X SEATALAY",
+        "target": {
+          "query": "\"MizuMi X SEATALAY\""
+        },
+        "rank": 11
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "NUNEW SPC PHOTO 2",
+        "target": {
+          "query": "\"NUNEW SPC PHOTO 2\""
+        },
+        "rank": 12
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "iPad",
+        "target": {
+          "query": "iPad"
+        },
+        "rank": 13
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "NUNEW CONCERT AT IMPACT",
+        "target": {
+          "query": "\"NUNEW CONCERT AT IMPACT\""
+        },
+        "rank": 14
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "MEGA GALE",
+        "target": {
+          "query": "\"MEGA GALE\""
+        },
+        "rank": 15
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#แรงเงาEP1",
+        "target": {
+          "query": "#แรงเงาEP1"
+        },
+        "rank": 16
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#ThomasKongxWaveVlogSFW2027SS",
+        "target": {
+          "query": "#ThomasKongxWaveVlogSFW2027SS"
+        },
+        "rank": 17
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#LUNARisHereMV",
+        "target": {
+          "query": "#LUNARisHereMV"
+        },
+        "rank": 18
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#แรงเงา2026",
+        "target": {
+          "query": "#แรงเงา2026"
+        },
+        "rank": 19
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#MISTINExPUINOONBINT",
+        "target": {
+          "query": "#MISTINExPUINOONBINT"
+        },
+        "rank": 20
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#GalaxyxJanJingjing",
+        "target": {
+          "query": "#GalaxyxJanJingjing"
+        },
+        "rank": 21
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#รชตช่อผกาtn",
+        "target": {
+          "query": "#รชตช่อผกาtn"
+        },
+        "rank": 22
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#BamXUltramild",
+        "target": {
+          "query": "#BamXUltramild"
+        },
+        "rank": 23
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#MrFanboyEP10xDrChoice",
+        "target": {
+          "query": "#MrFanboyEP10xDrChoice"
+        },
+        "rank": 24
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#AKALIKOHOTELอกาลิโกโฮเทล",
+        "target": {
+          "query": "#AKALIKOHOTELอกาลิโกโฮเทล"
+        },
+        "rank": 25
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#BibleWichapas",
+        "target": {
+          "query": "#BibleWichapas"
+        },
+        "rank": 26
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#ROADTOTHEGRIMLOVERLIVE",
+        "target": {
+          "query": "#ROADTOTHEGRIMLOVERLIVE"
+        },
+        "rank": 27
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#TeddyxDazzleMe",
+        "target": {
+          "query": "#TeddyxDazzleMe"
+        },
+        "rank": 28
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#nhuugarnns",
+        "target": {
+          "query": "#nhuugarnns"
+        },
+        "rank": 29
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#Bamsaralee",
+        "target": {
+          "query": "#Bamsaralee"
+        },
+        "rank": 30
+      }
+    }
+  ],
+  "singapore": [
+    {
+      "rank": 0,
+      "name": {
+        "name": "Base Track",
+        "target": {
+          "query": "\"Base Track\""
+        },
+        "rank": 1
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Brazil",
+        "target": {
+          "query": "Brazil"
+        },
+        "rank": 2
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#LYKNReflexionConcertD3",
+        "target": {
+          "query": "#LYKNReflexionConcertD3"
+        },
+        "rank": 3
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#BINI_SIGNALS_WORLDTOUR_2026",
+        "target": {
+          "query": "#BINI_SIGNALS_WORLDTOUR_2026"
+        },
+        "rank": 4
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "KHOM KHLANG EP8",
+        "target": {
+          "query": "\"KHOM KHLANG EP8\""
+        },
+        "rank": 5
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#EVEANDBOYxLenaMiu",
+        "target": {
+          "query": "#EVEANDBOYxLenaMiu"
+        },
+        "rank": 6
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Lula",
+        "target": {
+          "query": "Lula"
+        },
+        "rank": 7
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "MR FANBOY CHAPTER 9",
+        "target": {
+          "query": "\"MR FANBOY CHAPTER 9\""
+        },
+        "rank": 8
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#ข่มขลังตอนที่8",
+        "target": {
+          "query": "#ข่มขลังตอนที่8"
+        },
+        "rank": 9
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "KEONHO CHANEL BOY REDEFINED",
+        "target": {
+          "query": "\"KEONHO CHANEL BOY REDEFINED\""
+        },
+        "rank": 10
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "REFLEXION FOREVER",
+        "target": {
+          "query": "\"REFLEXION FOREVER\""
+        },
+        "rank": 11
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "bonnie shopee emi",
+        "target": {
+          "query": "\"bonnie shopee emi\""
+        },
+        "rank": 12
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "#ShopeeLivexEmiBonnie",
+        "target": {
+          "query": "#ShopeeLivexEmiBonnie"
+        },
+        "rank": 13
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "IKEONIC",
+        "target": {
+          "query": "IKEONIC"
+        },
+        "rank": 14
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "arnbook meet pnb",
+        "target": {
+          "query": "\"arnbook meet pnb\""
+        },
+        "rank": 15
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "PNB THE UNDERGROUND",
+        "target": {
+          "query": "\"PNB THE UNDERGROUND\""
+        },
+        "rank": 16
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "TEETEEPOR HOOKS EFW26",
+        "target": {
+          "query": "\"TEETEEPOR HOOKS EFW26\""
+        },
+        "rank": 17
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "WORSHIP THE GRIM LOVER",
+        "target": {
+          "query": "\"WORSHIP THE GRIM LOVER\""
+        },
+        "rank": 18
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Bournemouth",
+        "target": {
+          "query": "Bournemouth"
+        },
+        "rank": 19
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Ballon",
+        "target": {
+          "query": "Ballon"
+        },
+        "rank": 20
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "CULTURAL HERITAGE RECOGNITION",
+        "target": {
+          "query": "\"CULTURAL HERITAGE RECOGNITION\""
+        },
+        "rank": 21
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "AUAUSAVE HOOKS EFW26",
+        "target": {
+          "query": "\"AUAUSAVE HOOKS EFW26\""
+        },
+        "rank": 22
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "BAM AT EVEANDBOYSQ1 OPENING",
+        "target": {
+          "query": "\"BAM AT EVEANDBOYSQ1 OPENING\""
+        },
+        "rank": 23
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Anthropic",
+        "target": {
+          "query": "Anthropic"
+        },
+        "rank": 24
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Halloween",
+        "target": {
+          "query": "Halloween"
+        },
+        "rank": 25
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Tielemans",
+        "target": {
+          "query": "Tielemans"
+        },
+        "rank": 26
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "seungkwan",
+        "target": {
+          "query": "seungkwan"
+        },
+        "rank": 27
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "syncdrop",
+        "target": {
+          "query": "syncdrop"
+        },
+        "rank": 28
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Rebecca",
+        "target": {
+          "query": "Rebecca"
+        },
+        "rank": 29
+      }
+    },
+    {
+      "rank": 0,
+      "name": {
+        "name": "Nasdaq",
+        "target": {
+          "query": "Nasdaq"
+        },
+        "rank": 30
+      }
+    }
+  ]
 }
