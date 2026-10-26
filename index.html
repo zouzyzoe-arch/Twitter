@@ -69,7 +69,7 @@
     }
     .preset-chip:active { background: #1a8cd8; border-color: #1a8cd8; color: #fff; }
     .preset-chip.active { background: #1d9bf0; border-color: #1d9bf0; color: #fff; font-weight: 700; }
-    .preset-empty { font-size: 13px; color: #6e7a86; padding: 8px 0; }
+    .preset-empty { font-size: 13px; color: #6e7a86; padding: 8px 0; line-height: 1.6; }
     .event-detail { background: #15202b; border: 1px solid #38444d; border-radius: 12px; padding: 14px; margin-bottom: 16px; }
     .event-detail-title { font-size: 15px; font-weight: 700; color: #1d9bf0; margin-bottom: 6px; }
     .event-meta { font-size: 12px; color: #8b98a5; line-height: 1.6; margin-bottom: 8px; }
@@ -425,17 +425,29 @@
   async function fetchRemoteEvents() {
     if (!REMOTE_GIST_ID) return null;
     try {
+      // 增加 8 秒超时，防止国内某些网络环境下无限等待
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 8000);
+
       const res = await fetch(
         'https://api.github.com/gists/' + REMOTE_GIST_ID + '?t=' + Date.now(),
-        { headers: { 'Accept': 'application/vnd.github+json' } }
+        { 
+          headers: { 'Accept': 'application/vnd.github+json' },
+          signal: controller.signal
+        }
       );
+      clearTimeout(timeoutId);
+
       if (!res.ok) throw new Error('status ' + res.status);
       const data = await res.json();
       const file = data.files && data.files[GIST_FILENAME];
       if (!file) return null;
       const arr = JSON.parse(file.content || '[]');
       return Array.isArray(arr) ? arr.map(normalizeEvent) : null;
-    } catch (e) { return null; }
+    } catch (e) { 
+      console.warn('拉取远程数据失败:', e);
+      return null; 
+    }
   }
 
   async function pushRemoteEvents(arr) {
@@ -605,10 +617,7 @@
     let finalTags = additionalTags;
     let finalStartTags = startTags;
 
-    // 核心规则：
-    // - 如果有 📈 或 Add additional hashtags，最终词条照常使用尾部内容；
-    // - 如果没有 📈 也没有 Add additional hashtags，所有词条归入开始词条，最终词条留空；
-    // - 如果最终词条为空但开始词条有内容，再把开始词条整体放入最终词条块（兼容原有逻辑）。
+    // 核心规则：如果没有 📈 也没有 Add additional hashtags，所有词条归入开始词条
     if (!hasTail) {
       finalTags = '';
       finalStartTags = startTags;
@@ -756,8 +765,13 @@
     if (remote) {
       useEvents = remote;
       saveEvents(remote);
+      eventEmpty.innerHTML = '后台还没有添加 EVENT，请先到后台配置。'; // 恢复默认文案
     } else {
       useEvents = loadEvents();
+      // 如果远程请求失败且本地为空，给个友好的错误提示
+      if (useEvents.length === 0) {
+        eventEmpty.innerHTML = '获取 EVENT 失败或暂无数据。<br><br><span style="font-size:12px;color:#6e7a86">如果你是微信/QQ打开，请点击右上角“在浏览器中打开”<br>或检查你的网络环境。</span>';
+      }
     }
     renderEventList();
     if (activeEventId) {
