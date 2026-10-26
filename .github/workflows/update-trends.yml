@@ -1,0 +1,60 @@
+name: Update Twitter Trends
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # 每 30 分钟运行一次
+  workflow_dispatch: # 允许手动触发测试
+
+permissions:
+  contents: write # 允许提交文件
+
+jobs:
+  update-trends:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Fetch Trends
+        env:
+          API_KEY: ${{ secrets.TWITTER_API_KEY }}
+        run: |
+          node << 'EOF'
+          const fs = require('fs');
+          // WOEID: 全球=1, 泰国=23424960, 新加坡=23424948
+          const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
+
+          async function fetchTrends() {
+            const result = {};
+            for (const [name, woeid] of Object.entries(locations)) {
+              try {
+                const res = await fetch(`https://api.twitterapi.io/twitter/trends?woeid=${woeid}`, {
+                  headers: { 'X-API-Key': process.env.API_KEY }
+                });
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                const data = await res.json();
+                // 取前 50 名
+                result[name] = (data.trends || []).slice(0, 50).map(t => ({
+                  rank: t.rank,
+                  name: t.name
+                }));
+              } catch (e) {
+                console.error(`Fetch ${name} failed:`, e.message);
+                result[name] = [];
+              }
+            }
+            fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
+          }
+          fetchTrends();
+          EOF
+
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: 'Auto-update trends [skip ci]'
+          file_pattern: trends.json
