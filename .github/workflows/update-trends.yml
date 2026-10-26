@@ -2,8 +2,9 @@ name: Update Twitter Trends
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # 每 30 分钟运行一次
-  workflow_dispatch: 
+    # 每 30 分钟运行一次
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # 允许手动点击测试
 
 permissions:
   contents: write
@@ -28,29 +29,57 @@ jobs:
           const fs = require('fs');
           const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
 
+          // 辅助函数：让程序暂停指定的毫秒数
+          const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
           async function fetchTrends() {
-            const result = {
-              lastUpdated: Date.now() // 记录本次抓取的时间戳
-            };
+            // 初始化结果对象，记录本次抓取的时间戳
+            const result = { lastUpdated: Date.now() };
             
             for (const [name, woeid] of Object.entries(locations)) {
               try {
                 const res = await fetch(`https://api.twitterapi.io/twitter/trends?woeid=${woeid}`, {
                   headers: { 'X-API-Key': process.env.API_KEY }
                 });
+                
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 const data = await res.json();
-                result[name] = (data.trends || []).slice(0, 50).map(t => ({
-                  rank: t.rank,
-                  name: t.name
-                }));
+                
+                // 兼容性提取趋势数组
+                let trendArray = [];
+                if (Array.isArray(data)) {
+                  trendArray = data[0]?.trends || data;
+                } else if (data.trends) {
+                  trendArray = data.trends;
+                } else if (data.data && data.data.trends) {
+                  trendArray = data.data.trends;
+                }
+
+                // 提取前 50 名，保留名称和排名，过滤掉空数据
+                result[name] = trendArray.slice(0, 50).map(t => ({
+                  rank: t.rank || t.position || 0,
+                  name: t.name || t.trend || t.query || ''
+                })).filter(t => t.name !== '');
+
+                console.log(`[${name}] 成功解析了 ${result[name].length} 条趋势`);
+
               } catch (e) {
                 console.error(`Fetch ${name} failed:`, e.message);
-                result[name] = []; 
+                result[name] = []; // 失败则存空数组
+              }
+              
+              // 核心防限流机制：每次请求后等待 5.5 秒，防止 429 错误
+              if (name !== 'singapore') {
+                console.log(`等待 5.5 秒后继续...`);
+                await sleep(5500); 
               }
             }
+            
+            // 写入文件
             fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
+            console.log('trends.json 生成完毕');
           }
+          
           fetchTrends();
           EOF
 
@@ -59,3 +88,5 @@ jobs:
         with:
           commit_message: 'Auto-update trends [skip ci]'
           file_pattern: trends.json
+          commit_user_name: 'GitHub Action Bot'
+          commit_user_email: 'action@github.com'
