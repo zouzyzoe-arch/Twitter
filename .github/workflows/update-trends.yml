@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Fetch Trends
         env:
@@ -38,11 +38,21 @@ jobs:
                 });
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 const data = await res.json();
-                // 取前 50 名
-                result[name] = (data.trends || []).slice(0, 50).map(t => ({
-                  rank: t.rank,
-                  name: t.name
-                }));
+                
+                // 调试输出（你可以去 Actions 日志里看真实返回结构）
+                console.log(`--- API Response for ${name} ---`);
+                console.log(JSON.stringify(data, null, 2));
+                
+                // 兼容不同层级的返回
+                const rawTrends = data.trends || data.data?.trends || data.data || [];
+                const trends = Array.isArray(rawTrends) ? rawTrends : [];
+
+                result[name] = trends.slice(0, 50).map((t, index) => ({
+                  rank: t.rank || index + 1,
+                  // 兼容 name、trend、query 等不同字段名
+                  name: t.name || t.trend || t.query || t.hashtag || ''
+                })).filter(t => t.name !== ''); // 过滤掉空名字
+                
               } catch (e) {
                 console.error(`Fetch ${name} failed:`, e.message);
                 result[name] = [];
