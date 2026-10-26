@@ -259,11 +259,6 @@
           <label style="color:#1d9bf0;">📊 关联词条 Twitter 排名</label>
           <div id="trendUpdateTime" style="font-size: 11px; color: #6e7a86; margin-top: 4px;">数据加载中...</div>
         </div>
-        <select id="trendRegionSelect" onchange="updateTrendRanks()" style="width:auto; padding:4px 8px; font-size:12px; height:28px; border-radius:6px; background:#1e2732; border:1px solid #38444d; color:#fff;">
-          <option value="global">全球</option>
-          <option value="thailand" selected>泰国</option>
-          <option value="singapore">新加坡</option>
-        </select>
       </div>
       <div id="trendRanksList" class="preset-list" style="flex-direction:column; gap:6px; margin-top:8px; margin-bottom: 0;">
         <!-- 排名结果动态生成 -->
@@ -1012,9 +1007,6 @@
       return;
     }
 
-    const region = document.getElementById('trendRegionSelect').value;
-    const currentTrends = globalTrendsData[region] || [];
-
     const keywordsToCheck = ev.trendKeywords || [];
     
     if (keywordsToCheck.length === 0) {
@@ -1025,37 +1017,53 @@
     list.innerHTML = '';
     let foundAny = false;
 
+    // 遍历该 EVENT 配置的所有词条
     keywordsToCheck.forEach(kw => {
       const cleanKw = kw.toLowerCase().replace(/^#/, '');
       
-      const match = currentTrends.find(t => {
-        // 核心修复：强转字符串，防止旧数据里的对象引发报错崩溃
-        const tName = String(t.name || '').toLowerCase().replace(/^#/, '');
-        return tName === cleanKw || tName.includes(cleanKw);
-      });
+      // 分别去三个地区里找排名
+      const matchGlobal = (globalTrendsData.global || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
+      const matchThai = (globalTrendsData.thailand || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
+      const matchSG = (globalTrendsData.singapore || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
 
-      if (match) {
+      // 只要在任何一个地区上榜，就渲染这一行
+      if (matchGlobal || matchThai || matchSG) {
         foundAny = true;
         const row = document.createElement('div');
-        const isTop10 = match.rank <= 10;
         row.style.cssText = `
-          display: flex; justify-content: space-between; align-items: center;
-          padding: 8px 12px; border-radius: 8px; font-size: 13px;
-          background: ${isTop10 ? 'rgba(29,155,240,0.1)' : 'rgba(255,255,255,0.03)'};
-          border: 1px solid ${isTop10 ? 'rgba(29,155,240,0.3)' : 'transparent'};
+          display: flex; flex-direction: column; gap: 8px;
+          padding: 10px 12px; border-radius: 8px; font-size: 13px;
+          background: rgba(255,255,255,0.03); border: 1px solid #38444d;
+          margin-bottom: 6px;
         `;
-        row.innerHTML = `
-          <span style="color:#e7e9ea; font-weight:600;">${escapeHtml(kw)}</span>
-          <span style="background:${isTop10 ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">
-            ${region === 'global' ? '全球' : region === 'thailand' ? '泰国' : '新加坡'} #${match.rank}
-          </span>
-        `;
+        
+        // 左侧：词条名字
+        let html = `<div style="color:#e7e9ea; font-weight:700; font-size:14px; word-break: break-all;">${escapeHtml(kw)}</div>`;
+        
+        // 右侧：三个地区的标签
+        html += `<div style="display:flex; gap:6px; flex-wrap:wrap;">`;
+        
+        if (matchGlobal) {
+          const isTop = matchGlobal.rank <= 10;
+          html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">全球 #${matchGlobal.rank}</span>`;
+        }
+        if (matchThai) {
+          const isTop = matchThai.rank <= 10;
+          html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">泰国 #${matchThai.rank}</span>`;
+        }
+        if (matchSG) {
+          const isTop = matchSG.rank <= 10;
+          html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">新加坡 #${matchSG.rank}</span>`;
+        }
+        html += `</div>`;
+
+        row.innerHTML = html;
         list.appendChild(row);
       }
     });
 
     if (!foundAny) {
-      list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入该地区趋势榜单</span>';
+      list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入上述三地趋势榜单</span>';
     }
   }
 
