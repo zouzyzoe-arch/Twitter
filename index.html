@@ -1059,9 +1059,10 @@
     const list = document.getElementById('trendRanksList');
     
     try {
+      const cacheBuster = '?t=' + Date.now();
       const [res, switchRes] = await Promise.all([
-        fetch('trends.json?t=' + Date.now()),
-        fetch('trend_switch.json?t=' + Date.now())
+        fetch('trends.json' + cacheBuster),
+        fetch('trend_switch.json' + cacheBuster)
       ]);
       
       if (!res.ok) {
@@ -1071,9 +1072,15 @@
       
       globalTrendsData = await res.json();
       
-      if (switchRes.ok) {
-        const switchData = await switchRes.json();
-        globalTrendsData.switchOff = !switchData.enabled;
+      try {
+        if (switchRes.ok) {
+          const switchData = await switchRes.json();
+          globalTrendsData.switchOff = !switchData.enabled;
+        } else {
+          globalTrendsData.switchOff = null;
+        }
+      } catch (e) {
+        globalTrendsData.switchOff = null;
       }
 
       trendDataLoaded = true;
@@ -1115,10 +1122,6 @@
     }
     section.style.display = 'block';
 
-    if (globalTrendsData && globalTrendsData.switchOff) {
-      list.innerHTML = '<span style="font-size:12px; color:#f4212e; font-weight:bold;">⏸️ 后台已暂停实时趋势查询（当前显示为历史最后一次数据）</span>';
-    }
-
     if (!trendDataLoaded || !globalTrendsData) {
       list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">趋势数据加载中或暂不可用...</span>';
       return;
@@ -1130,9 +1133,15 @@
       return;
     }
 
-    const tempHTML = list.innerHTML; 
-    list.innerHTML = '';
+    let htmlNotice = '';
+    if (globalTrendsData.switchOff === true) {
+      htmlNotice = '<div style="color:#f4212e; font-weight:bold; font-size:12px; margin-bottom:8px; background:rgba(244,33,46,0.1); padding:8px; border-radius:6px; border:1px solid #f4212e;">⏸️ 后台已暂停实时趋势查询（当前显示为历史最后一次数据）</div>';
+    } else if (globalTrendsData.switchOff === null) {
+      htmlNotice = '<div style="color:#f4212e; font-size:12px; margin-bottom:8px; background:rgba(244,33,46,0.1); padding:8px; border-radius:6px; border:1px solid #f4212e;">⚠️ 无法获取开关状态，可能是 Token 权限不足或网络被拦截。</div>';
+    }
+
     let foundAny = false;
+    let rowsHTML = '';
 
     keywordsToCheck.forEach(kw => {
       const cleanKw = kw.toLowerCase().replace(/^#/, '');
@@ -1142,16 +1151,9 @@
 
       if (matchThai || matchSG) {
         foundAny = true;
-        const row = document.createElement('div');
-        row.style.cssText = `
-          display: flex; flex-direction: column; gap: 8px;
-          padding: 10px 12px; border-radius: 8px; font-size: 13px;
-          background: rgba(255,255,255,0.03); border: 1px solid #38444d;
-          margin-bottom: 6px;
-        `;
         
         let html = `<div style="color:#e7e9ea; font-weight:700; font-size:14px; word-break: break-all;">${escapeHtml(kw)}</div>`;
-        html += `<div style="display:flex; gap:6px; flex-wrap:wrap;">`;
+        html += `<div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:4px;">`;
         
         if (matchThai) {
           const isTop = matchThai.rank <= 10;
@@ -1163,14 +1165,19 @@
         }
         html += `</div>`;
 
-        row.innerHTML = html;
-        list.appendChild(row);
+        rowsHTML += `
+          <div style="display: flex; flex-direction: column; padding: 10px 12px; border-radius: 8px; font-size: 13px; background: rgba(255,255,255,0.03); border: 1px solid #38444d; margin-bottom: 6px;">
+            ${html}
+          </div>
+        `;
       }
     });
 
-    if (!foundAny && (!globalTrendsData || !globalTrendsData.switchOff)) {
-      list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入泰国或新加坡趋势榜单</span>';
+    if (!foundAny) {
+      rowsHTML = '<div style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入泰国或新加坡趋势榜单</div>';
     }
+
+    list.innerHTML = htmlNotice + rowsHTML;
   }
 
   /* =======================================================
