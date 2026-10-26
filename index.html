@@ -252,6 +252,21 @@
       <pre class="time-block-content locked-text" id="endContent">等待配置时间</pre>
     </div>
 
+    <!-- 关联趋势排名展示区 -->
+    <div class="field" id="trendRankSection" style="display:none; background:#15202b; border:1px solid #38444d; border-radius:12px; padding:12px; margin-bottom:12px;">
+      <div class="label-row">
+        <label style="color:#1d9bf0;">📊 关联词条 Twitter 排名</label>
+        <select id="trendRegionSelect" onchange="updateTrendRanks()" style="width:auto; padding:4px 8px; font-size:12px; height:28px; border-radius:6px; background:#1e2732; border:1px solid #38444d; color:#fff;">
+          <option value="global">全球</option>
+          <option value="thailand" selected>泰国</option>
+          <option value="singapore">新加坡</option>
+        </select>
+      </div>
+      <div id="trendRanksList" class="preset-list" style="flex-direction:column; gap:6px; margin-top:8px; margin-bottom: 0;">
+        <!-- 排名结果动态生成 -->
+      </div>
+    </div>
+
     <div class="field">
       <label for="customHashtags">✏️ 自定义词条（自由添加，始终参与发送）</label>
       <textarea id="customHashtags" placeholder="在这里输入你自己想加的词条，支持多行…"></textarea>
@@ -304,7 +319,7 @@
       · 主 Hashtag：`HASHTAG:` 或 `#️⃣`（支持多行）<br>
       · 最终词条：`📈` 后或 `Add additional hashtags at` 后所有 `#` 行<br>
       · 若没有 `📈` 且没有 `Add additional hashtags`，所有词条归入开始词条<br>
-      · 自动去除 `#.` 中的点，关键词与主 Hashtag 之间加空行
+      · 自动提取关联词用于排名比对
     </div>
   </div>
 
@@ -414,6 +429,7 @@
       keyword: p.keyword || '',
       mainHashtag: p.mainHashtag || '',
       additionalTags: p.additionalTags || '',
+      trendKeywords: Array.isArray(p.trendKeywords) ? p.trendKeywords : [],
       dateStr: p.dateStr || '',
       timeStr: p.timeStr || '',
       trendStarting: p.trendStarting || '',
@@ -425,7 +441,6 @@
   async function fetchRemoteEvents() {
     if (!REMOTE_GIST_ID) return null;
     try {
-      // 增加 8 秒超时，防止国内某些网络环境下无限等待
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 8000);
 
@@ -531,14 +546,13 @@
         return m ? m[1].trim() : '';
       })();
 
-    // —— 开始时间：TREND STARTING 优先，其次 Start Trend，再次 TIME ——
+    // —— 开始时间 ——
     let trendStarting = '';
     const trendStartM = chunk.match(/TREND\s+STARTING\s*[:：]?\s*([0-9]{1,2}[.:][0-9]{2}\s*(?:AM|PM)?)/i);
     const startTrendM = chunk.match(/Start\s*Trend\s*[:：]?\s*([0-9]{1,2}[.:][0-9]{2}\s*(?:AM|PM)?)/i);
     if (trendStartM) trendStarting = trendStartM[1];
     else if (startTrendM) trendStarting = startTrendM[1];
 
-    // —— 事件 TIME 作为 fallback ——
     let timeStr = '';
     const timeM = chunk.match(/TIME\s*[:：]\s*([0-9]{1,2}[.:][0-9]{2}\s*(?:AM|PM)?)/i);
     if (timeM) timeStr = timeM[1];
@@ -547,7 +561,7 @@
     const location = get(/LOCATION\s*[:：]\s*([^\n]+)/i);
     const eventType = get(/EVENT\s+TYPE\s*[:：]\s*([^\n]+)/i);
 
-    // —— 关键词：先找 KEYWORD:，再找 📝 ——
+    // —— 关键词 ——
     let keyword = '';
     const kwTextM = chunk.match(/KEYWORD\s*[:：]\s*([^\n]+)/i);
     if (kwTextM) keyword = kwTextM[1].trim();
@@ -557,7 +571,7 @@
     }
     keyword = keyword.replace(/[#️⃣📈➜🔜]/g, '').replace(/HASHTAG\s*[:：].*$/i, '').trim();
 
-    // —— 主 Hashtag：先找 HASHTAG:，再找 #️⃣ ——
+    // —— 主 Hashtag ——
     let mainHashtag = '';
     const hashTextM = chunk.match(/HASHTAG\s*[:：]\s*([^\n]+)/i);
     if (hashTextM) mainHashtag = hashTextM[1].trim();
@@ -606,7 +620,7 @@
       ? combineThaiDateTime(dateStr, effectiveEndTime)
       : eventTimeTs;
 
-    // —— 开始词条：关键词 + 空行 + 主 Hashtag ——
+    // —— 开始词条 ——
     let startTags = '';
     if (keyword && mainHashtag) {
       startTags = keyword + '\n\n' + mainHashtag;
@@ -617,7 +631,6 @@
     let finalTags = additionalTags;
     let finalStartTags = startTags;
 
-    // 核心规则：如果没有 📈 也没有 Add additional hashtags，所有词条归入开始词条
     if (!hasTail) {
       finalTags = '';
       finalStartTags = startTags;
@@ -625,6 +638,17 @@
       finalTags = startTags;
       finalStartTags = '';
     }
+
+    // —— 自动生成趋势关键词 ——
+    let trendKeywords = [];
+    if (keyword) trendKeywords.push(keyword);
+    if (mainHashtag) {
+      mainHashtag.split('\n').forEach(t => { if (t.trim()) trendKeywords.push(t.trim()); });
+    }
+    if (additionalTags) {
+      additionalTags.split('\n').forEach(t => { if (t.trim()) trendKeywords.push(t.trim()); });
+    }
+    trendKeywords = [...new Set(trendKeywords)];
 
     return {
       id: genId(),
@@ -636,6 +660,7 @@
       keyword: keyword,
       mainHashtag: mainHashtag,
       additionalTags: additionalTags,
+      trendKeywords: trendKeywords,
       dateStr: dateStr,
       timeStr: normalizeTime(timeStr),
       trendStarting: normalizeTime(trendStarting),
@@ -748,6 +773,10 @@
   let activeEventId = null;
   let useEvents = [];
   let countdownTimer = null;
+  
+  // 趋势数据相关
+  let globalTrendsData = null;
+  let trendDataLoaded = false;
 
   (function restoreTz() {
     const saved = localStorage.getItem(TZ_KEY);
@@ -761,14 +790,16 @@
   }
 
   async function initUse() {
+    // 加载趋势数据
+    fetchTrendsData();
+
     const remote = await fetchRemoteEvents();
     if (remote) {
       useEvents = remote;
       saveEvents(remote);
-      eventEmpty.innerHTML = '后台还没有添加 EVENT，请先到后台配置。'; // 恢复默认文案
+      eventEmpty.innerHTML = '后台还没有添加 EVENT，请先到后台配置。';
     } else {
       useEvents = loadEvents();
-      // 如果远程请求失败且本地为空，给个友好的错误提示
       if (useEvents.length === 0) {
         eventEmpty.innerHTML = '获取 EVENT 失败或暂无数据。<br><br><span style="font-size:12px;color:#6e7a86">如果你是微信/QQ打开，请点击右上角“在浏览器中打开”<br>或检查你的网络环境。</span>';
       }
@@ -815,6 +846,10 @@
     renderEventList();
     updateTimeBlocks();
     startCountdown();
+    
+    // 触发趋势排名更新
+    updateTrendRanks();
+
     if (!keepScroll) {
       eventDetailSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -912,6 +947,85 @@
       timeTextEl.textContent = '激活时间：' + timeStr;
       contentEl.className = 'time-block-content';
       contentEl.textContent = tags || '（该块未填写词条内容）';
+    }
+  }
+
+  /* =======================================================
+     趋势排名逻辑
+     ======================================================= */
+  async function fetchTrendsData() {
+    try {
+      const res = await fetch('trends.json?t=' + Date.now());
+      if (!res.ok) throw new Error('404');
+      globalTrendsData = await res.json();
+      trendDataLoaded = true;
+      // 如果此时已经选中了 EVENT，立即更新一次
+      if (activeEventId) updateTrendRanks();
+    } catch (e) {
+      console.warn('趋势数据加载失败:', e);
+      trendDataLoaded = false;
+    }
+  }
+
+  function updateTrendRanks() {
+    const section = document.getElementById('trendRankSection');
+    const list = document.getElementById('trendRanksList');
+    const ev = getActiveEvent();
+
+    if (!ev) {
+      section.style.display = 'none';
+      return;
+    }
+    section.style.display = 'block';
+
+    if (!trendDataLoaded || !globalTrendsData) {
+      list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">趋势数据加载中或暂不可用...</span>';
+      return;
+    }
+
+    const region = document.getElementById('trendRegionSelect').value;
+    const currentTrends = globalTrendsData[region] || [];
+
+    const keywordsToCheck = ev.trendKeywords || [];
+    
+    if (keywordsToCheck.length === 0) {
+      list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">后台未配置关联词</span>';
+      return;
+    }
+
+    list.innerHTML = '';
+    let foundAny = false;
+
+    keywordsToCheck.forEach(kw => {
+      const cleanKw = kw.toLowerCase().replace(/^#/, '');
+      
+      const match = currentTrends.find(t => {
+        const tName = (t.name || '').toLowerCase().replace(/^#/, '');
+        return tName === cleanKw || tName.includes(cleanKw);
+      });
+
+      if (match) {
+        foundAny = true;
+        const row = document.createElement('div');
+        const isTop10 = match.rank <= 10;
+        row.style.cssText = `
+          display: flex; justify-content: space-between; align-items: center;
+          padding: 8px 12px; border-radius: 8px; font-size: 13px;
+          background: ${isTop10 ? 'rgba(29,155,240,0.1)' : 'rgba(255,255,255,0.03)'};
+          border: 1px solid ${isTop10 ? 'rgba(29,155,240,0.3)' : 'transparent'};
+        `;
+        row.innerHTML = `
+          <span style="color:#e7e9ea; font-weight:600;">${escapeHtml(kw)}</span>
+          <span style="background:${isTop10 ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">
+            ${region === 'global' ? '全球' : region === 'thailand' ? '泰国' : '新加坡'} #${match.rank}
+          </span>
+        `;
+        list.appendChild(row);
+      }
+    });
+
+    if (!foundAny) {
+      list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入该地区趋势榜单</span>';
     }
   }
 
@@ -1068,7 +1182,7 @@
   }
 
   /* =======================================================
-     发送：各块之间用空行分隔
+     发送
      ======================================================= */
   function sendToTwitter() {
     const text = tweetText.value.trim();
@@ -1137,6 +1251,7 @@
       keyword: '',
       mainHashtag: '',
       additionalTags: '',
+      trendKeywords: [],
       dateStr: '',
       timeStr: '',
       trendStarting: '',
@@ -1218,6 +1333,17 @@
       endTagsArea.value = ev.endTags || '';
       endTagsArea.oninput = e => { ev.endTags = e.target.value; };
 
+      const trendKwLabel = document.createElement('div');
+      trendKwLabel.className = 'sub-label';
+      trendKwLabel.textContent = '📈 趋势关联词（用于比对推特趋势，逗号或换行分隔）';
+
+      const trendKwArea = document.createElement('textarea');
+      trendKwArea.placeholder = '自动提取的关键词与标签，可手动修改';
+      trendKwArea.value = (ev.trendKeywords || []).join('\n');
+      trendKwArea.oninput = e => {
+        ev.trendKeywords = e.target.value.split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
+      };
+
       const metaLabel = document.createElement('div');
       metaLabel.className = 'sub-label';
       metaLabel.textContent = '其他信息（可编辑）';
@@ -1252,6 +1378,8 @@
       body.appendChild(endTimeInput);
       body.appendChild(endTagsLabel);
       body.appendChild(endTagsArea);
+      body.appendChild(trendKwLabel);
+      body.appendChild(trendKwArea);
       body.appendChild(metaLabel);
       body.appendChild(keywordInput);
       body.appendChild(hashtagInput);
