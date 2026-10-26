@@ -2,7 +2,8 @@ name: Update Twitter Trends
 
 on:
   schedule:
-    - cron: '0 * * * *' # 每小时运行一次
+    # 核心改动：每 20 分钟运行一次
+    - cron: '*/20 * * * *'
   workflow_dispatch: 
 
 permissions:
@@ -26,25 +27,73 @@ jobs:
         run: |
           node << 'EOF'
           const fs = require('fs');
-          
-          // 1. 检查开关文件，如果关闭直接退出
-          try {
-            const switchData = JSON.parse(fs.readFileSync('trend_switch.json', 'utf8'));
-            if (!switchData.enabled) {
-              console.log('⏸️ 实时查询已在后台关闭，本次跳过执行。');
-              process.exit(0); 
+
+          // ================= 配置区 =================
+          const GIST_ID = '4cee62e56e30e8290809efc7be947be0';
+          const GIST_FILENAME = 'xhelper-presets.json';
+          // ==========================================
+
+          async function main() {
+            // 1. 检查手动总开关
+            try {
+              const switchData = JSON.parse(fs.readFileSync('trend_switch.json', 'utf8'));
+              if (!switchData.enabled) {
+                console.log('⏸️ 手动总开关处于关闭状态，跳过执行。');
+                return;
+              }
+            } catch (e) {
+              console.log('未找到 trend_switch.json，默认继续执行');
             }
-          } catch (e) {
-            console.log('未找到 trend_switch.json，默认继续执行');
-          }
 
-          // 2. 只保留泰国和新加坡
-          const locations = { thailand: 23424960, singapore: 23424948 };
-          const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+            // 2. 获取 EVENT 数据
+            let events = [];
+            try {
+              const res = await fetch(`https://api.github.com/gists/${GIST_ID}`, {
+                headers: { 'Accept': 'application/vnd.github+json' }
+              });
+              const data = await res.json();
+              const file = data.files && data.files[GIST_FILENAME];
+              if (file && file.content) {
+                events = JSON.parse(file.content) || [];
+              }
+            } catch (e) {
+              console.log('获取 EVENT 数据失败，默认继续执行', e.message);
+            }
 
-          async function fetchTrends() {
-            const result = { lastUpdated: Date.now() };
+            // 3. 判断当前是否在“开始时间后 1 小时内”的高频监控期
+            const now = Date.now();
+            let isHighFreqPeriod = false;
             
+            if (events.length > 0) {
+              events.forEach(ev => {
+                const start = ev.startTime || 0;
+                // 只要有任何一个活动处于“开始后 1 小时内”，就开启高频
+                if (start > 0 && now >= start && now <= start + 60 * 60 * 1000) {
+                  isHighFreqPeriod = true;
+                }
+              });
+            }
+
+            // 4. 定时器判断逻辑
+            const minutes = new Date().getMinutes();
+            
+            if (isHighFreqPeriod) {
+              console.log('🔥 当前处于活动开始后 1 小时内，执行高频抓取！');
+            } else {
+              // 如果不在高频期，只在每小时的 0 分或 40 分左右执行（确保大约每小时1次）
+              // 因为 cron 是 */20，也就是 0, 20, 40。我们让 20 分直接跳过。
+              if (minutes !== 0 && minutes !== 40) {
+                console.log(`💤 当前属于日常维护期 (第 ${minutes} 分钟)，跳过本次抓取。`);
+                return;
+              }
+              console.log('🚀 日常维护期，执行 30 分钟/60 分钟级别的抓取...');
+            }
+
+            // 5. 执行抓取
+            const locations = { thailand: 23424960, singapore: 23424948 };
+            const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+            const result = { lastUpdated: Date.now() };
+
             for (const [name, woeid] of Object.entries(locations)) {
               try {
                 const res = await fetch(`https://api.twitterapi.io/twitter/trends?woeid=${woeid}`, {
@@ -77,11 +126,12 @@ jobs:
               }
               if (name !== 'singapore') await sleep(5500); 
             }
-            
+
             fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
             console.log('trends.json 生成完毕');
           }
-          fetchTrends();
+
+          main();
           EOF
 
       - name: Commit and push
