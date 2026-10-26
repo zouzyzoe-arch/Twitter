@@ -2,7 +2,7 @@ name: Update Twitter Trends
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # 每 30 分钟运行一次
+    - cron: '0 * * * *' # 每小时运行一次
   workflow_dispatch: 
 
 permissions:
@@ -26,8 +26,20 @@ jobs:
         run: |
           node << 'EOF'
           const fs = require('fs');
-          const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
+          
+          // 1. 检查开关是否打开
+          try {
+            const switchData = JSON.parse(fs.readFileSync('trend_switch.json', 'utf8'));
+            if (!switchData.enabled) {
+              console.log('⏸️ 实时查询已在后台关闭，本次跳过执行。');
+              process.exit(0); 
+            }
+          } catch (e) {
+            console.log('未找到 trend_switch.json 或格式错误，默认继续执行');
+          }
 
+          // 2. 只保留泰国和新加坡
+          const locations = { thailand: 23424960, singapore: 23424948 };
           const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
           async function fetchTrends() {
@@ -42,28 +54,19 @@ jobs:
                 const data = await res.json();
                 
                 let trendArray = [];
-                if (Array.isArray(data)) {
-                  trendArray = data[0]?.trends || data;
-                } else if (data.trends) {
-                  trendArray = data.trends;
-                } else if (data.data && data.data.trends) {
-                  trendArray = data.data.trends;
-                }
+                if (Array.isArray(data)) trendArray = data[0]?.trends || data;
+                else if (data.trends) trendArray = data.trends;
+                else if (data.data && data.data.trends) trendArray = data.data.trends;
 
-                // 深层解析，强制将 name 转换为字符串，防止前端崩溃
-                result[name] = trendArray.slice(0, 50).map(t => {
-                  let realName = '';
-                  let realRank = 0;
-
+                result[name] = trendArray.slice(0, 30).map(t => {
+                  let realName = '', realRank = 0;
                   let rawName = t.name || t.trend || t.query || '';
                   if (typeof rawName === 'object' && rawName !== null) {
                     realName = rawName.name || (rawName.target && rawName.target.query) || '';
                     realRank = rawName.rank || 0;
                   } else {
-                    realName = String(rawName);
-                    realRank = t.rank || t.position || 0;
+                    realName = String(rawName); realRank = t.rank || t.position || 0;
                   }
-
                   return { rank: realRank, name: realName };
                 }).filter(t => t.name !== '');
 
@@ -72,11 +75,7 @@ jobs:
                 console.error(`Fetch ${name} failed:`, e.message);
                 result[name] = []; 
               }
-              
-              if (name !== 'singapore') {
-                console.log(`等待 5.5 秒后继续...`);
-                await sleep(5500); 
-              }
+              if (name !== 'singapore') await sleep(5500); 
             }
             
             fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
