@@ -793,7 +793,6 @@
   }
 
   async function initUse() {
-    // 加载趋势数据
     fetchTrendsData();
 
     const remote = await fetchRemoteEvents();
@@ -971,7 +970,6 @@
       globalTrendsData = await res.json();
       trendDataLoaded = true;
       
-      // 格式化时间显示
       if (globalTrendsData.lastUpdated) {
         const date = new Date(globalTrendsData.lastUpdated);
         const timeStr = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -1031,7 +1029,8 @@
       const cleanKw = kw.toLowerCase().replace(/^#/, '');
       
       const match = currentTrends.find(t => {
-        const tName = (t.name || '').toLowerCase().replace(/^#/, '');
+        // 核心修复：强转字符串，防止旧数据里的对象引发报错崩溃
+        const tName = String(t.name || '').toLowerCase().replace(/^#/, '');
         return tName === cleanKw || tName.includes(cleanKw);
       });
 
