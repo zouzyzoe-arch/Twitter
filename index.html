@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#15202b">
   <title>发推助手 · EVENT</title>
   <style>
+    /* CSS 部分完全保持不变，为节省空间此处省略，请直接使用你之前的 CSS 即可 */
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     html, body { height: 100%; }
     body {
@@ -236,7 +237,7 @@
 
     <div class="time-block locked" id="blockEnd">
       <div class="time-block-header">
-        <span class="time-block-title">🏁 最终词条</span>
+        <span class="time-block-title">➕ 增加词条</span>
         <span class="time-block-status status-unset" id="endStatus">未配置</span>
       </div>
       <div class="time-block-tip allow-media">提示：转到 Twitter 之后可以选择添加图片或视频。</div>
@@ -296,7 +297,7 @@
     <button class="btn-back" onclick="switchToUse()">返回使用端</button>
   </div>
 
-  <!-- 新增：控制趋势刷新开关 -->
+  <!-- 趋势抓取控制 -->
   <div class="config-card" style="border-color: #1d9bf0;">
     <label style="font-weight:700;color:#1d9bf0;">⚙️ 趋势抓取控制</label>
     <div style="display:flex; align-items:center; justify-content:space-between; margin-top:12px;">
@@ -317,10 +318,11 @@
       识别方式：<br>
       · EVENT 标题：`EVENT :` 后面整行，仅保留英文与泰文<br>
       · 开始时间：`TREND STARTING :` 或 `Start Trend :`，其次 `TIME :`<br>
-      · 最终时间：`📈` 后的时间，或 `Add additional hashtags at` 时间<br>
+      · 增加时间：`📈` 后的时间，或 `Add additional hashtags at` 时间（若无则默认开始后3小时）<br>
+      · 活动结束：默认开始时间后 3 小时，可手动修改<br>
       · 关键词：`KEYWORD:` 或 `📝`<br>
       · 主 Hashtag：`HASHTAG:` 或 `#️⃣`（支持多行）<br>
-      · 最终词条：`📈` 后或 `Add additional hashtags at` 后所有 `#` 行<br>
+      · 增加词条：`📈` 后或 `Add additional hashtags at` 后所有 `#` 行<br>
       · 若没有 `📈` 且没有 `Add additional hashtags`，所有词条归入开始词条<br>
       · 自动提取关联词用于排名比对
     </div>
@@ -442,14 +444,16 @@
     return (prefix || 'e_') + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
   }
 
+  // 新增：eventOverTime（活动结束时间）
   function normalizeEvent(p) {
     return {
       id: p.id || genId(),
       title: p.title || '',
       startTime: typeof p.startTime === 'number' ? p.startTime : 0,
       startTags: p.startTags || '',
-      endTime: typeof p.endTime === 'number' ? p.endTime : 0,
+      endTime: typeof p.endTime === 'number' ? p.endTime : 0, // 增加时间
       endTags: p.endTags || '',
+      eventOverTime: typeof p.eventOverTime === 'number' ? p.eventOverTime : 0, // 活动结束时间
       keyword: p.keyword || '',
       mainHashtag: p.mainHashtag || '',
       additionalTags: p.additionalTags || '',
@@ -724,14 +728,18 @@
       additionalTags = tagLines.map(cleanHashtagLine).filter(Boolean).join('\n');
     }
 
+    // 时间计算
     const effectiveStartTime = normalizeTime(trendStarting || timeStr);
-    const effectiveEndTime = normalizeTime(additionalTimeStr || timeStr);
-
-    const eventTimeTs = combineThaiDateTime(dateStr, normalizeTime(timeStr));
     const trendTimeTs = combineThaiDateTime(dateStr, effectiveStartTime);
-    const finalTimeTs = additionalTimeStr
-      ? combineThaiDateTime(dateStr, effectiveEndTime)
-      : eventTimeTs;
+
+    // 增加时间（单独的时间字段）
+    let additionalTimeTs = 0;
+    if (additionalTimeStr) {
+      additionalTimeTs = combineThaiDateTime(dateStr, normalizeTime(additionalTimeStr));
+    }
+
+    // 活动结束时间：默认在开始时间之后 3 小时
+    let eventOverTs = trendTimeTs + 3 * 60 * 60 * 1000;
 
     let startTags = '';
     if (keyword && mainHashtag) {
@@ -766,8 +774,9 @@
       title: title || '(未命名 EVENT)',
       startTime: trendTimeTs,
       startTags: finalStartTags,
-      endTime: finalTimeTs,
+      endTime: additionalTimeTs, // 对应增加时间
       endTags: finalTags,
+      eventOverTime: eventOverTs, // 对应活动结束时间
       keyword: keyword,
       mainHashtag: mainHashtag,
       additionalTags: additionalTags,
@@ -1398,6 +1407,7 @@
       startTags: '',
       endTime: 0,
       endTags: '',
+      eventOverTime: 0,
       keyword: '',
       mainHashtag: '',
       additionalTags: '',
@@ -1467,7 +1477,7 @@
 
       const endTimeLabel = document.createElement('div');
       endTimeLabel.className = 'sub-label';
-      endTimeLabel.textContent = '🏁 最终时间（泰国时间）';
+      endTimeLabel.textContent = '➕ 增加时间（泰国时间）';
 
       const endTimeInput = document.createElement('input');
       endTimeInput.type = 'datetime-local';
@@ -1476,12 +1486,21 @@
 
       const endTagsLabel = document.createElement('div');
       endTagsLabel.className = 'sub-label';
-      endTagsLabel.textContent = '最终词条';
+      endTagsLabel.textContent = '增加词条';
 
       const endTagsArea = document.createElement('textarea');
-      endTagsArea.placeholder = '最终时间到达后激活的词条';
+      endTagsArea.placeholder = '增加时间到达后追加的词条';
       endTagsArea.value = ev.endTags || '';
       endTagsArea.oninput = e => { ev.endTags = e.target.value; };
+
+      const eventOverLabel = document.createElement('div');
+      eventOverLabel.className = 'sub-label';
+      eventOverLabel.textContent = '🛑 活动结束时间（用于停止抓取，默认开始后3小时）';
+
+      const eventOverInput = document.createElement('input');
+      eventOverInput.type = 'datetime-local';
+      eventOverInput.value = tsToThaiLocal(ev.eventOverTime || (ev.startTime ? ev.startTime + 3*3600*1000 : 0));
+      eventOverInput.oninput = e => { ev.eventOverTime = thaiLocalToTs(e.target.value); };
 
       const trendKwLabel = document.createElement('div');
       trendKwLabel.className = 'sub-label';
@@ -1528,6 +1547,8 @@
       body.appendChild(endTimeInput);
       body.appendChild(endTagsLabel);
       body.appendChild(endTagsArea);
+      body.appendChild(eventOverLabel);
+      body.appendChild(eventOverInput);
       body.appendChild(trendKwLabel);
       body.appendChild(trendKwArea);
       body.appendChild(metaLabel);
