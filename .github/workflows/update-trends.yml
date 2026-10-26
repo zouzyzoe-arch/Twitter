@@ -28,11 +28,9 @@ jobs:
           const fs = require('fs');
           const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
 
-          // 辅助函数：让程序暂停指定的毫秒数
           const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
           async function fetchTrends() {
-            // 初始化结果对象，记录本次抓取的时间戳
             const result = { lastUpdated: Date.now() };
             
             for (const [name, woeid] of Object.entries(locations)) {
@@ -40,11 +38,9 @@ jobs:
                 const res = await fetch(`https://api.twitterapi.io/twitter/trends?woeid=${woeid}`, {
                   headers: { 'X-API-Key': process.env.API_KEY }
                 });
-                
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 const data = await res.json();
                 
-                // 兼容性提取趋势数组
                 let trendArray = [];
                 if (Array.isArray(data)) {
                   trendArray = data[0]?.trends || data;
@@ -54,31 +50,38 @@ jobs:
                   trendArray = data.data.trends;
                 }
 
-                // 提取前 50 名，保留名称和排名，过滤掉空数据
-                result[name] = trendArray.slice(0, 50).map(t => ({
-                  rank: t.rank || t.position || 0,
-                  name: t.name || t.trend || t.query || ''
-                })).filter(t => t.name !== '');
+                // 深层解析，强制将 name 转换为字符串，防止前端崩溃
+                result[name] = trendArray.slice(0, 50).map(t => {
+                  let realName = '';
+                  let realRank = 0;
+
+                  let rawName = t.name || t.trend || t.query || '';
+                  if (typeof rawName === 'object' && rawName !== null) {
+                    realName = rawName.name || (rawName.target && rawName.target.query) || '';
+                    realRank = rawName.rank || 0;
+                  } else {
+                    realName = String(rawName);
+                    realRank = t.rank || t.position || 0;
+                  }
+
+                  return { rank: realRank, name: realName };
+                }).filter(t => t.name !== '');
 
                 console.log(`[${name}] 成功解析了 ${result[name].length} 条趋势`);
-
               } catch (e) {
                 console.error(`Fetch ${name} failed:`, e.message);
-                result[name] = []; // 失败则存空数组
+                result[name] = []; 
               }
               
-              // 核心防限流机制：每次请求后等待 5.5 秒，防止 429 错误
               if (name !== 'singapore') {
                 console.log(`等待 5.5 秒后继续...`);
                 await sleep(5500); 
               }
             }
             
-            // 写入文件
             fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
             console.log('trends.json 生成完毕');
           }
-          
           fetchTrends();
           EOF
 
