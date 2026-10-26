@@ -27,7 +27,7 @@ jobs:
           node << 'EOF'
           const fs = require('fs');
           
-          // 1. 检查开关是否打开
+          // 1. 检查开关文件，如果关闭直接退出
           try {
             const switchData = JSON.parse(fs.readFileSync('trend_switch.json', 'utf8'));
             if (!switchData.enabled) {
@@ -35,7 +35,7 @@ jobs:
               process.exit(0); 
             }
           } catch (e) {
-            console.log('未找到 trend_switch.json 或格式错误，默认继续执行');
+            console.log('未找到 trend_switch.json，默认继续执行');
           }
 
           // 2. 只保留泰国和新加坡
