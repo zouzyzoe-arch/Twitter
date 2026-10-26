@@ -1,0 +1,22 @@
+{
+  "headers": [
+    {
+      "source": "/trend_switch.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/trends.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}
