@@ -955,7 +955,11 @@
     const list = document.getElementById('trendRanksList');
     
     try {
-      const res = await fetch('trends.json?t=' + Date.now());
+      // 同时请求数据文件和开关状态
+      const [res, switchRes] = await Promise.all([
+        fetch('trends.json?t=' + Date.now()),
+        fetch('trend_switch.json?t=' + Date.now())
+      ]);
       
       if (!res.ok) {
         if (res.status === 404) throw new Error('404');
@@ -963,6 +967,13 @@
       }
       
       globalTrendsData = await res.json();
+      
+      // 记录开关状态
+      if (switchRes.ok) {
+        const switchData = await switchRes.json();
+        globalTrendsData.switchOff = !switchData.enabled;
+      }
+
       trendDataLoaded = true;
       
       if (globalTrendsData.lastUpdated) {
@@ -1002,32 +1013,33 @@
     }
     section.style.display = 'block';
 
+    if (globalTrendsData && globalTrendsData.switchOff) {
+      list.innerHTML = '<span style="font-size:12px; color:#f4212e; font-weight:bold;">⏸️ 后台已暂停实时趋势查询（当前显示为历史最后一次数据）</span>';
+    }
+
     if (!trendDataLoaded || !globalTrendsData) {
       list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">趋势数据加载中或暂不可用...</span>';
       return;
     }
 
     const keywordsToCheck = ev.trendKeywords || [];
-    
     if (keywordsToCheck.length === 0) {
       list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">后台未配置关联词</span>';
       return;
     }
 
+    const tempHTML = list.innerHTML; 
     list.innerHTML = '';
     let foundAny = false;
 
-    // 遍历该 EVENT 配置的所有词条
     keywordsToCheck.forEach(kw => {
       const cleanKw = kw.toLowerCase().replace(/^#/, '');
       
-      // 分别去三个地区里找排名
-      const matchGlobal = (globalTrendsData.global || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
+      // 只匹配泰国和新加坡
       const matchThai = (globalTrendsData.thailand || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
       const matchSG = (globalTrendsData.singapore || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
 
-      // 只要在任何一个地区上榜，就渲染这一行
-      if (matchGlobal || matchThai || matchSG) {
+      if (matchThai || matchSG) {
         foundAny = true;
         const row = document.createElement('div');
         row.style.cssText = `
@@ -1037,16 +1049,9 @@
           margin-bottom: 6px;
         `;
         
-        // 左侧：词条名字
         let html = `<div style="color:#e7e9ea; font-weight:700; font-size:14px; word-break: break-all;">${escapeHtml(kw)}</div>`;
-        
-        // 右侧：三个地区的标签
         html += `<div style="display:flex; gap:6px; flex-wrap:wrap;">`;
         
-        if (matchGlobal) {
-          const isTop = matchGlobal.rank <= 10;
-          html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">全球 #${matchGlobal.rank}</span>`;
-        }
         if (matchThai) {
           const isTop = matchThai.rank <= 10;
           html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">泰国 #${matchThai.rank}</span>`;
@@ -1062,8 +1067,8 @@
       }
     });
 
-    if (!foundAny) {
-      list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入上述三地趋势榜单</span>';
+    if (!foundAny && (!globalTrendsData || !globalTrendsData.switchOff)) {
+      list.innerHTML = '<span style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入泰国或新加坡趋势榜单</span>';
     }
   }
 
