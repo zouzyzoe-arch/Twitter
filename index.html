@@ -6,7 +6,6 @@
   <meta name="theme-color" content="#15202b">
   <title>发推助手 · EVENT</title>
   <style>
-    /* CSS 部分完全保持不变，为节省空间此处省略，请直接使用你之前的 CSS 即可 */
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     html, body { height: 100%; }
     body {
@@ -225,12 +224,14 @@
       </select>
     </div>
 
+    <!-- 新增：智能刷推规则提示区 -->
+    <div id="smartRuleTip" class="field" style="display:none; padding:10px 12px; border-radius:8px; font-size:13px; font-weight:600; line-height:1.5; margin-bottom:12px; transition:all 0.3s;"></div>
+
     <div class="time-block locked" id="blockStart">
       <div class="time-block-header">
         <span class="time-block-title">🚀 开始词条</span>
         <span class="time-block-status status-unset" id="startStatus">未配置</span>
       </div>
-      <div class="time-block-tip highlight">如果只有此处到达时间，刷推不要添加图片或视频。</div>
       <div class="time-block-time" id="startTimeText"></div>
       <pre class="time-block-content locked-text" id="startContent">等待配置时间</pre>
     </div>
@@ -240,7 +241,6 @@
         <span class="time-block-title">➕ 增加词条</span>
         <span class="time-block-status status-unset" id="endStatus">未配置</span>
       </div>
-      <div class="time-block-tip allow-media">提示：转到 Twitter 之后可以选择添加图片或视频。</div>
       <div class="time-block-time" id="endTimeText"></div>
       <pre class="time-block-content locked-text" id="endContent">等待配置时间</pre>
     </div>
@@ -444,16 +444,15 @@
     return (prefix || 'e_') + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
   }
 
-  // 新增：eventOverTime（活动结束时间）
   function normalizeEvent(p) {
     return {
       id: p.id || genId(),
       title: p.title || '',
       startTime: typeof p.startTime === 'number' ? p.startTime : 0,
       startTags: p.startTags || '',
-      endTime: typeof p.endTime === 'number' ? p.endTime : 0, // 增加时间
+      endTime: typeof p.endTime === 'number' ? p.endTime : 0,
       endTags: p.endTags || '',
-      eventOverTime: typeof p.eventOverTime === 'number' ? p.eventOverTime : 0, // 活动结束时间
+      eventOverTime: typeof p.eventOverTime === 'number' ? p.eventOverTime : 0,
       keyword: p.keyword || '',
       mainHashtag: p.mainHashtag || '',
       additionalTags: p.additionalTags || '',
@@ -728,17 +727,14 @@
       additionalTags = tagLines.map(cleanHashtagLine).filter(Boolean).join('\n');
     }
 
-    // 时间计算
     const effectiveStartTime = normalizeTime(trendStarting || timeStr);
     const trendTimeTs = combineThaiDateTime(dateStr, effectiveStartTime);
 
-    // 增加时间（单独的时间字段）
     let additionalTimeTs = 0;
     if (additionalTimeStr) {
       additionalTimeTs = combineThaiDateTime(dateStr, normalizeTime(additionalTimeStr));
     }
 
-    // 活动结束时间：默认在开始时间之后 3 小时
     let eventOverTs = trendTimeTs + 3 * 60 * 60 * 1000;
 
     let startTags = '';
@@ -774,9 +770,9 @@
       title: title || '(未命名 EVENT)',
       startTime: trendTimeTs,
       startTags: finalStartTags,
-      endTime: additionalTimeTs, // 对应增加时间
+      endTime: additionalTimeTs,
       endTags: finalTags,
-      eventOverTime: eventOverTs, // 对应活动结束时间
+      eventOverTime: eventOverTs,
       keyword: keyword,
       mainHashtag: mainHashtag,
       additionalTags: additionalTags,
@@ -1022,6 +1018,36 @@
       ev.endTime, ev.endTags, tz, now,
       'blockEnd', 'endStatus', 'endTimeText', 'endContent'
     );
+
+    // 智能提示
+    const ruleBox = document.getElementById('smartRuleTip');
+    if (!ev.startTime) {
+      ruleBox.style.display = 'none';
+    } else if (now < ev.startTime) {
+      ruleBox.style.display = 'block';
+      ruleBox.style.background = 'rgba(29, 155, 240, 0.1)';
+      ruleBox.style.color = '#1d9bf0';
+      ruleBox.style.border = '1px solid rgba(29, 155, 240, 0.3)';
+      ruleBox.innerHTML = '⏳ <b>活动未开始。</b>请勿提前带 Tag 发推，以免降低账号权重。';
+    } else if (now >= ev.startTime && now < ev.startTime + 15 * 60 * 1000) {
+      ruleBox.style.display = 'block';
+      ruleBox.style.background = 'rgba(244, 33, 46, 0.1)';
+      ruleBox.style.color = '#f4212e';
+      ruleBox.style.border = '1px solid rgba(244, 33, 46, 0.3)';
+      ruleBox.innerHTML = '🚨 <b>前 15 分钟冲榜期！</b>请只发纯文字，绝对不要带图片/视频！';
+    } else if (now >= ev.endTime && ev.endTime > 0) {
+      ruleBox.style.display = 'block';
+      ruleBox.style.background = 'rgba(0, 186, 124, 0.1)';
+      ruleBox.style.color = '#00ba7c';
+      ruleBox.style.border = '1px solid rgba(0, 186, 124, 0.3)';
+      ruleBox.innerHTML = '✅ <b>已进入增加词条阶段。</b>现在可以自由搭配图片/视频了！';
+    } else {
+      ruleBox.style.display = 'block';
+      ruleBox.style.background = 'rgba(0, 186, 124, 0.1)';
+      ruleBox.style.color = '#00ba7c';
+      ruleBox.style.border = '1px solid rgba(0, 186, 124, 0.3)';
+      ruleBox.innerHTML = '✅ <b>冲榜期已过。</b>现在可以带图片/视频进行互动了。';
+    }
   }
 
   function updateSingleBlock(timeTs, tags, tz, now, blockId, statusId, timeTextId, contentId) {
