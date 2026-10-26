@@ -1,35 +1,305 @@
 {
   "global": [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
+    {
+      "rank": 1,
+      "name": {
+        "name": "#BallonDor",
+        "target": {
+          "query": "#BallonDor"
+        },
+        "rank": 1
+      }
+    },
+    {
+      "rank": 2,
+      "name": {
+        "name": "#GSvFB",
+        "target": {
+          "query": "#GSvFB"
+        },
+        "rank": 2
+      }
+    },
+    {
+      "rank": 3,
+      "name": {
+        "name": "#الاهلي_الغرافه",
+        "target": {
+          "query": "#الاهلي_الغرافه"
+        },
+        "rank": 3
+      }
+    },
+    {
+      "rank": 4,
+      "name": {
+        "name": "BLEACH",
+        "target": {
+          "query": "BLEACH"
+        },
+        "rank": 4
+      }
+    },
+    {
+      "rank": 5,
+      "name": {
+        "name": "#ExercitoDoLula",
+        "target": {
+          "query": "#ExercitoDoLula"
+        },
+        "rank": 5
+      }
+    },
+    {
+      "rank": 6,
+      "name": {
+        "name": "Harry Kane",
+        "target": {
+          "query": "\"Harry Kane\""
+        },
+        "rank": 6
+      }
+    },
+    {
+      "rank": 7,
+      "name": {
+        "name": "#BJKvİBFK",
+        "target": {
+          "query": "#BJKvİBFK"
+        },
+        "rank": 7
+      }
+    },
+    {
+      "rank": 8,
+      "name": {
+        "name": "Walter Koenig",
+        "target": {
+          "query": "\"Walter Koenig\""
+        },
+        "rank": 8
+      }
+    },
+    {
+      "rank": 9,
+      "name": {
+        "name": "Brazil",
+        "target": {
+          "query": "Brazil"
+        },
+        "rank": 9
+      }
+    },
+    {
+      "rank": 10,
+      "name": {
+        "name": "Rize",
+        "target": {
+          "query": "Rize"
+        },
+        "rank": 10
+      }
+    },
+    {
+      "rank": 11,
+      "name": {
+        "name": "هاري كين",
+        "target": {
+          "query": "\"هاري كين\""
+        },
+        "rank": 11
+      }
+    },
+    {
+      "rank": 12,
+      "name": {
+        "name": "KHOM KHLANG EP8",
+        "target": {
+          "query": "\"KHOM KHLANG EP8\""
+        },
+        "rank": 12
+      }
+    },
+    {
+      "rank": 13,
+      "name": {
+        "name": "الكره الذهبيه",
+        "target": {
+          "query": "\"الكره الذهبيه\""
+        },
+        "rank": 13
+      }
+    },
+    {
+      "rank": 14,
+      "name": {
+        "name": "Balón de Oro",
+        "target": {
+          "query": "\"Balón de Oro\""
+        },
+        "rank": 14
+      }
+    },
+    {
+      "rank": 15,
+      "name": {
+        "name": "Komanche",
+        "target": {
+          "query": "Komanche"
+        },
+        "rank": 15
+      }
+    },
+    {
+      "rank": 16,
+      "name": {
+        "name": "Mbappe",
+        "target": {
+          "query": "Mbappe"
+        },
+        "rank": 16
+      }
+    },
+    {
+      "rank": 17,
+      "name": {
+        "name": "BüyükBuluşmaya HazırMısınız",
+        "target": {
+          "query": "\"BüyükBuluşmaya HazırMısınız\""
+        },
+        "rank": 17
+      }
+    },
+    {
+      "rank": 18,
+      "name": {
+        "name": "Brown",
+        "target": {
+          "query": "Brown"
+        },
+        "rank": 18
+      }
+    },
+    {
+      "rank": 19,
+      "name": {
+        "name": "Muçi",
+        "target": {
+          "query": "Muçi"
+        },
+        "rank": 19
+      }
+    },
+    {
+      "rank": 20,
+      "name": {
+        "name": "31Ekim AdanaMimarSinandayız",
+        "target": {
+          "query": "\"31Ekim AdanaMimarSinandayız\""
+        },
+        "rank": 20
+      }
+    },
+    {
+      "rank": 21,
+      "name": {
+        "name": "Chekov",
+        "target": {
+          "query": "Chekov"
+        },
+        "rank": 21
+      }
+    },
+    {
+      "rank": 22,
+      "name": {
+        "name": "Vlahovic",
+        "target": {
+          "query": "Vlahovic"
+        },
+        "rank": 22
+      }
+    },
+    {
+      "rank": 23,
+      "name": {
+        "name": "iPad mini",
+        "target": {
+          "query": "\"iPad mini\""
+        },
+        "rank": 23
+      }
+    },
+    {
+      "rank": 24,
+      "name": {
+        "name": "GPT-6.1 Terra",
+        "target": {
+          "query": "\"GPT-6.1 Terra\""
+        },
+        "rank": 24
+      }
+    },
+    {
+      "rank": 25,
+      "name": {
+        "name": "Yamal",
+        "target": {
+          "query": "Yamal"
+        },
+        "rank": 25
+      }
+    },
+    {
+      "rank": 26,
+      "name": {
+        "name": "Cerny",
+        "target": {
+          "query": "Cerny"
+        },
+        "rank": 26
+      }
+    },
+    {
+      "rank": 27,
+      "name": {
+        "name": "Babylon 5",
+        "target": {
+          "query": "\"Babylon 5\""
+        },
+        "rank": 27
+      }
+    },
+    {
+      "rank": 28,
+      "name": {
+        "name": "Anthropic",
+        "target": {
+          "query": "Anthropic"
+        },
+        "rank": 28
+      }
+    },
+    {
+      "rank": 29,
+      "name": {
+        "name": "Oppong",
+        "target": {
+          "query": "Oppong"
+        },
+        "rank": 29
+      }
+    },
+    {
+      "rank": 30,
+      "name": {
+        "name": "Olaitan",
+        "target": {
+          "query": "Olaitan"
+        },
+        "rank": 30
+      }
+    }
   ],
   "thailand": [],
   "singapore": []
