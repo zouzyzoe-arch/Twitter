@@ -2,8 +2,8 @@ name: Update Twitter Trends
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
-  workflow_dispatch:
+    - cron: '*/30 * * * *' # 每 30 分钟运行一次
+  workflow_dispatch: 
 
 permissions:
   contents: write
@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
 
       - name: Fetch Trends
         env:
@@ -29,7 +29,10 @@ jobs:
           const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
 
           async function fetchTrends() {
-            const result = {};
+            const result = {
+              lastUpdated: Date.now() // 记录本次抓取的时间戳
+            };
+            
             for (const [name, woeid] of Object.entries(locations)) {
               try {
                 const res = await fetch(`https://api.twitterapi.io/twitter/trends?woeid=${woeid}`, {
@@ -37,18 +40,13 @@ jobs:
                 });
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 const data = await res.json();
-                
-                const rawTrends = data.trends || data.data?.trends || data.data || [];
-                const trends = Array.isArray(rawTrends) ? rawTrends : [];
-
-                result[name] = trends.slice(0, 50).map((t, index) => ({
-                  rank: t.rank || index + 1,
-                  name: t.name || t.trend || t.query || t.hashtag || ''
-                })).filter(t => t.name !== '');
-                
+                result[name] = (data.trends || []).slice(0, 50).map(t => ({
+                  rank: t.rank,
+                  name: t.name
+                }));
               } catch (e) {
                 console.error(`Fetch ${name} failed:`, e.message);
-                result[name] = [];
+                result[name] = []; 
               }
             }
             fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
@@ -56,11 +54,8 @@ jobs:
           fetchTrends();
           EOF
 
-      - name: Commit and push changes
-        run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          git add trends.json
-          git commit -m "Auto-update trends [skip ci]" || echo "No changes to commit"
-          git pull origin main --rebase
-          git push
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: 'Auto-update trends [skip ci]'
+          file_pattern: trends.json
