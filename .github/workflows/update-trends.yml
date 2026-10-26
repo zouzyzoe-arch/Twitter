@@ -2,9 +2,8 @@ name: Update Twitter Trends
 
 on:
   schedule:
-    # 每 30 分钟运行一次
-    - cron: '*/30 * * * *'
-  workflow_dispatch: # 允许手动点击测试
+    - cron: '*/30 * * * *' # 每 30 分钟运行一次
+  workflow_dispatch: 
 
 permissions:
   contents: write
