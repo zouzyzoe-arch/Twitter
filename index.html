@@ -1,3 +1,8 @@
+为了避免“最高排名”给粉丝带来误解（比如因为抓取间隔导致错过了真正的最高点），我为你加入了一个非常严谨的提示语。
+ 
+以下是完整的 index.html 代码。包含了全球趋势展示、历史最高排名显示，以及准确的免责/偏差提示。
+ 
+请直接全选覆盖你的 index.html 文件：
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -252,6 +257,10 @@
           <label style="color:#1d9bf0;">📊 关联词条 Twitter 排名</label>
           <div id="trendUpdateTime" style="font-size: 11px; color: #6e7a86; margin-top: 4px;">数据加载中...</div>
         </div>
+      </div>
+      <!-- 最高排名偏差提示 -->
+      <div style="font-size: 10px; color: #6e7a86; margin-top: 4px; margin-bottom: 8px;">
+        * 历史最高排名根据系统每次抓取结果记录，受抓取间隔影响，可能与官方实际最高点存在偏差。
       </div>
       <div id="trendRanksList" class="preset-list" style="flex-direction:column; gap:6px; margin-top:8px; margin-bottom: 0;">
         <!-- 排名结果动态生成 -->
@@ -1181,22 +1190,31 @@
     keywordsToCheck.forEach(kw => {
       const cleanKw = kw.toLowerCase().replace(/^#/, '');
       
+      // 三地匹配
+      const matchGlobal = (globalTrendsData.global || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
       const matchThai = (globalTrendsData.thailand || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
       const matchSG = (globalTrendsData.singapore || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
 
-      if (matchThai || matchSG) {
+      if (matchGlobal || matchThai || matchSG) {
         foundAny = true;
         
         let html = `<div style="color:#e7e9ea; font-weight:700; font-size:14px; word-break: break-all;">${escapeHtml(kw)}</div>`;
         html += `<div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:4px;">`;
         
+        if (matchGlobal) {
+          const isTop = matchGlobal.rank <= 10;
+          const highest = matchGlobal.highestRank ? ` (最高 #${matchGlobal.highestRank})` : '';
+          html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">全球 #${matchGlobal.rank}${highest}</span>`;
+        }
         if (matchThai) {
           const isTop = matchThai.rank <= 10;
-          html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">泰国 #${matchThai.rank}</span>`;
+          const highest = matchThai.highestRank ? ` (最高 #${matchThai.highestRank})` : '';
+          html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">泰国 #${matchThai.rank}${highest}</span>`;
         }
         if (matchSG) {
           const isTop = matchSG.rank <= 10;
-          html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">新加坡 #${matchSG.rank}</span>`;
+          const highest = matchSG.highestRank ? ` (最高 #${matchSG.highestRank})` : '';
+          html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">新加坡 #${matchSG.rank}${highest}</span>`;
         }
         html += `</div>`;
 
@@ -1209,7 +1227,7 @@
     });
 
     if (!foundAny) {
-      rowsHTML = '<div style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入泰国或新加坡趋势榜单</div>';
+      rowsHTML = '<div style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入全球、泰国或新加坡趋势榜单</div>';
     }
 
     list.innerHTML = htmlNotice + rowsHTML;
@@ -1582,7 +1600,7 @@
       body.appendChild(hashtagInput);
       body.appendChild(locationInput);
 
-      details.appendChild(body);
+      details.appendChild(body);jin
       adminList.appendChild(details);
     });
   }
