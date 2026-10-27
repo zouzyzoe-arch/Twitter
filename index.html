@@ -224,7 +224,7 @@
       </select>
     </div>
 
-    <!-- 新增：智能刷推规则提示区 -->
+    <!-- 智能刷推规则提示区 -->
     <div id="smartRuleTip" class="field" style="display:none; padding:10px 12px; border-radius:8px; font-size:13px; font-weight:600; line-height:1.5; margin-bottom:12px; transition:all 0.3s;"></div>
 
     <div class="time-block locked" id="blockStart">
@@ -1199,18 +1199,17 @@
         
         let html = `<div style="color:#e7e9ea; font-weight:700; font-size:14px; word-break: break-all;">${escapeHtml(kw)}</div>`;
         
-        // 下面是单独展示的标签区
         html += `<div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; align-items:center;">`;
         
         // 渲染单个地区的辅助函数
         const renderTag = (match, regionName) => {
           if (!match) return '';
           
-          // 1. 当前排名标签（带“当前”标识）
+          // 1. 当前排名标签
           const isTop10 = match.rank <= 10;
           let tagHTML = `<span style="background:${isTop10 ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">${regionName} 当前 #${match.rank}</span>`;
           
-          // 2. 历史最高排名标签（带“最高”标识，金色高亮，强制显示）
+          // 2. 历史最高排名标签（强显）
           const highest = match.highestRank || match.rank;
           tagHTML += `<span style="background:#ffd700; color:#000; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700; margin-left:4px;">最高 ${regionName} #${highest}</span>`;
           
@@ -1235,7 +1234,14 @@
       rowsHTML = '<div style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入全球、泰国或新加坡趋势榜单</div>';
     }
 
-    list.innerHTML = htmlNotice + rowsHTML;
+    // 【新增】在面板上方加上解释提示条
+    const explanationHTML = `
+      <div style="background: rgba(255, 215, 0, 0.1); border: 1px solid rgba(255, 215, 0, 0.4); border-radius: 6px; padding: 8px 10px; margin-bottom: 10px; color: #ffd700; font-size: 11px; font-weight: 600; line-height: 1.4;">
+        💡 提示：「当前」为实时抓取排名；「最高」为系统记录的历史最好成绩（受抓取间隔影响，可能与实际峰值存在微小时差）。
+      </div>
+    `;
+
+    list.innerHTML = htmlNotice + explanationHTML + rowsHTML;
   }
 
   /* =======================================================
