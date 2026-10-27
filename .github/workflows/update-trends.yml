@@ -2,7 +2,7 @@ name: Update Twitter Trends
 
 on:
   schedule:
-    # 核心改动：每 20 分钟运行一次
+    # 每 20 分钟唤醒一次脚本
     - cron: '*/20 * * * *'
   workflow_dispatch: 
 
@@ -45,7 +45,7 @@ jobs:
               console.log('未找到 trend_switch.json，默认继续执行');
             }
 
-            // 2. 获取 EVENT 数据
+            // 2. 获取 EVENT 数据，判断是否需要高频抓取
             let events = [];
             try {
               const res = await fetch(`https://api.github.com/gists/${GIST_ID}`, {
@@ -60,7 +60,6 @@ jobs:
               console.log('获取 EVENT 数据失败，默认继续执行', e.message);
             }
 
-            // 3. 判断当前是否在“开始时间后 1 小时内”的高频监控期
             const now = Date.now();
             let isHighFreqPeriod = false;
             
@@ -74,13 +73,13 @@ jobs:
               });
             }
 
-            // 4. 定时器判断逻辑
+            // 3. 定时器判断逻辑
             const minutes = new Date().getMinutes();
             
             if (isHighFreqPeriod) {
               console.log('🔥 当前处于活动开始后 1 小时内，执行高频抓取！');
             } else {
-              // 如果不在高频期，只在每小时的 0 分或 40 分左右执行（确保大约每小时1次）
+              // 如果不在高频期，只在每小时的 0 分或 40 分左右执行（确保大约 1 小时 1 次）
               // 因为 cron 是 */20，也就是 0, 20, 40。我们让 20 分直接跳过。
               if (minutes !== 0 && minutes !== 40) {
                 console.log(`💤 当前属于日常维护期 (第 ${minutes} 分钟)，跳过本次抓取。`);
@@ -89,12 +88,21 @@ jobs:
               console.log('🚀 日常维护期，执行 30 分钟/60 分钟级别的抓取...');
             }
 
-            // 5. 执行抓取
-            const locations = { thailand: 23424960, singapore: 23424948 };
+            // 4. 执行抓取（包含全球）
+            const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
             const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-            const result = { lastUpdated: Date.now() };
+            
+            // 读取旧数据以比对历史最高排名
+            let oldData = {};
+            try { oldData = JSON.parse(fs.readFileSync('trends.json', 'utf8')); } catch(e) {}
 
-            for (const [name, woeid] of Object.entries(locations)) {
+            const result = { lastUpdated: Date.now() };
+            const locationKeys = Object.keys(locations);
+
+            for (let i = 0; i < locationKeys.length; i++) {
+              const name = locationKeys[i];
+              const woeid = locations[name];
+              
               try {
                 const res = await fetch(`https://api.twitterapi.io/twitter/trends?woeid=${woeid}`, {
                   headers: { 'X-API-Key': process.env.API_KEY }
@@ -116,7 +124,22 @@ jobs:
                   } else {
                     realName = String(rawName); realRank = t.rank || t.position || 0;
                   }
-                  return { rank: realRank, name: realName };
+                  
+                  // 👇 核心比对逻辑：查找旧数据中是否有这个词，以及它的最高排名
+                  let highestRank = realRank;
+                  if (oldData[name] && Array.isArray(oldData[name])) {
+                    const oldMatch = oldData[name].find(o => o.name === realName);
+                    // 如果旧数据里有，且旧排名更靠前（数字更小），则保留旧的
+                    if (oldMatch && oldMatch.highestRank && oldMatch.highestRank < realRank) {
+                      highestRank = oldMatch.highestRank;
+                    }
+                  }
+
+                  return { 
+                    rank: realRank, 
+                    name: realName,
+                    highestRank: highestRank // 记录历史最高排名
+                  };
                 }).filter(t => t.name !== '');
 
                 console.log(`[${name}] 成功解析了 ${result[name].length} 条趋势`);
@@ -124,7 +147,9 @@ jobs:
                 console.error(`Fetch ${name} failed:`, e.message);
                 result[name] = []; 
               }
-              if (name !== 'singapore') await sleep(5500); 
+              
+              // 每个地区请求之间等待 5.5 秒，防止 429
+              if (i < locationKeys.length - 1) await sleep(5500); 
             }
 
             fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
