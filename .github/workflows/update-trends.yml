@@ -34,7 +34,7 @@ jobs:
           // ==========================================
 
           async function main() {
-            // 1. 检查手动总开关
+            // 1. 检查手动总开关 (读取 trend_switch.json)
             try {
               const switchData = JSON.parse(fs.readFileSync('trend_switch.json', 'utf8'));
               if (!switchData.enabled) {
@@ -42,10 +42,10 @@ jobs:
                 return;
               }
             } catch (e) {
-              console.log('未找到 trend_switch.json，默认继续执行');
+              console.log('未找到 trend_switch.json 或解析失败，默认继续执行');
             }
 
-            // 2. 获取 EVENT 数据，判断是否需要高频抓取
+            // 2. 获取 EVENT 数据，判断当前处于什么阶段
             let events = [];
             try {
               const res = await fetch(`https://api.github.com/gists/${GIST_ID}`, {
@@ -57,45 +57,80 @@ jobs:
                 events = JSON.parse(file.content) || [];
               }
             } catch (e) {
-              console.log('获取 EVENT 数据失败，默认继续执行', e.message);
+              console.log('获取 EVENT 数据失败，按无活动处理', e.message);
             }
 
             const now = Date.now();
-            let isHighFreqPeriod = false;
+            let currentMode = 'NONE'; // NONE(无活动), PRE_HEAT(预热), HIGH_FREQ(爆发), LOW_FREQ(长尾)
             
             if (events.length > 0) {
-              events.forEach(ev => {
+              for (const ev of events) {
                 const start = ev.startTime || 0;
-                // 只要有任何一个活动处于“开始后 1 小时内”，就开启高频
-                if (start > 0 && now >= start && now <= start + 60 * 60 * 1000) {
-                  isHighFreqPeriod = true;
+                if (start === 0) continue;
+                
+                // 活动结束时间（如果没有配置，默认开始后 3 小时）
+                const end = ev.eventOverTime || (start + 3 * 60 * 60 * 1000); 
+                
+                const preHeatStart = start - 5 * 60 * 1000;        // 开始前5分钟
+                const highFreqEnd = start + 2 * 60 * 60 * 1000;    // 开始后2小时
+
+                if (now >= preHeatStart && now < start) {
+                  if (currentMode !== 'HIGH_FREQ') currentMode = 'PRE_HEAT'; 
+                } else if (now >= start && now < highFreqEnd) {
+                  currentMode = 'HIGH_FREQ'; 
+                  break; // 爆发期优先级最高，直接跳出循环
+                } else if (now >= highFreqEnd && now <= end) {
+                  if (currentMode === 'NONE') currentMode = 'LOW_FREQ';
                 }
-              });
+              }
             }
 
-            // 3. 定时器判断逻辑
-            const minutes = new Date().getMinutes();
+            // 3. 无活动，直接终止
+            if (currentMode === 'NONE') {
+              console.log('💤 [无活动] 当前没有任何处于预热、进行中或长尾期的活动，跳过抓取。');
+              return;
+            }
+
+            // 4. 读取上次成功抓取的时间，计算时间差
+            let oldData = {};
+            let lastUpdated = 0;
+            try { 
+              oldData = JSON.parse(fs.readFileSync('trends.json', 'utf8')); 
+              lastUpdated = oldData.lastUpdated || 0;
+            } catch(e) {}
             
-            if (isHighFreqPeriod) {
-              console.log('🔥 当前处于活动开始后 1 小时内，执行高频抓取！');
-            } else {
-              // 如果不在高频期，只在每小时的 0 分或 40 分左右执行（确保大约 1 小时 1 次）
-              // 因为 cron 是 */20，也就是 0, 20, 40。我们让 20 分直接跳过。
-              if (minutes !== 0 && minutes !== 40) {
-                console.log(`💤 当前属于日常维护期 (第 ${minutes} 分钟)，跳过本次抓取。`);
+            const minutesSinceLast = lastUpdated > 0 ? (now - lastUpdated) / (1000 * 60) : 9999;
+
+            // 5. 根据阶段判断是否满足抓取间隔
+            if (currentMode === 'HIGH_FREQ') {
+              // 爆发期：间隔 >= 20 分钟
+              if (minutesSinceLast < 20) {
+                console.log(`💤 [爆发期] 距上次抓取仅 ${Math.floor(minutesSinceLast)} 分钟，未满 20 分钟，跳过本次。`);
                 return;
               }
-              console.log('🚀 日常维护期，执行 30 分钟/60 分钟级别的抓取...');
+              console.log(`🔥 [爆发期] 距上次抓取 ${Math.floor(minutesSinceLast)} 分钟，执行抓取！`);
+            } 
+            else if (currentMode === 'LOW_FREQ') {
+              // 长尾期：间隔 >= 60 分钟
+              if (minutesSinceLast < 60) {
+                console.log(`💤 [长尾期] 距上次抓取仅 ${Math.floor(minutesSinceLast)} 分钟，未满 60 分钟，跳过本次。`);
+                return;
+              }
+              console.log(`🚀 [长尾期] 距上次抓取 ${Math.floor(minutesSinceLast)} 分钟，执行抓取！`);
+            } 
+            else if (currentMode === 'PRE_HEAT') {
+              // 预热期：如果在开始前5分钟内刚抓过，就不再重复
+              if (minutesSinceLast < 5) {
+                console.log(`💤 [预热期] 距上次抓取仅 ${Math.floor(minutesSinceLast)} 分钟，跳过本次。`);
+                return;
+              }
+              console.log(`🚀 [预热期] 活动即将开始，执行抓取！`);
             }
 
-            // 4. 执行抓取（包含全球）
+            // 6. 执行抓取 (全球、泰国、新加坡)
             const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
             const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
             
-            // 读取旧数据以比对历史最高排名
-            let oldData = {};
-            try { oldData = JSON.parse(fs.readFileSync('trends.json', 'utf8')); } catch(e) {}
-
             const result = { lastUpdated: Date.now() };
             const locationKeys = Object.keys(locations);
 
@@ -125,11 +160,10 @@ jobs:
                     realName = String(rawName); realRank = t.rank || t.position || 0;
                   }
                   
-                  // 👇 核心比对逻辑：查找旧数据中是否有这个词，以及它的最高排名
+                  // 比对历史最高排名
                   let highestRank = realRank;
                   if (oldData[name] && Array.isArray(oldData[name])) {
                     const oldMatch = oldData[name].find(o => o.name === realName);
-                    // 如果旧数据里有，且旧排名更靠前（数字更小），则保留旧的
                     if (oldMatch && oldMatch.highestRank && oldMatch.highestRank < realRank) {
                       highestRank = oldMatch.highestRank;
                     }
@@ -138,7 +172,7 @@ jobs:
                   return { 
                     rank: realRank, 
                     name: realName,
-                    highestRank: highestRank // 记录历史最高排名
+                    highestRank: highestRank
                   };
                 }).filter(t => t.name !== '');
 
@@ -148,10 +182,11 @@ jobs:
                 result[name] = []; 
               }
               
-              // 每个地区请求之间等待 5.5 秒，防止 429
+              // 防止请求过快被封禁，间隔 5.5 秒
               if (i < locationKeys.length - 1) await sleep(5500); 
             }
 
+            // 7. 保存结果
             fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
             console.log('trends.json 生成完毕');
           }
