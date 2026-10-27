@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793106476181,
+  "lastUpdated": 1793109990109,
   "global": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
     },
     {
       "rank": 3,
-      "name": "ホークス",
+      "name": "#恋とき",
       "highestRank": 3
     },
     {
@@ -23,13 +23,13 @@
     },
     {
       "rank": 5,
-      "name": "#81AnosDoMaiorDoMundo",
-      "highestRank": 4
+      "name": "ソフトバンク",
+      "highestRank": 5
     },
     {
       "rank": 6,
-      "name": "ホームラン",
-      "highestRank": 6
+      "name": "#81AnosDoMaiorDoMundo",
+      "highestRank": 4
     },
     {
       "rank": 7,
@@ -38,18 +38,18 @@
     },
     {
       "rank": 8,
+      "name": "ホームラン",
+      "highestRank": 6
+    },
+    {
+      "rank": 9,
       "name": "#GMMTVNEXT",
       "highestRank": 3
     },
     {
-      "rank": 9,
-      "name": "#日本シリーズ",
-      "highestRank": 9
-    },
-    {
       "rank": 10,
-      "name": "#sbhawks",
-      "highestRank": 6
+      "name": "#いろはの恋は時代をかける",
+      "highestRank": 10
     },
     {
       "rank": 11,
@@ -63,32 +63,32 @@
     },
     {
       "rank": 13,
-      "name": "正木サヨ",
+      "name": "BOKBEAR 100K BIG HUG",
       "highestRank": 13
     },
     {
       "rank": 14,
-      "name": "ゲッツー",
-      "highestRank": 5
+      "name": "Mao Zedong",
+      "highestRank": 14
     },
     {
       "rank": 15,
+      "name": "正木サヨ",
+      "highestRank": 13
+    },
+    {
+      "rank": 16,
       "name": "正木くん",
       "highestRank": 15
     },
     {
-      "rank": 16,
+      "rank": 17,
       "name": "ユナイト",
       "highestRank": 8
     },
     {
-      "rank": 17,
-      "name": "マッキー",
-      "highestRank": 11
-    },
-    {
       "rank": 18,
-      "name": "ソフバン",
+      "name": "CHEFPOM X PUINOONBINT",
       "highestRank": 18
     },
     {
@@ -98,58 +98,58 @@
     },
     {
       "rank": 20,
-      "name": "マサキング",
-      "highestRank": 20
+      "name": "マッキー",
+      "highestRank": 11
     },
     {
       "rank": 21,
-      "name": "神里大丈夫",
-      "highestRank": 10
+      "name": "ゲッツー",
+      "highestRank": 5
     },
     {
       "rank": 22,
-      "name": "ルイーズ",
-      "highestRank": 22
+      "name": "ソフバン",
+      "highestRank": 18
     },
     {
       "rank": 23,
-      "name": "サヨナラ",
+      "name": "DEWTEE BURGER KING LIVE",
       "highestRank": 23
     },
     {
       "rank": 24,
-      "name": "正木選手",
-      "highestRank": 24
+      "name": "マサキング",
+      "highestRank": 20
     },
     {
       "rank": 25,
+      "name": "スタトロ",
+      "highestRank": 24
+    },
+    {
+      "rank": 26,
       "name": "NUNEW SPC TEASER",
       "highestRank": 13
     },
     {
-      "rank": 26,
-      "name": "正木智也",
-      "highestRank": 26
-    },
-    {
       "rank": 27,
-      "name": "Mao Zedong",
+      "name": "ArigaTO Indonesia",
       "highestRank": 27
     },
     {
       "rank": 28,
-      "name": "守備固め",
+      "name": "FLÁVIO BOLSONARO FUGIU",
       "highestRank": 28
     },
     {
       "rank": 29,
-      "name": "守備シフト",
-      "highestRank": 16
+      "name": "BENEATH THE LIES EP7",
+      "highestRank": 29
     },
     {
       "rank": 30,
-      "name": "スタトロ",
-      "highestRank": 24
+      "name": "生琉先生",
+      "highestRank": 30
     }
   ],
   "thailand": [
@@ -160,12 +160,12 @@
     },
     {
       "rank": 2,
-      "name": "#SupernORMalMatterMakers",
+      "name": "#แสนอุ้งเท้าก้าวไปกับบ้อกแบร์",
       "highestRank": 2
     },
     {
       "rank": 3,
-      "name": "ORM MUSE MATTER MAKERS",
+      "name": "BOKBEAR 100K BIG HUG",
       "highestRank": 3
     },
     {
@@ -175,48 +175,48 @@
     },
     {
       "rank": 5,
-      "name": "#MDRInTheKitchenEP6",
+      "name": "CHEFPOM X PUINOONBINT",
       "highestRank": 5
     },
     {
       "rank": 6,
-      "name": "#TeaserBORNTOBE",
-      "highestRank": 4
+      "name": "#ตะวันลวงEP7",
+      "highestRank": 6
     },
     {
       "rank": 7,
-      "name": "CHEFPOM X PUINOONBINT",
+      "name": "BENEATH THE LIES EP7",
       "highestRank": 7
     },
     {
       "rank": 8,
-      "name": "NUNEW SPC TEASER",
+      "name": "#MDRInTheKitchenEP6",
       "highestRank": 5
     },
     {
       "rank": 9,
+      "name": "NUNEW SPC TEASER",
+      "highestRank": 5
+    },
+    {
+      "rank": 10,
       "name": "DEWTEE BURGER KING LIVE",
       "highestRank": 9
     },
     {
-      "rank": 10,
-      "name": "BOKBEAR 100K BIG HUG",
-      "highestRank": 10
+      "rank": 11,
+      "name": "THE SOULMATE RINGS EP8",
+      "highestRank": 11
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "REBECCA OPPO FIND X10",
       "highestRank": 8
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "PP KRIT OPPO FINDX10 LAUNCH",
       "highestRank": 12
-    },
-    {
-      "rank": 13,
-      "name": "GENERATION HAPPY",
-      "highestRank": 9
     },
     {
       "rank": 14,
@@ -225,18 +225,18 @@
     },
     {
       "rank": 15,
+      "name": "GENERATION HAPPY",
+      "highestRank": 9
+    },
+    {
+      "rank": 16,
       "name": "PEEMWASU AT MAC CITY",
       "highestRank": 14
     },
     {
-      "rank": 16,
+      "rank": 17,
       "name": "YINWAR X THE GHOST RADIO",
       "highestRank": 15
-    },
-    {
-      "rank": 17,
-      "name": "THAI OF BUS",
-      "highestRank": 16
     },
     {
       "rank": 18,
@@ -245,43 +245,43 @@
     },
     {
       "rank": 19,
-      "name": "YINWAR AT THE MALL HALLOWEEN",
-      "highestRank": 17
-    },
-    {
-      "rank": 20,
       "name": "MMAX 33rd BIRTHDAY",
       "highestRank": 19
     },
     {
-      "rank": 21,
+      "rank": 20,
       "name": "NUNEW CONCERT AT IMPACT",
       "highestRank": 20
     },
     {
-      "rank": 22,
-      "name": "NOUR OR TREAT",
-      "highestRank": 22
-    },
-    {
-      "rank": 23,
-      "name": "The Crow Club Q35",
-      "highestRank": 23
-    },
-    {
-      "rank": 24,
+      "rank": 21,
       "name": "SMILEY BESIDE CHARLOTTE27",
       "highestRank": 21
     },
     {
-      "rank": 25,
+      "rank": 22,
+      "name": "#SupernORMalMatterMakers",
+      "highestRank": 2
+    },
+    {
+      "rank": 23,
+      "name": "#TeaserBORNTOBE",
+      "highestRank": 4
+    },
+    {
+      "rank": 24,
       "name": "#BKSuperKingFishxDewTee",
-      "highestRank": 25
+      "highestRank": 24
+    },
+    {
+      "rank": 25,
+      "name": "#บุ๋มปนัดดา",
+      "highestRank": 7
     },
     {
       "rank": 26,
-      "name": "#บุ๋มปนัดดา",
-      "highestRank": 7
+      "name": "#แรงเงาEP2",
+      "highestRank": 26
     },
     {
       "rank": 27,
@@ -290,30 +290,30 @@
     },
     {
       "rank": 28,
-      "name": "#NampingFashionFiles",
-      "highestRank": 25
+      "name": "#MarcJacobsTH",
+      "highestRank": 28
     },
     {
       "rank": 29,
-      "name": "#FoolInLove",
-      "highestRank": 24
+      "name": "#แหวนรักข้ามเวลาEP8",
+      "highestRank": 29
     },
     {
       "rank": 30,
-      "name": "#แสนอุ้งเท้าก้าวไปกับบ้อกแบร์",
-      "highestRank": 30
+      "name": "#NampingFashionFiles",
+      "highestRank": 25
     }
   ],
   "singapore": [
     {
       "rank": 1,
-      "name": "#GMMTVNEXT",
+      "name": "Base Track",
       "highestRank": 1
     },
     {
       "rank": 2,
-      "name": "Base Track",
-      "highestRank": 2
+      "name": "#GMMTVNEXT",
+      "highestRank": 1
     },
     {
       "rank": 3,
@@ -322,53 +322,53 @@
     },
     {
       "rank": 4,
+      "name": "Harry Kane",
+      "highestRank": 4
+    },
+    {
+      "rank": 5,
       "name": "#SupernORMalMatterMakers",
       "highestRank": 3
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "ORM MUSE MATTER MAKERS",
       "highestRank": 4
     },
     {
-      "rank": 6,
-      "name": "Harry Kane",
-      "highestRank": 6
-    },
-    {
       "rank": 7,
-      "name": "Brazil",
+      "name": "MARC JACOBS",
       "highestRank": 7
     },
     {
       "rank": 8,
+      "name": "Brazil",
+      "highestRank": 7
+    },
+    {
+      "rank": 9,
       "name": "#EVEANDBOYxLenaMiu",
       "highestRank": 8
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "LENAMIU AT EVEANDBOY SQ1",
       "highestRank": 9
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "#ข่มขลังตอนที่8",
       "highestRank": 10
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "KHOM KHLANG EP8",
       "highestRank": 11
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "#ootd",
       "highestRank": 12
-    },
-    {
-      "rank": 13,
-      "name": "Anthropic",
-      "highestRank": 13
     },
     {
       "rank": 14,
@@ -382,37 +382,37 @@
     },
     {
       "rank": 16,
+      "name": "Anthropic",
+      "highestRank": 13
+    },
+    {
+      "rank": 17,
       "name": "Mbappe",
       "highestRank": 16
     },
     {
-      "rank": 17,
+      "rank": 18,
       "name": "Chanel",
       "highestRank": 17
     },
     {
-      "rank": 18,
+      "rank": 19,
       "name": "Yamal",
       "highestRank": 18
     },
     {
-      "rank": 19,
+      "rank": 20,
       "name": "CULTURAL HERITAGE RECOGNITION",
       "highestRank": 19
     },
     {
-      "rank": 20,
+      "rank": 21,
       "name": "Terra",
       "highestRank": 20
     },
     {
-      "rank": 21,
-      "name": "BAM AT EVEANDBOYSQ1 OPENING",
-      "highestRank": 21
-    },
-    {
       "rank": 22,
-      "name": "Metropolix",
+      "name": "bam at eveandboysq1 opening",
       "highestRank": 22
     },
     {
@@ -422,38 +422,38 @@
     },
     {
       "rank": 24,
-      "name": "Kashmir",
-      "highestRank": 24
+      "name": "Metropolix",
+      "highestRank": 22
     },
     {
       "rank": 25,
-      "name": "Rebecca",
+      "name": "RLUSD",
       "highestRank": 25
     },
     {
       "rank": 26,
-      "name": "SG ROARS BINI SIGNALS",
-      "highestRank": 26
+      "name": "Kashmir",
+      "highestRank": 24
     },
     {
       "rank": 27,
-      "name": "REFLEXION FOREVER",
-      "highestRank": 27
+      "name": "Rebecca",
+      "highestRank": 25
     },
     {
       "rank": 28,
-      "name": "PNB THE UNDERGROUND",
+      "name": "sg roars bini signals",
       "highestRank": 28
     },
     {
       "rank": 29,
-      "name": "Indonesia",
-      "highestRank": 29
+      "name": "REFLEXION FOREVER",
+      "highestRank": 27
     },
     {
       "rank": 30,
-      "name": "Howe",
-      "highestRank": 30
+      "name": "PNB THE UNDERGROUND",
+      "highestRank": 28
     }
   ]
 }
