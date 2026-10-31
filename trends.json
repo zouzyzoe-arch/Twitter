@@ -1,13 +1,21 @@
 {
-  "lastUpdated": 1793460044758,
+  "lastUpdated": 1793463733798,
   "global": [
+    {
+      "rank": 1,
+      "name": "Halloween"
+    },
+    {
+      "rank": 1,
+      "name": "ハロウィン"
+    },
     {
       "rank": 1,
       "name": "Happy Halloween"
     },
     {
-      "rank": 1,
-      "name": "ハロウィン"
+      "rank": 3,
+      "name": "#เขมจิราตลอดกาลEP1"
     },
     {
       "rank": 3,
@@ -19,15 +27,15 @@
     },
     {
       "rank": 4,
-      "name": "#เขมจิราตลอดกาลEP1"
-    },
-    {
-      "rank": 4,
-      "name": "#CHEMUN"
+      "name": "#MrFanboyEP10"
     },
     {
       "rank": 4,
       "name": "#YouManiacSeriesFinalEP"
+    },
+    {
+      "rank": 4,
+      "name": "#CHEMUN"
     },
     {
       "rank": 5,
@@ -35,16 +43,24 @@
     },
     {
       "rank": 5,
-      "name": "Chelsea"
+      "name": "MANIAC FINAL MOMENT"
     },
     {
       "rank": 5,
-      "name": "MANIAC FINAL MOMENT"
+      "name": "Chelsea"
+    },
+    {
+      "rank": 6,
+      "name": "MR FANBOY CHAPTER 10"
     },
     {
       "rank": 6,
       "name": "#เปิดฤกษ์คืนขวัญเขมจิรา",
       "highestRank": 6
+    },
+    {
+      "rank": 7,
+      "name": "#SixTONESANN"
     },
     {
       "rank": 7,
@@ -57,16 +73,12 @@
     },
     {
       "rank": 8,
-      "name": "#SixTONESANN"
+      "name": "Manchester United"
     },
     {
       "rank": 8,
       "name": "#BornToBeNuNewConcertD1",
       "highestRank": 5
-    },
-    {
-      "rank": 9,
-      "name": "#MrFanboyEP10"
     },
     {
       "rank": 9,
@@ -86,15 +98,11 @@
     },
     {
       "rank": 11,
-      "name": "Manchester United"
+      "name": "#누구보다_빠른_11월_최애_선점"
     },
     {
       "rank": 11,
       "name": "あなたの運勢"
-    },
-    {
-      "rank": 12,
-      "name": "MR FANBOY CHAPTER 10"
     },
     {
       "rank": 12,
@@ -103,6 +111,10 @@
     {
       "rank": 13,
       "name": "コスプレ"
+    },
+    {
+      "rank": 14,
+      "name": "Man U"
     },
     {
       "rank": 14,
@@ -119,6 +131,10 @@
     },
     {
       "rank": 15,
+      "name": "Ocon"
+    },
+    {
+      "rank": 15,
       "name": "Estevao"
     },
     {
@@ -130,6 +146,10 @@
       "rank": 16,
       "name": "トリックオアトリート",
       "highestRank": 14
+    },
+    {
+      "rank": 17,
+      "name": "ほくじゅり"
     },
     {
       "rank": 17,
@@ -169,6 +189,10 @@
     },
     {
       "rank": 23,
+      "name": "Brighton"
+    },
+    {
+      "rank": 23,
       "name": "はろうぃん",
       "highestRank": 23
     },
@@ -176,6 +200,10 @@
       "rank": 24,
       "name": "ユージーン",
       "highestRank": 24
+    },
+    {
+      "rank": 25,
+      "name": "NUNEW 2ND CON DAY1"
     },
     {
       "rank": 25,
@@ -210,10 +238,6 @@
     },
     {
       "rank": 28,
-      "name": "NUNEW 2ND CON DAY1"
-    },
-    {
-      "rank": 28,
       "name": "Initial Agent Offering",
       "highestRank": 15
     },
@@ -225,6 +249,10 @@
       "rank": 29,
       "name": "神木くん",
       "highestRank": 29
+    },
+    {
+      "rank": 30,
+      "name": "Haas"
     },
     {
       "rank": 30,
@@ -296,11 +324,11 @@
     },
     {
       "rank": 11,
-      "name": "LINGORM SMOOTH E FUN DAY"
+      "name": "Halloween"
     },
     {
-      "rank": 12,
-      "name": "HALLOWEEN x OUROAD DAY2"
+      "rank": 11,
+      "name": "LINGORM SMOOTH E FUN DAY"
     },
     {
       "rank": 12,
@@ -311,12 +339,20 @@
       "name": "CHARLOTTE AFTER DARK"
     },
     {
+      "rank": 12,
+      "name": "HALLOWEEN x OUROAD DAY2"
+    },
+    {
       "rank": 13,
-      "name": "Haier x BamBam 2026"
+      "name": "LOVE HURTS"
     },
     {
       "rank": 13,
       "name": "MARKJRTN AT RICHES BROW"
+    },
+    {
+      "rank": 13,
+      "name": "Haier x BamBam 2026"
     },
     {
       "rank": 15,
@@ -333,19 +369,19 @@
     },
     {
       "rank": 17,
-      "name": "POOHPAVEL TRICK OR TREAT"
+      "name": "ENJOY ON COURT ROUND2"
     },
     {
       "rank": 17,
-      "name": "UHR THE RULES BEGIN"
+      "name": "POOHPAVEL TRICK OR TREAT"
     },
     {
       "rank": 17,
       "name": "DERMASTER WITH BOUN"
     },
     {
-      "rank": 18,
-      "name": "ENJOY ON COURT ROUND2"
+      "rank": 17,
+      "name": "UHR THE RULES BEGIN"
     },
     {
       "rank": 18,
@@ -420,6 +456,10 @@
     },
     {
       "rank": 2,
+      "name": "MR FANBOY CHAPTER 10"
+    },
+    {
+      "rank": 2,
       "name": "#MrFanboyEP10"
     },
     {
@@ -429,10 +469,6 @@
     {
       "rank": 2,
       "name": "MANIAC FINAL MOMENT"
-    },
-    {
-      "rank": 3,
-      "name": "MR FANBOY CHAPTER 10"
     },
     {
       "rank": 3,
@@ -448,6 +484,10 @@
     },
     {
       "rank": 6,
+      "name": "#savewrg"
+    },
+    {
+      "rank": 6,
       "name": "LENAMIU PLS LOVE FINAL EP"
     },
     {
@@ -456,11 +496,19 @@
     },
     {
       "rank": 7,
+      "name": "#อู่อู๋เซฟ"
+    },
+    {
+      "rank": 7,
       "name": "Carrick"
     },
     {
       "rank": 7,
       "name": "PERTHSANTA RALPHS CLUB POPUP"
+    },
+    {
+      "rank": 8,
+      "name": "#auautnp"
     },
     {
       "rank": 8,
@@ -476,6 +524,10 @@
     },
     {
       "rank": 10,
+      "name": "KHEMJIRA FOREVER EP1"
+    },
+    {
+      "rank": 10,
       "name": "#MUFC"
     },
     {
@@ -488,10 +540,6 @@
     },
     {
       "rank": 12,
-      "name": "KHEMJIRA FOREVER EP1"
-    },
-    {
-      "rank": 12,
       "name": "#LoversAndGangstersEP1"
     },
     {
@@ -500,11 +548,19 @@
     },
     {
       "rank": 14,
-      "name": "#เขมจิราตลอดกาลEP1"
+      "name": "NUNEW 2ND CON DAY1"
     },
     {
       "rank": 14,
       "name": "Poland"
+    },
+    {
+      "rank": 14,
+      "name": "#เขมจิราตลอดกาลEP1"
+    },
+    {
+      "rank": 15,
+      "name": "Episode 10"
     },
     {
       "rank": 15,
@@ -536,11 +592,15 @@
     },
     {
       "rank": 20,
-      "name": "Rogers"
+      "name": "Third and Wan"
     },
     {
       "rank": 20,
       "name": "CHARLOTTE AFTER DARK"
+    },
+    {
+      "rank": 20,
+      "name": "Rogers"
     },
     {
       "rank": 21,
