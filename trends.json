@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793474823756,
+  "lastUpdated": 1793477846368,
   "global": [
     {
       "rank": 1,
@@ -15,11 +15,19 @@
     },
     {
       "rank": 2,
+      "name": "テーオーエルビス"
+    },
+    {
+      "rank": 2,
       "name": "#FBvGOZ"
     },
     {
       "rank": 2,
       "name": "#MrFanboyEP10"
+    },
+    {
+      "rank": 3,
+      "name": "#الهلال_الفتح"
     },
     {
       "rank": 3,
@@ -39,6 +47,10 @@
     },
     {
       "rank": 4,
+      "name": "#CaneloMbilli"
+    },
+    {
+      "rank": 4,
       "name": "MR FANBOY CHAPTER 10"
     },
     {
@@ -48,10 +60,6 @@
     {
       "rank": 4,
       "name": "#CHEMUN"
-    },
-    {
-      "rank": 5,
-      "name": "#الهلال_الفتح"
     },
     {
       "rank": 5,
@@ -98,11 +106,19 @@
     },
     {
       "rank": 9,
+      "name": "BCスプリント"
+    },
+    {
+      "rank": 9,
       "name": "#ほん怖"
     },
     {
       "rank": 9,
       "name": "KHEMJIRA WELCOME BACK"
+    },
+    {
+      "rank": 10,
+      "name": "Ferro"
     },
     {
       "rank": 10,
@@ -131,6 +147,10 @@
     {
       "rank": 12,
       "name": "イタズラ"
+    },
+    {
+      "rank": 13,
+      "name": "ميلان"
     },
     {
       "rank": 13,
@@ -197,6 +217,10 @@
     },
     {
       "rank": 17,
+      "name": "نيفيز"
+    },
+    {
+      "rank": 17,
       "name": "Dortmund"
     },
     {
@@ -218,6 +242,10 @@
     {
       "rank": 17,
       "name": "Maguire"
+    },
+    {
+      "rank": 18,
+      "name": "イングリッシュマン"
     },
     {
       "rank": 18,
@@ -243,6 +271,10 @@
     },
     {
       "rank": 20,
+      "name": "Rabiot"
+    },
+    {
+      "rank": 20,
       "name": "Maresca"
     },
     {
@@ -265,6 +297,10 @@
     },
     {
       "rank": 23,
+      "name": "Balde"
+    },
+    {
+      "rank": 23,
       "name": "Iowa"
     },
     {
@@ -275,6 +311,10 @@
       "rank": 23,
       "name": "はろうぃん",
       "highestRank": 23
+    },
+    {
+      "rank": 24,
+      "name": "الاتفاق"
     },
     {
       "rank": 24,
@@ -296,6 +336,10 @@
     },
     {
       "rank": 26,
+      "name": "Godoy Cruz"
+    },
+    {
+      "rank": 26,
       "name": "Roma"
     },
     {
@@ -314,6 +358,10 @@
       "rank": 26,
       "name": "SAMA SAMA BINIYAHENG PINAS",
       "highestRank": 26
+    },
+    {
+      "rank": 27,
+      "name": "Tommy Carr"
     },
     {
       "rank": 27,
@@ -339,6 +387,10 @@
     },
     {
       "rank": 29,
+      "name": "Syracuse"
+    },
+    {
+      "rank": 29,
       "name": "Mateta"
     },
     {
@@ -352,6 +404,10 @@
     },
     {
       "rank": 30,
+      "name": "T O Elvis"
+    },
+    {
+      "rank": 30,
       "name": "POOHPAVEL TRICK OR TREAT",
       "highestRank": 23
     }
@@ -359,11 +415,11 @@
   "thailand": [
     {
       "rank": 1,
-      "name": "#เขมจิราตลอดกาลEP1"
+      "name": "#MrFanboyEP10"
     },
     {
       "rank": 1,
-      "name": "#MrFanboyEP10"
+      "name": "#เขมจิราตลอดกาลEP1"
     },
     {
       "rank": 1,
@@ -395,8 +451,7 @@
     },
     {
       "rank": 4,
-      "name": "#EnchantedFest2026xBUS",
-      "highestRank": 2
+      "name": "#EnchantedFest2026xBUS"
     },
     {
       "rank": 5,
@@ -452,6 +507,10 @@
     },
     {
       "rank": 13,
+      "name": "ENJOY ON COURT ROUND2"
+    },
+    {
+      "rank": 13,
       "name": "Haier x BamBam 2026"
     },
     {
@@ -459,8 +518,8 @@
       "name": "MARKJRTN AT RICHES BROW"
     },
     {
-      "rank": 14,
-      "name": "ENJOY ON COURT ROUND2"
+      "rank": 15,
+      "name": "POOHPAVEL TRICK OR TREAT"
     },
     {
       "rank": 15,
@@ -476,6 +535,10 @@
     },
     {
       "rank": 16,
+      "name": "DERMASTER WITH BOUN"
+    },
+    {
+      "rank": 16,
       "name": "Time to Say Goodbye"
     },
     {
@@ -485,11 +548,7 @@
     },
     {
       "rank": 17,
-      "name": "POOHPAVEL TRICK OR TREAT"
-    },
-    {
-      "rank": 17,
-      "name": "DERMASTER WITH BOUN"
+      "name": "#เติ้ลเฟิร์สวัน"
     },
     {
       "rank": 17,
@@ -497,7 +556,19 @@
     },
     {
       "rank": 18,
+      "name": "#ThirdPersonTheSeriesEP8"
+    },
+    {
+      "rank": 18,
       "name": "THE D DORM SITCOM EP 7"
+    },
+    {
+      "rank": 19,
+      "name": "#ไดร์ม่อนเลโก้"
+    },
+    {
+      "rank": 20,
+      "name": "#diamondlego"
     },
     {
       "rank": 21,
@@ -517,6 +588,10 @@
     },
     {
       "rank": 23,
+      "name": "#OASISxJoongDunk"
+    },
+    {
+      "rank": 23,
       "name": "SPOOKY LUNAR X CATHY DOLL"
     },
     {
@@ -530,7 +605,7 @@
     },
     {
       "rank": 25,
-      "name": "#ThirdPersonTheSeriesEP8"
+      "name": "#HAPPYkobiejaDAY"
     },
     {
       "rank": 25,
@@ -543,7 +618,7 @@
     },
     {
       "rank": 26,
-      "name": "#เติ้ลเฟิร์สวัน"
+      "name": "#JAEHYUN"
     },
     {
       "rank": 26,
@@ -556,12 +631,16 @@
     },
     {
       "rank": 27,
+      "name": "#diamondnrk_"
+    },
+    {
+      "rank": 27,
       "name": "NAMTANFILM AT MAKRO HORECA",
       "highestRank": 17
     },
     {
       "rank": 28,
-      "name": "#ไดร์ม่อนเลโก้"
+      "name": "#HAPPY_HAMIN_DAY"
     },
     {
       "rank": 28,
@@ -569,7 +648,7 @@
     },
     {
       "rank": 29,
-      "name": "#diamondlego"
+      "name": "#TeeXBellalinclinic"
     },
     {
       "rank": 29,
@@ -577,8 +656,7 @@
     },
     {
       "rank": 30,
-      "name": "#OASISxJoongDunk",
-      "highestRank": 29
+      "name": "#MatchDayWithEnjoy"
     }
   ],
   "singapore": [
@@ -620,11 +698,11 @@
     },
     {
       "rank": 6,
-      "name": "#savewrg"
+      "name": "Mitch"
     },
     {
       "rank": 6,
-      "name": "Mitch"
+      "name": "#savewrg"
     },
     {
       "rank": 6,
@@ -660,6 +738,10 @@
     },
     {
       "rank": 10,
+      "name": "dow protocol"
+    },
+    {
+      "rank": 10,
       "name": "KHEMJIRA FOREVER EP1"
     },
     {
@@ -672,15 +754,11 @@
     },
     {
       "rank": 11,
-      "name": "dow protocol"
+      "name": "#LoversAndGangstersEP1"
     },
     {
       "rank": 11,
       "name": "KHEMJIRA WELCOME BACK"
-    },
-    {
-      "rank": 12,
-      "name": "#LoversAndGangstersEP1"
     },
     {
       "rank": 13,
@@ -689,6 +767,10 @@
     {
       "rank": 13,
       "name": "LINGORM SMOOTH E FUN DAY"
+    },
+    {
+      "rank": 14,
+      "name": "FORCEBOOK LAG EP1"
     },
     {
       "rank": 14,
@@ -705,10 +787,6 @@
     {
       "rank": 14,
       "name": "#เขมจิราตลอดกาลEP1"
-    },
-    {
-      "rank": 15,
-      "name": "FORCEBOOK LAG EP1"
     },
     {
       "rank": 16,
