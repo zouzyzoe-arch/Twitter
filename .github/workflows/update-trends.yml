@@ -38,12 +38,13 @@ jobs:
             console.log('未找到 trend_switch.json，默认继续执行');
           }
 
-          const locations = { thailand: 23424960, singapore: 23424948 };
+          // 2. 加回全球 (global: 1)
+          const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
           const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
           async function fetchTrends() {
-            // 【新增】读取旧的 trends.json，用于保留最高排名
-            let oldData = { thailand: [], singapore: [] };
+            // 读取旧的 trends.json，用于保留最高排名
+            let oldData = { global: [], thailand: [], singapore: [] };
             if (fs.existsSync('trends.json')) {
               try {
                 oldData = JSON.parse(fs.readFileSync('trends.json', 'utf8'));
@@ -77,10 +78,7 @@ jobs:
                   return { rank: realRank, name: realName };
                 }).filter(t => t.name !== '');
 
-                // 【新增】合并旧数据：将未上榜但曾经上榜的词条，以历史最高排名保留在列表中
                 const oldTrends = oldData[name] || [];
-                
-                // 1. 找出所有曾经出现过的词条名
                 const allNames = new Set([...newTrends.map(t => t.name), ...oldTrends.map(t => t.name)]);
                 
                 result[name] = Array.from(allNames).map(tName => {
@@ -88,28 +86,23 @@ jobs:
                   const oldMatch = oldTrends.find(t => t.name === tName);
                   
                   if (newMatch && oldMatch) {
-                    // 如果新旧都有，取最好（数值最小）的排名
                     return { rank: Math.min(newMatch.rank, oldMatch.rank), name: tName };
                   } else if (newMatch) {
                     return newMatch;
                   } else {
-                    // 如果只有旧的，说明掉榜了，保留其历史最高记录，但为了区分，我们不改rank，前端判断
                     return oldMatch;
                   }
-                });
-
-                // 重新按排名排序
-                result[name].sort((a, b) => a.rank - b.rank);
+                }).sort((a, b) => a.rank - b.rank);
 
               } catch (e) {
                 console.error(`Fetch ${name} failed:`, e.message);
-                result[name] = oldData[name] || []; // 失败则保留旧数据
+                result[name] = oldData[name] || []; 
               }
               if (name !== 'singapore') await sleep(5500); 
             }
             
             fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
-            console.log('trends.json 生成完毕（已包含历史最高排名）');
+            console.log('trends.json 生成完毕（已包含全球及历史最高排名）');
           }
           fetchTrends();
           EOF
@@ -120,4 +113,4 @@ jobs:
           commit_message: 'Auto-update trends [skip ci]'
           file_pattern: trends.json
           commit_user_name: 'GitHub Action Bot'
-          commit_email: 'action@github.com'
+          commit_user_email: 'action@github.com'
