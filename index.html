@@ -104,6 +104,7 @@
     .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
     .admin-header h2 { font-size: 17px; color: #1d9bf0; }
     .admin-card { background: #15202b; border: 1px solid #38444d; border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+    .admin-card.hidden-card { border-color: #f4212e; opacity: 0.8; }
     .admin-card > summary {
       list-style: none; cursor: pointer; padding: 14px; font-size: 14px;
       font-weight: 700; color: #e7e9ea; display: flex; justify-content: space-between;
@@ -161,6 +162,18 @@
       color: #e7e9ea; border-radius: 8px; font-size: 13px; font-weight: 600;
       cursor: pointer; margin-top: 10px; min-height: 40px;
     }
+    
+    /* 新增：可见性复选框样式 */
+    .visibility-row {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 10px; padding: 8px 12px;
+      background: #15202b; border-radius: 8px; border: 1px solid #38444d;
+    }
+    .visibility-row input[type="checkbox"] {
+      width: 18px; height: 18px; margin: 0; cursor: pointer; accent-color: #1d9bf0;
+    }
+    .visibility-row span { font-size: 14px; font-weight: 600; color: #e7e9ea; cursor: pointer; }
+
     .modal-mask {
       position: fixed; inset: 0; background: rgba(0,0,0,0.6);
       display: flex; justify-content: center; align-items: center;
@@ -461,7 +474,8 @@
       timeStr: p.timeStr || '',
       trendStarting: p.trendStarting || '',
       location: p.location || '',
-      eventType: p.eventType || ''
+      eventType: p.eventType || '',
+      visible: p.visible !== false // 默认为 true
     };
   }
 
@@ -781,7 +795,8 @@
       timeStr: normalizeTime(timeStr),
       trendStarting: normalizeTime(trendStarting),
       location: location,
-      eventType: eventType
+      eventType: eventType,
+      visible: true // 默认解析出的活动为显示
     };
   }
 
@@ -914,7 +929,7 @@
     }
     renderEventList();
     if (activeEventId) {
-      const still = useEvents.find(e => e.id === activeEventId);
+      const still = useEvents.find(e => e.id === activeEventId && e.visible !== false);
       if (still) {
         selectEvent(activeEventId, true);
       } else {
@@ -926,12 +941,15 @@
 
   function renderEventList() {
     eventListEl.innerHTML = '';
-    if (!useEvents || useEvents.length === 0) {
+    // 过滤掉 visible 为 false 的活动
+    const visibleEvents = useEvents.filter(ev => ev.visible !== false);
+
+    if (!visibleEvents || visibleEvents.length === 0) {
       eventEmpty.style.display = 'block';
       return;
     }
     eventEmpty.style.display = 'none';
-    useEvents.forEach(ev => {
+    visibleEvents.forEach(ev => {
       const chip = document.createElement('button');
       chip.className = 'preset-chip' + (ev.id === activeEventId ? ' active' : '');
       chip.textContent = ev.title || '(未命名 EVENT)';
@@ -943,7 +961,7 @@
 
   function selectEvent(id, keepScroll) {
     const ev = useEvents.find(x => x.id === id);
-    if (!ev) return;
+    if (!ev || ev.visible === false) return;
     activeEventId = id;
 
     document.getElementById('tweetText').value = '';
@@ -980,7 +998,6 @@
     if (ev.keyword) parts.push('🔑 关键词：' + ev.keyword);
     if (ev.mainHashtag) parts.push('🏷️ 主 Hashtag：' + ev.mainHashtag);
     
-    // 显示活动结束时间
     if (ev.eventOverTime) {
       const tz = Number(tzSelect.value);
       const overTimeStr = formatTsWithTz(ev.eventOverTime, tz);
@@ -1189,7 +1206,6 @@
     keywordsToCheck.forEach(kw => {
       const cleanKw = kw.toLowerCase().replace(/^#/, '');
       
-      // 三地匹配
       const matchGlobal = (globalTrendsData.global || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
       const matchThai = (globalTrendsData.thailand || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
       const matchSG = (globalTrendsData.singapore || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
@@ -1198,28 +1214,20 @@
         foundAny = true;
         
         let html = `<div style="color:#e7e9ea; font-weight:700; font-size:14px; word-break: break-all;">${escapeHtml(kw)}</div>`;
-        
         html += `<div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; align-items:center;">`;
         
-        // 渲染单个地区的辅助函数
         const renderTag = (match, regionName) => {
           if (!match) return '';
-          
-          // 1. 当前排名标签
           const isTop10 = match.rank <= 10;
           let tagHTML = `<span style="background:${isTop10 ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">${regionName} 当前 #${match.rank}</span>`;
-          
-          // 2. 历史最高排名标签（强显）
           const highest = match.highestRank || match.rank;
           tagHTML += `<span style="background:#ffd700; color:#000; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700; margin-left:4px;">最高 ${regionName} #${highest}</span>`;
-          
           return tagHTML;
         };
 
         html += renderTag(matchGlobal, '全球');
         html += renderTag(matchThai, '泰国');
         html += renderTag(matchSG, '新加坡');
-        
         html += `</div>`;
 
         rowsHTML += `
@@ -1234,7 +1242,6 @@
       rowsHTML = '<div style="font-size:12px; color:#6e7a86;">当前配置的词条暂未进入全球、泰国或新加坡趋势榜单</div>';
     }
 
-    // 【新增】在面板上方加上解释提示条
     const explanationHTML = `
       <div style="background: rgba(255, 215, 0, 0.1); border: 1px solid rgba(255, 215, 0, 0.4); border-radius: 6px; padding: 8px 10px; margin-bottom: 10px; color: #ffd700; font-size: 11px; font-weight: 600; line-height: 1.4;">
         💡 提示：「当前」为实时抓取排名；「最高」为系统记录的历史最好成绩（受抓取间隔影响，可能与实际峰值存在微小时差）。
@@ -1396,9 +1403,6 @@
     setTimeout(() => { tweetText.style.background = ''; }, 250);
   }
 
-  /* =======================================================
-     发送
-     ======================================================= */
   function sendToTwitter() {
     const text = tweetText.value.trim();
     const ev = getActiveEvent();
@@ -1471,7 +1475,8 @@
       timeStr: '',
       trendStarting: '',
       location: '',
-      eventType: ''
+      eventType: '',
+      visible: true
     };
   }
 
@@ -1480,6 +1485,8 @@
     adminDraft.forEach((ev, idx) => {
       const details = document.createElement('details');
       details.className = 'admin-card';
+      // 如果隐藏，卡片添加特殊样式
+      if (ev.visible === false) details.classList.add('hidden-card');
 
       const summary = document.createElement('summary');
       summary.textContent = ev.title || '(未命名 EVENT)';
@@ -1487,6 +1494,33 @@
 
       const body = document.createElement('div');
       body.className = 'admin-card-body';
+
+      // 新增：前台可见性开关
+      const visRow = document.createElement('div');
+      visRow.className = 'visibility-row';
+      
+      const visCheckbox = document.createElement('input');
+      visCheckbox.type = 'checkbox';
+      visCheckbox.id = 'vis_' + ev.id;
+      visCheckbox.checked = ev.visible !== false;
+      visCheckbox.onchange = e => {
+        ev.visible = e.target.checked;
+        if (ev.visible) {
+          details.classList.remove('hidden-card');
+        } else {
+          details.classList.add('hidden-card');
+        }
+      };
+      
+      const visLabel = document.createElement('label');
+      visLabel.htmlFor = 'vis_' + ev.id;
+      visLabel.innerText = '在前台显示此活动';
+      visLabel.style.cursor = 'pointer';
+      visLabel.style.marginBottom = '0';
+      visLabel.style.color = '#e7e9ea';
+
+      visRow.appendChild(visCheckbox);
+      visRow.appendChild(visLabel);
 
       const titleRow = document.createElement('div');
       titleRow.className = 'card-title';
@@ -1593,6 +1627,7 @@
       locationInput.style.marginTop = '6px';
       locationInput.oninput = e => { ev.location = e.target.value; };
 
+      body.appendChild(visRow); // 插入可见性开关
       body.appendChild(titleRow);
       body.appendChild(startTimeLabel);
       body.appendChild(startTimeInput);
