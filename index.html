@@ -1191,7 +1191,7 @@
     }
   }
 
-    function updateTrendRanks() {
+  function updateTrendRanks() {
     const section = document.getElementById('trendRankSection');
     const list = document.getElementById('trendRanksList');
     const ev = getActiveEvent();
@@ -1213,69 +1213,43 @@
       return;
     }
 
-    // 顶部提示（如果有）
     let htmlNotice = '';
     if (globalTrendsData.switchOff === true) {
       htmlNotice = '<div style="color:#f4212e; font-weight:bold; font-size:12px; margin-bottom:8px; background:rgba(244,33,46,0.1); padding:8px; border-radius:6px; border:1px solid #f4212e;">⏸️ 后台已暂停实时趋势查询（当前显示为历史最后一次数据）</div>';
     }
 
     let rowsHTML = '';
-    const bestRanks = getBestRanks(); // 读取本地最高记录
 
     keywordsToCheck.forEach(kw => {
       const cleanKw = kw.toLowerCase().replace(/^#/, '');
       
-      // 寻找当前排名
+      // 在后台合并后的“历史最高排名”列表中寻找
       const matchThai = (globalTrendsData.thailand || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
       const matchSG = (globalTrendsData.singapore || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
 
-      // 记录最高排名并判断是否破纪录
-      let thaiBest = 0, sgBest = 0;
-      let thaiNewRecord = false, sgNewRecord = false;
+      // 如果这两个地区根本没有这个词条的历史记录，就直接跳过不显示这一行
+      if (!matchThai && !matchSG) return;
 
-      if (matchThai) {
-        thaiNewRecord = saveBestRank('thailand', kw, matchThai.rank);
-        thaiBest = getBestRanks()['thailand_' + kw]; // 更新后重新读一次
-      } else {
-        thaiBest = bestRanks['thailand_' + kw] || 0;
-      }
-
-      if (matchSG) {
-        sgNewRecord = saveBestRank('singapore', kw, matchSG.rank);
-        sgBest = getBestRanks()['singapore_' + kw];
-      } else {
-        sgBest = bestRanks['singapore_' + kw] || 0;
-      }
-
-      // 构建 UI
       let html = `<div style="color:#e7e9ea; font-weight:700; font-size:14px; word-break: break-all; margin-bottom:4px;">${escapeHtml(kw)}</div>`;
       html += `<div style="display:flex; gap:6px; flex-wrap:wrap;">`;
 
-      // 泰国显示逻辑
+      // 渲染泰国数据
       if (matchThai) {
+        // 判断是否在前 10 名
         const isTop = matchThai.rank <= 10;
-        const recordBadge = thaiNewRecord ? ' <span style="color:#ffd700;font-size:10px;">🔥新纪录</span>' : '';
-        html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">泰国 #${matchThai.rank}${recordBadge}</span>`;
+        // 这里为了简单，我们把后台保留的排名直接当作“最佳成绩”展示。
+        // 如果你想严格区分“当前正在榜上”和“历史最高”，可以对比 lastUpdated 时间，这里为了直观，统一展示为最高排名。
+        html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">泰国 最高 #${matchThai.rank}</span>`;
       } else {
-        // 未上榜，但如果有历史记录，则灰显
-        if (thaiBest > 0) {
-          html += `<span style="background:#1e2732; color:#8b98a5; border:1px solid #38444d; padding:2px 8px; border-radius:12px; font-size:11px;">泰国 未上榜 (最高#${thaiBest})</span>`;
-        } else {
-          html += `<span style="background:#1e2732; color:#6e7a86; border:1px solid #38444d; padding:2px 8px; border-radius:12px; font-size:11px;">泰国 未上榜</span>`;
-        }
+        html += `<span style="background:#1e2732; color:#6e7a86; border:1px solid #38444d; padding:2px 8px; border-radius:12px; font-size:11px;">泰国 未上榜</span>`;
       }
 
-      // 新加坡显示逻辑
+      // 渲染新加坡数据
       if (matchSG) {
         const isTop = matchSG.rank <= 10;
-        const recordBadge = sgNewRecord ? ' <span style="color:#ffd700;font-size:10px;">🔥新纪录</span>' : '';
-        html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">新加坡 #${matchSG.rank}${recordBadge}</span>`;
+        html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">新加坡 最高 #${matchSG.rank}</span>`;
       } else {
-        if (sgBest > 0) {
-          html += `<span style="background:#1e2732; color:#8b98a5; border:1px solid #38444d; padding:2px 8px; border-radius:12px; font-size:11px;">新加坡 未上榜 (最高#${sgBest})</span>`;
-        } else {
-          html += `<span style="background:#1e2732; color:#6e7a86; border:1px solid #38444d; padding:2px 8px; border-radius:12px; font-size:11px;">新加坡 未上榜</span>`;
-        }
+        html += `<span style="background:#1e2732; color:#6e7a86; border:1px solid #38444d; padding:2px 8px; border-radius:12px; font-size:11px;">新加坡 未上榜</span>`;
       }
 
       html += `</div>`;
@@ -1286,6 +1260,10 @@
         </div>
       `;
     });
+
+    if (!rowsHTML) {
+      rowsHTML = '<div style="font-size:12px; color:#6e7a86;">当前配置的词条暂无任何历史趋势记录</div>';
+    }
 
     list.innerHTML = htmlNotice + rowsHTML;
   }
