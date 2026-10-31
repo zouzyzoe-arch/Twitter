@@ -1,30 +1,41 @@
 {
-  "lastUpdated": 1793449991303,
+  "lastUpdated": 1793455661790,
   "global": [
     {
       "rank": 1,
-      "name": "ハロウィン",
-      "highestRank": 1
+      "name": "ハロウィン"
     },
     {
       "rank": 2,
-      "name": "Happy Halloween",
-      "highestRank": 2
+      "name": "Happy Halloween"
     },
     {
       "rank": 3,
-      "name": "#超特急_神フィバ変身",
-      "highestRank": 3
+      "name": "Martinez"
+    },
+    {
+      "rank": 3,
+      "name": "#超特急_神フィバ変身"
     },
     {
       "rank": 4,
-      "name": "#YouManiacSeriesFinalEP",
-      "highestRank": 3
+      "name": "#CHEMUN"
+    },
+    {
+      "rank": 4,
+      "name": "#YouManiacSeriesFinalEP"
     },
     {
       "rank": 5,
-      "name": "MANIAC FINAL MOMENT",
-      "highestRank": 4
+      "name": "Chelsea"
+    },
+    {
+      "rank": 5,
+      "name": "MANIAC FINAL MOMENT"
+    },
+    {
+      "rank": 6,
+      "name": "#เขมจิราตลอดกาลEP1"
     },
     {
       "rank": 6,
@@ -33,8 +44,16 @@
     },
     {
       "rank": 7,
+      "name": "Fofana"
+    },
+    {
+      "rank": 7,
       "name": "#OASISxJoongDunk",
       "highestRank": 7
+    },
+    {
+      "rank": 8,
+      "name": "KHEMJIRA FOREVER EP1"
     },
     {
       "rank": 8,
@@ -43,28 +62,35 @@
     },
     {
       "rank": 9,
-      "name": "KHEMJIRA WELCOME BACK",
-      "highestRank": 9
+      "name": "KHEMJIRA WELCOME BACK"
     },
     {
       "rank": 10,
-      "name": "ぶいすぽっ",
-      "highestRank": 5
+      "name": "Amad"
+    },
+    {
+      "rank": 10,
+      "name": "ぶいすぽっ"
     },
     {
       "rank": 11,
-      "name": "あなたの運勢",
-      "highestRank": 3
+      "name": "あなたの運勢"
     },
     {
       "rank": 12,
-      "name": "イタズラ",
-      "highestRank": 9
+      "name": "#ほん怖"
+    },
+    {
+      "rank": 12,
+      "name": "イタズラ"
     },
     {
       "rank": 13,
-      "name": "コスプレ",
-      "highestRank": 13
+      "name": "コスプレ"
+    },
+    {
+      "rank": 14,
+      "name": "Morgan Rogers"
     },
     {
       "rank": 14,
@@ -73,8 +99,16 @@
     },
     {
       "rank": 15,
+      "name": "Palmer"
+    },
+    {
+      "rank": 15,
       "name": "ボルゾイ",
       "highestRank": 15
+    },
+    {
+      "rank": 16,
+      "name": "Manchester United"
     },
     {
       "rank": 16,
@@ -83,13 +117,20 @@
     },
     {
       "rank": 17,
-      "name": "KHEMJIRA FOREVER EP1",
-      "highestRank": 17
+      "name": "Maguire"
+    },
+    {
+      "rank": 18,
+      "name": "Estevao"
     },
     {
       "rank": 18,
       "name": "ピアノコンサート",
       "highestRank": 18
+    },
+    {
+      "rank": 19,
+      "name": "PIL SERIES EP8"
     },
     {
       "rank": 19,
@@ -108,8 +149,7 @@
     },
     {
       "rank": 22,
-      "name": "PIL SERIES EP8",
-      "highestRank": 22
+      "name": "JOONGDUNK OASIS MEMORIES"
     },
     {
       "rank": 23,
@@ -123,8 +163,16 @@
     },
     {
       "rank": 25,
+      "name": "Lavia"
+    },
+    {
+      "rank": 25,
       "name": "CHARLOTTE AFTER DARK",
       "highestRank": 16
+    },
+    {
+      "rank": 26,
+      "name": "Cunha"
     },
     {
       "rank": 26,
@@ -138,13 +186,25 @@
     },
     {
       "rank": 28,
+      "name": "ユナイテッド"
+    },
+    {
+      "rank": 28,
       "name": "Initial Agent Offering",
       "highestRank": 15
     },
     {
       "rank": 29,
+      "name": "リサマル"
+    },
+    {
+      "rank": 29,
       "name": "神木くん",
       "highestRank": 29
+    },
+    {
+      "rank": 30,
+      "name": "NUNEW 2ND CON DAY1"
     },
     {
       "rank": 30,
@@ -155,18 +215,31 @@
   "thailand": [
     {
       "rank": 1,
-      "name": "#เปิดฤกษ์คืนขวัญเขมจิรา",
-      "highestRank": 1
+      "name": "#เขมจิราตลอดกาลEP1"
+    },
+    {
+      "rank": 1,
+      "name": "#เปิดฤกษ์คืนขวัญเขมจิรา"
     },
     {
       "rank": 2,
-      "name": "KHEMJIRA WELCOME BACK",
-      "highestRank": 2
+      "name": "KHEMJIRA FOREVER EP1"
+    },
+    {
+      "rank": 2,
+      "name": "KHEMJIRA WELCOME BACK"
     },
     {
       "rank": 3,
-      "name": "#BornToBeNuNewConcertD1",
-      "highestRank": 1
+      "name": "#PoliceinLoveEP8"
+    },
+    {
+      "rank": 3,
+      "name": "#BornToBeNuNewConcertD1"
+    },
+    {
+      "rank": 4,
+      "name": "PIL SERIES EP8"
     },
     {
       "rank": 4,
@@ -175,8 +248,7 @@
     },
     {
       "rank": 5,
-      "name": "#YouManiacSeriesFinalEP",
-      "highestRank": 2
+      "name": "#YouManiacSeriesFinalEP"
     },
     {
       "rank": 6,
@@ -185,48 +257,39 @@
     },
     {
       "rank": 7,
-      "name": "MANIAC FINAL MOMENT",
-      "highestRank": 3
-    },
-    {
-      "rank": 8,
-      "name": "KHEMJIRA FOREVER EP1",
-      "highestRank": 8
-    },
-    {
-      "rank": 9,
-      "name": "PIL SERIES EP8",
-      "highestRank": 9
+      "name": "MANIAC FINAL MOMENT"
     },
     {
       "rank": 10,
-      "name": "PERTHSANTA RALPHS CLUB POPUP",
-      "highestRank": 9
+      "name": "NUNEW 2ND CON DAY1"
+    },
+    {
+      "rank": 10,
+      "name": "PERTHSANTA RALPHS CLUB POPUP"
     },
     {
       "rank": 11,
-      "name": "LINGORM SMOOTH E FUN DAY",
-      "highestRank": 6
+      "name": "LINGORM SMOOTH E FUN DAY"
     },
     {
       "rank": 12,
-      "name": "CHARLOTTE AFTER DARK",
-      "highestRank": 8
+      "name": "2TEE BOO IN THE AIR"
+    },
+    {
+      "rank": 12,
+      "name": "CHARLOTTE AFTER DARK"
     },
     {
       "rank": 13,
-      "name": "MARKJRTN AT RICHES BROW",
-      "highestRank": 10
-    },
-    {
-      "rank": 14,
-      "name": "2TEE BOO IN THE AIR",
-      "highestRank": 14
+      "name": "MARKJRTN AT RICHES BROW"
     },
     {
       "rank": 15,
-      "name": "SKYNANI TAIPEI FANDAY",
-      "highestRank": 13
+      "name": "JUNIOR BSC LOCK IT FIT"
+    },
+    {
+      "rank": 15,
+      "name": "SKYNANI TAIPEI FANDAY"
     },
     {
       "rank": 16,
@@ -235,43 +298,52 @@
     },
     {
       "rank": 17,
-      "name": "DERMASTER WITH BOUN",
-      "highestRank": 15
+      "name": "POOHPAVEL TRICK OR TREAT"
+    },
+    {
+      "rank": 17,
+      "name": "DERMASTER WITH BOUN"
     },
     {
       "rank": 18,
-      "name": "THE D DORM SITCOM EP 7",
-      "highestRank": 18
+      "name": "UHR THE RULES BEGIN"
+    },
+    {
+      "rank": 18,
+      "name": "THE D DORM SITCOM EP 7"
     },
     {
       "rank": 19,
-      "name": "ENJOY ON COURT ROUND2",
-      "highestRank": 12
-    },
-    {
-      "rank": 20,
-      "name": "JUNIOR BSC LOCK IT FIT",
-      "highestRank": 20
+      "name": "ENJOY ON COURT ROUND2"
     },
     {
       "rank": 21,
-      "name": "HAPPY MONSTER HOUSE X WAR",
-      "highestRank": 21
+      "name": "ILY Season"
+    },
+    {
+      "rank": 21,
+      "name": "HAPPY MONSTER HOUSE X WAR"
     },
     {
       "rank": 22,
-      "name": "GULF​ X​ VIF​ IN​ CHIANG MAI",
-      "highestRank": 10
+      "name": "GULF​ X​ VIF​ IN​ CHIANG MAI"
     },
     {
       "rank": 23,
-      "name": "POLCA FAM IN HK",
-      "highestRank": 11
+      "name": "SPOOKY LUNAR X CATHY DOLL"
+    },
+    {
+      "rank": 23,
+      "name": "POLCA FAM IN HK"
     },
     {
       "rank": 24,
       "name": "TONLIEW WITH NIYOMJEANS",
       "highestRank": 9
+    },
+    {
+      "rank": 25,
+      "name": "ARMY UNITED FOR BTS"
     },
     {
       "rank": 25,
@@ -285,18 +357,16 @@
     },
     {
       "rank": 27,
+      "name": "XUNING THE SPOTLIGHT"
+    },
+    {
+      "rank": 27,
       "name": "NAMTANFILM AT MAKRO HORECA",
       "highestRank": 17
     },
     {
-      "rank": 28,
-      "name": "#เขมจิราตลอดกาลEP1",
-      "highestRank": 28
-    },
-    {
       "rank": 29,
-      "name": "#PoliceinLoveEP8",
-      "highestRank": 29
+      "name": "ALL THE WAY TO AOU 2M IG"
     },
     {
       "rank": 30,
@@ -307,23 +377,23 @@
   "singapore": [
     {
       "rank": 1,
-      "name": "Halloween",
-      "highestRank": 1
+      "name": "Halloween"
     },
     {
       "rank": 2,
-      "name": "MANIAC FINAL MOMENT",
-      "highestRank": 2
+      "name": "#YouManiacSeriesFinalEP"
+    },
+    {
+      "rank": 2,
+      "name": "MANIAC FINAL MOMENT"
     },
     {
       "rank": 3,
-      "name": "#YouManiacSeriesFinalEP",
-      "highestRank": 2
+      "name": "Dow Protocol"
     },
     {
-      "rank": 4,
-      "name": "Dow Protocol",
-      "highestRank": 4
+      "rank": 5,
+      "name": "Martinez"
     },
     {
       "rank": 5,
@@ -332,78 +402,83 @@
     },
     {
       "rank": 6,
-      "name": "LENAMIU PLS LOVE FINAL EP",
-      "highestRank": 5
+      "name": "JOONGDUNK OASIS MEMORIES"
+    },
+    {
+      "rank": 6,
+      "name": "LENAMIU PLS LOVE FINAL EP"
     },
     {
       "rank": 7,
-      "name": "PERTHSANTA RALPHS CLUB POPUP",
-      "highestRank": 7
+      "name": "PERTHSANTA RALPHS CLUB POPUP"
     },
     {
       "rank": 8,
-      "name": "Binance",
-      "highestRank": 6
+      "name": "Binance"
     },
     {
       "rank": 9,
-      "name": "#BornToBeNuNewConcertD1",
-      "highestRank": 4
+      "name": "Carrick"
+    },
+    {
+      "rank": 9,
+      "name": "#BornToBeNuNewConcertD1"
     },
     {
       "rank": 10,
-      "name": "#เปิดฤกษ์คืนขวัญเขมจิรา",
-      "highestRank": 10
+      "name": "Fofana"
+    },
+    {
+      "rank": 10,
+      "name": "#เปิดฤกษ์คืนขวัญเขมจิรา"
     },
     {
       "rank": 11,
-      "name": "KHEMJIRA WELCOME BACK",
-      "highestRank": 11
+      "name": "KHEMJIRA WELCOME BACK"
     },
     {
       "rank": 12,
-      "name": "#LoversAndGangstersEP1",
-      "highestRank": 8
+      "name": "#MUFC"
+    },
+    {
+      "rank": 12,
+      "name": "#LoversAndGangstersEP1"
     },
     {
       "rank": 13,
-      "name": "LINGORM SMOOTH E FUN DAY",
-      "highestRank": 13
+      "name": "KHEMJIRA FOREVER EP1"
+    },
+    {
+      "rank": 13,
+      "name": "LINGORM SMOOTH E FUN DAY"
     },
     {
       "rank": 14,
-      "name": "Poland",
-      "highestRank": 11
+      "name": "Poland"
     },
     {
       "rank": 15,
-      "name": "FORCEBOOK LAG EP1",
-      "highestRank": 11
+      "name": "FORCEBOOK LAG EP1"
     },
     {
       "rank": 16,
-      "name": "Initial Agent Offering",
-      "highestRank": 16
+      "name": "Initial Agent Offering"
     },
     {
       "rank": 17,
-      "name": "ORM BA LEAPMOTOR B03X",
-      "highestRank": 10
+      "name": "ORM BA LEAPMOTOR B03X"
     },
     {
       "rank": 18,
-      "name": "LAVOJOY TONE UP X EMI",
-      "highestRank": 14
+      "name": "LAVOJOY TONE UP X EMI"
     },
     {
       "rank": 19,
-      "name": "North Korea",
-      "highestRank": 17
+      "name": "North Korea"
     },
     {
       "rank": 20,
-      "name": "CHARLOTTE AFTER DARK",
-      "highestRank": 16
+      "name": "CHARLOTTE AFTER DARK"
     },
     {
       "rank": 21,
@@ -412,23 +487,23 @@
     },
     {
       "rank": 22,
-      "name": "Tusk",
-      "highestRank": 20
+      "name": "Tusk"
     },
     {
       "rank": 23,
-      "name": "Orm Kornnaphat",
-      "highestRank": 15
+      "name": "Chelsea"
+    },
+    {
+      "rank": 23,
+      "name": "Orm Kornnaphat"
     },
     {
       "rank": 24,
-      "name": "JUNIORMARKMO GRAB MEGAGALE",
-      "highestRank": 23
+      "name": "JUNIORMARKMO GRAB MEGAGALE"
     },
     {
       "rank": 25,
-      "name": "SAFU",
-      "highestRank": 24
+      "name": "SAFU"
     },
     {
       "rank": 26,
