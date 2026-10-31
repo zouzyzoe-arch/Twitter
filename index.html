@@ -789,7 +789,7 @@
       additionalTimeTs = combineThaiDateTime(dateStr, normalizeTime(additionalTimeStr));
     }
 
-    let eventOverTs = trendTimeTs + 3 * 60 * 60 * 1000;
+    let eventOverTs = trendTimeTs + 8 * 60 * 60 * 1000;
 
     let startTags = '';
     if (keyword && mainHashtag) {
@@ -1646,7 +1646,7 @@
 
       const eventOverLabel = document.createElement('div');
       eventOverLabel.className = 'sub-label';
-      eventOverLabel.textContent = '🛑 活动结束时间（用于停止抓取，默认开始后3小时）';
+      eventOverLabel.textContent = '🛑 活动结束时间（用于停止抓取，默认开始后8小时）';
 
       const eventOverInput = document.createElement('input');
       eventOverInput.type = 'datetime-local';
