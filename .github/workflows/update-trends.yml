@@ -26,33 +26,96 @@ jobs:
         run: |
           node << 'EOF'
           const fs = require('fs');
+
+          // ================= 配置区 =================
+          const GIST_ID = '4cee62e56e30e8290809efc7be947be0';
+          const GIST_FILENAME = 'xhelper-presets.json';
           
-          // 1. 检查开关文件
-          try {
-            const switchData = JSON.parse(fs.readFileSync('trend_switch.json', 'utf8'));
-            if (!switchData.enabled) {
-              console.log('⏸️ 实时查询已在后台关闭，本次跳过执行。');
-              process.exit(0); 
+          // 提前多久开启抓取（毫秒）。这里默认提前 1 小时。
+          const START_EARLY_MS = 60 * 60 * 1000;
+          // 活动结束后多久关闭抓取（毫秒）。这里默认延后 15 分钟。
+          const END_LATE_MS = 15 * 60 * 1000;
+          // ==========================================
+
+          async function main() {
+            // 1. 检查手动总开关
+            try {
+              const switchData = JSON.parse(fs.readFileSync('trend_switch.json', 'utf8'));
+              if (!switchData.enabled) {
+                console.log('⏸️ 手动总开关处于关闭状态，跳过执行。');
+                return;
+              }
+            } catch (e) {
+              console.log('未找到 trend_switch.json，默认继续执行');
             }
-          } catch (e) {
-            console.log('未找到 trend_switch.json，默认继续执行');
-          }
 
-          // 2. 加回全球 (global: 1)
-          const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
-          const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+            // 2. 获取 EVENT 数据
+            let events = [];
+            try {
+              const res = await fetch(`https://api.github.com/gists/${GIST_ID}`, {
+                headers: { 'Accept': 'application/vnd.github+json' }
+              });
+              const data = await res.json();
+              const file = data.files && data.files[GIST_FILENAME];
+              if (file && file.content) {
+                events = JSON.parse(file.content) || [];
+              }
+            } catch (e) {
+              console.log('获取 EVENT 数据失败，默认继续执行', e.message);
+            }
 
-          async function fetchTrends() {
-            // 读取旧的 trends.json，用于保留最高排名
+            // 3. 检查当前时间是否在活动窗口内
+            const now = Date.now();
+            let isActive = false;
+            
+            console.log(`\n=== 时间诊断 ===`);
+            console.log(`当前系统时间戳: ${now} (${new Date(now).toUTCString()})`);
+
+            // 核心过滤：只判断可见的活动（visible 为 true 或未定义）
+            const activeEvents = events.filter(ev => ev.visible === true || ev.visible === undefined);
+
+            if (activeEvents.length === 0) {
+              console.log('⚠️ 没有任何可见的 EVENT 配置，跳过抓取（保护额度）。');
+              isActive = false; 
+            } else {
+              console.log(`共有 ${activeEvents.length} 个可见 EVENT，开始检查时间窗口：`);
+              
+              activeEvents.forEach(ev => {
+                // 计算开始窗口（提前 1 小时）
+                const start = ev.startTime ? ev.startTime - START_EARLY_MS : 0;
+                
+                // 计算结束窗口：优先用 eventOverTime，其次用 endTime，最后兜底默认开始后8小时
+                let baseEnd = ev.eventOverTime || ev.endTime || (ev.startTime ? ev.startTime + 8 * 3600 * 1000 : 0);
+                const end = baseEnd ? baseEnd + END_LATE_MS : 0;
+
+                if (start > 0 && end > 0) {
+                  console.log(`- [${ev.title || '未命名'}] 窗口: ${new Date(start).toUTCString()} ~ ${new Date(end).toUTCString()}`);
+                  if (now >= start && now <= end) {
+                    isActive = true;
+                    console.log(`  🟢 命中此活动！`);
+                  }
+                }
+              });
+            }
+
+            if (!isActive) {
+              console.log('💤 当前不在任何可见活动的有效时间窗口内，跳过抓取以节省额度。');
+              return; 
+            }
+
+            console.log('\n🚀 处于活动期间，开始抓取趋势...');
+
+            // 4. 执行抓取
+            const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
+            const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+            const result = { lastUpdated: Date.now() };
+
+            // 读取旧数据以保留历史最高
             let oldData = { global: [], thailand: [], singapore: [] };
             if (fs.existsSync('trends.json')) {
-              try {
-                oldData = JSON.parse(fs.readFileSync('trends.json', 'utf8'));
-              } catch (e) {}
+              try { oldData = JSON.parse(fs.readFileSync('trends.json', 'utf8')); } catch (e) {}
             }
-            
-            const result = { lastUpdated: Date.now() };
-            
+
             for (const [name, woeid] of Object.entries(locations)) {
               try {
                 const res = await fetch(`https://api.twitterapi.io/twitter/trends?woeid=${woeid}`, {
@@ -94,17 +157,19 @@ jobs:
                   }
                 }).sort((a, b) => a.rank - b.rank);
 
+                console.log(`[${name}] 成功解析了 ${result[name].length} 条趋势`);
               } catch (e) {
                 console.error(`Fetch ${name} failed:`, e.message);
                 result[name] = oldData[name] || []; 
               }
               if (name !== 'singapore') await sleep(5500); 
             }
-            
+
             fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
-            console.log('trends.json 生成完毕（已包含全球及历史最高排名）');
+            console.log('trends.json 生成完毕');
           }
-          fetchTrends();
+
+          main();
           EOF
 
       - name: Commit and push
