@@ -1268,7 +1268,8 @@
       const matchThai = (globalTrendsData.thailand || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
       const matchSG = (globalTrendsData.singapore || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
 
-      if (!matchGlobal && !matchThai && !matchSG) return;
+      // ❌ 删除了这里的一句： if (!matchGlobal && !matchThai && !matchSG) return;
+      // 这样即使没上榜，也会往下走，渲染出“未上榜”的提示
 
       let html = `<div style="color:#e7e9ea; font-weight:700; font-size:14px; word-break: break-all; margin-bottom:4px;">${escapeHtml(kw)}</div>`;
       html += `<div style="display:flex; gap:6px; flex-wrap:wrap;">`;
