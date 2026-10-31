@@ -316,6 +316,7 @@
     <div style="display:flex; align-items:center; justify-content:space-between; margin-top:12px;">
       <span style="font-size:14px; color:#e7e9ea;">当前状态：<span id="switchStatusText" style="font-weight:bold; color:#00ba7c;">读取中...</span></span>
       <button class="btn-cfg" id="btnToggleTrend" style="width:auto; margin-top:0; padding:8px 16px;" onclick="toggleTrendSwitch()">切换状态</button>
+      <button class="btn-cfg" id="btnManualFetch" style="width:auto; margin-top:8px; padding:8px 16px; border-color:#1d9bf0; color:#1d9bf0;" onclick="triggerManualFetch()">⚡ 立即读取最新趋势</button>
     </div>
     <div class="config-hint">
       关闭后，GitHub Actions 将暂停抓取，停止消耗 API 额度。<br>
@@ -628,6 +629,45 @@
       updateSwitchUI();
     } finally {
       btnEl.disabled = false;
+    }
+  }
+
+  async function triggerManualFetch() {
+    const cfg = loadRemoteCfg();
+    if (!cfg || !cfg.token) {
+      alert('请先在上方填写 Personal Access Token 并保存！');
+      return;
+    }
+
+    const btnEl = document.getElementById('btnManualFetch');
+    const oldText = btnEl.textContent;
+    btnEl.disabled = true;
+    btnEl.textContent = '⏳ 正在通知后台...';
+
+    try {
+      // 呼叫 GitHub Actions 的 dispatch 接口，触发 update-trends.yml
+      const res = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/update-trends.yml/dispatches`, {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer ' + cfg.token,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ ref: 'main' }) // 这里默认是 main 分支，如果是 master 请修改
+      });
+
+      if (res.status === 204) {
+        // 204 代表触发成功，没有返回内容
+        alert('✅ 已向 GitHub 发送抓取指令！\n请等待约 15 秒后，刷新前台页面查看最新排名。');
+      } else {
+        const txt = await res.text();
+        throw new Error('触发失败: ' + res.status + ' ' + txt);
+      }
+    } catch (e) {
+      alert(e.message);
+    } finally {
+      btnEl.disabled = false;
+      btnEl.textContent = oldText;
     }
   }
 
@@ -1223,28 +1263,33 @@
     keywordsToCheck.forEach(kw => {
       const cleanKw = kw.toLowerCase().replace(/^#/, '');
       
-      // 在后台合并后的“历史最高排名”列表中寻找
+      // 同时匹配全球、泰国、新加坡
+      const matchGlobal = (globalTrendsData.global || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
       const matchThai = (globalTrendsData.thailand || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
       const matchSG = (globalTrendsData.singapore || []).find(t => String(t.name || '').toLowerCase().replace(/^#/, '').includes(cleanKw));
 
-      // 如果这两个地区根本没有这个词条的历史记录，就直接跳过不显示这一行
-      if (!matchThai && !matchSG) return;
+      if (!matchGlobal && !matchThai && !matchSG) return;
 
       let html = `<div style="color:#e7e9ea; font-weight:700; font-size:14px; word-break: break-all; margin-bottom:4px;">${escapeHtml(kw)}</div>`;
       html += `<div style="display:flex; gap:6px; flex-wrap:wrap;">`;
 
-      // 渲染泰国数据
+      // 渲染全球
+      if (matchGlobal) {
+        const isTop = matchGlobal.rank <= 10;
+        html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">全球 最高 #${matchGlobal.rank}</span>`;
+      } else {
+        html += `<span style="background:#1e2732; color:#6e7a86; border:1px solid #38444d; padding:2px 8px; border-radius:12px; font-size:11px;">全球 未上榜</span>`;
+      }
+
+      // 渲染泰国
       if (matchThai) {
-        // 判断是否在前 10 名
         const isTop = matchThai.rank <= 10;
-        // 这里为了简单，我们把后台保留的排名直接当作“最佳成绩”展示。
-        // 如果你想严格区分“当前正在榜上”和“历史最高”，可以对比 lastUpdated 时间，这里为了直观，统一展示为最高排名。
         html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">泰国 最高 #${matchThai.rank}</span>`;
       } else {
         html += `<span style="background:#1e2732; color:#6e7a86; border:1px solid #38444d; padding:2px 8px; border-radius:12px; font-size:11px;">泰国 未上榜</span>`;
       }
 
-      // 渲染新加坡数据
+      // 渲染新加坡
       if (matchSG) {
         const isTop = matchSG.rank <= 10;
         html += `<span style="background:${isTop ? '#1d9bf0' : '#2f3336'}; color:#fff; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">新加坡 最高 #${matchSG.rank}</span>`;
@@ -1267,7 +1312,6 @@
 
     list.innerHTML = htmlNotice + rowsHTML;
   }
-
   /* =======================================================
      需求匹配 + 随机抽取
      ======================================================= */
