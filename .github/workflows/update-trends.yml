@@ -2,8 +2,7 @@ name: Update Twitter Trends
 
 on:
   schedule:
-    # 每 20 分钟唤醒一次脚本
-    - cron: '*/20 * * * *'
+    - cron: '0 * * * *' # 每小时运行一次
   workflow_dispatch: 
 
 permissions:
@@ -27,117 +26,33 @@ jobs:
         run: |
           node << 'EOF'
           const fs = require('fs');
-
-          // ================= 配置区 =================
-          const GIST_ID = '4cee62e56e30e8290809efc7be947be0';
-          const GIST_FILENAME = 'xhelper-presets.json';
-          // ==========================================
-
-          async function main() {
-            // 1. 检查手动总开关 (读取 trend_switch.json)
-            try {
-              const switchData = JSON.parse(fs.readFileSync('trend_switch.json', 'utf8'));
-              if (!switchData.enabled) {
-                console.log('⏸️ 手动总开关处于关闭状态，跳过执行。');
-                return;
-              }
-            } catch (e) {
-              console.log('未找到 trend_switch.json 或解析失败，默认继续执行');
+          
+          // 1. 检查开关文件
+          try {
+            const switchData = JSON.parse(fs.readFileSync('trend_switch.json', 'utf8'));
+            if (!switchData.enabled) {
+              console.log('⏸️ 实时查询已在后台关闭，本次跳过执行。');
+              process.exit(0); 
             }
+          } catch (e) {
+            console.log('未找到 trend_switch.json，默认继续执行');
+          }
 
-            // 2. 获取 EVENT 数据，判断当前处于什么阶段
-            let events = [];
-            try {
-              const res = await fetch(`https://api.github.com/gists/${GIST_ID}`, {
-                headers: { 'Accept': 'application/vnd.github+json' }
-              });
-              const data = await res.json();
-              const file = data.files && data.files[GIST_FILENAME];
-              if (file && file.content) {
-                events = JSON.parse(file.content) || [];
-              }
-            } catch (e) {
-              console.log('获取 EVENT 数据失败，按无活动处理', e.message);
+          const locations = { thailand: 23424960, singapore: 23424948 };
+          const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+          async function fetchTrends() {
+            // 【新增】读取旧的 trends.json，用于保留最高排名
+            let oldData = { thailand: [], singapore: [] };
+            if (fs.existsSync('trends.json')) {
+              try {
+                oldData = JSON.parse(fs.readFileSync('trends.json', 'utf8'));
+              } catch (e) {}
             }
-
-            const now = Date.now();
-            let currentMode = 'NONE'; // NONE(无活动), PRE_HEAT(预热), HIGH_FREQ(爆发), LOW_FREQ(长尾)
-            
-            if (events.length > 0) {
-              for (const ev of events) {
-                const start = ev.startTime || 0;
-                if (start === 0) continue;
-                
-                // 活动结束时间（如果没有配置，默认开始后 3 小时）
-                const end = ev.eventOverTime || (start + 3 * 60 * 60 * 1000); 
-                
-                const preHeatStart = start - 5 * 60 * 1000;        // 开始前5分钟
-                const highFreqEnd = start + 2 * 60 * 60 * 1000;    // 开始后2小时
-
-                if (now >= preHeatStart && now < start) {
-                  if (currentMode !== 'HIGH_FREQ') currentMode = 'PRE_HEAT'; 
-                } else if (now >= start && now < highFreqEnd) {
-                  currentMode = 'HIGH_FREQ'; 
-                  break; // 爆发期优先级最高，直接跳出循环
-                } else if (now >= highFreqEnd && now <= end) {
-                  if (currentMode === 'NONE') currentMode = 'LOW_FREQ';
-                }
-              }
-            }
-
-            // 3. 无活动，直接终止
-            if (currentMode === 'NONE') {
-              console.log('💤 [无活动] 当前没有任何处于预热、进行中或长尾期的活动，跳过抓取。');
-              return;
-            }
-
-            // 4. 读取上次成功抓取的时间，计算时间差
-            let oldData = {};
-            let lastUpdated = 0;
-            try { 
-              oldData = JSON.parse(fs.readFileSync('trends.json', 'utf8')); 
-              lastUpdated = oldData.lastUpdated || 0;
-            } catch(e) {}
-            
-            const minutesSinceLast = lastUpdated > 0 ? (now - lastUpdated) / (1000 * 60) : 9999;
-
-            // 5. 根据阶段判断是否满足抓取间隔
-            if (currentMode === 'HIGH_FREQ') {
-              // 爆发期：间隔 >= 20 分钟
-              if (minutesSinceLast < 20) {
-                console.log(`💤 [爆发期] 距上次抓取仅 ${Math.floor(minutesSinceLast)} 分钟，未满 20 分钟，跳过本次。`);
-                return;
-              }
-              console.log(`🔥 [爆发期] 距上次抓取 ${Math.floor(minutesSinceLast)} 分钟，执行抓取！`);
-            } 
-            else if (currentMode === 'LOW_FREQ') {
-              // 长尾期：间隔 >= 60 分钟
-              if (minutesSinceLast < 60) {
-                console.log(`💤 [长尾期] 距上次抓取仅 ${Math.floor(minutesSinceLast)} 分钟，未满 60 分钟，跳过本次。`);
-                return;
-              }
-              console.log(`🚀 [长尾期] 距上次抓取 ${Math.floor(minutesSinceLast)} 分钟，执行抓取！`);
-            } 
-            else if (currentMode === 'PRE_HEAT') {
-              // 预热期：如果在开始前5分钟内刚抓过，就不再重复
-              if (minutesSinceLast < 5) {
-                console.log(`💤 [预热期] 距上次抓取仅 ${Math.floor(minutesSinceLast)} 分钟，跳过本次。`);
-                return;
-              }
-              console.log(`🚀 [预热期] 活动即将开始，执行抓取！`);
-            }
-
-            // 6. 执行抓取 (全球、泰国、新加坡)
-            const locations = { global: 1, thailand: 23424960, singapore: 23424948 };
-            const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
             
             const result = { lastUpdated: Date.now() };
-            const locationKeys = Object.keys(locations);
-
-            for (let i = 0; i < locationKeys.length; i++) {
-              const name = locationKeys[i];
-              const woeid = locations[name];
-              
+            
+            for (const [name, woeid] of Object.entries(locations)) {
               try {
                 const res = await fetch(`https://api.twitterapi.io/twitter/trends?woeid=${woeid}`, {
                   headers: { 'X-API-Key': process.env.API_KEY }
@@ -150,7 +65,7 @@ jobs:
                 else if (data.trends) trendArray = data.trends;
                 else if (data.data && data.data.trends) trendArray = data.data.trends;
 
-                result[name] = trendArray.slice(0, 30).map(t => {
+                const newTrends = trendArray.slice(0, 30).map(t => {
                   let realName = '', realRank = 0;
                   let rawName = t.name || t.trend || t.query || '';
                   if (typeof rawName === 'object' && rawName !== null) {
@@ -159,39 +74,44 @@ jobs:
                   } else {
                     realName = String(rawName); realRank = t.rank || t.position || 0;
                   }
-                  
-                  // 比对历史最高排名
-                  let highestRank = realRank;
-                  if (oldData[name] && Array.isArray(oldData[name])) {
-                    const oldMatch = oldData[name].find(o => o.name === realName);
-                    if (oldMatch && oldMatch.highestRank && oldMatch.highestRank < realRank) {
-                      highestRank = oldMatch.highestRank;
-                    }
-                  }
-
-                  return { 
-                    rank: realRank, 
-                    name: realName,
-                    highestRank: highestRank
-                  };
+                  return { rank: realRank, name: realName };
                 }).filter(t => t.name !== '');
 
-                console.log(`[${name}] 成功解析了 ${result[name].length} 条趋势`);
+                // 【新增】合并旧数据：将未上榜但曾经上榜的词条，以历史最高排名保留在列表中
+                const oldTrends = oldData[name] || [];
+                
+                // 1. 找出所有曾经出现过的词条名
+                const allNames = new Set([...newTrends.map(t => t.name), ...oldTrends.map(t => t.name)]);
+                
+                result[name] = Array.from(allNames).map(tName => {
+                  const newMatch = newTrends.find(t => t.name === tName);
+                  const oldMatch = oldTrends.find(t => t.name === tName);
+                  
+                  if (newMatch && oldMatch) {
+                    // 如果新旧都有，取最好（数值最小）的排名
+                    return { rank: Math.min(newMatch.rank, oldMatch.rank), name: tName };
+                  } else if (newMatch) {
+                    return newMatch;
+                  } else {
+                    // 如果只有旧的，说明掉榜了，保留其历史最高记录，但为了区分，我们不改rank，前端判断
+                    return oldMatch;
+                  }
+                });
+
+                // 重新按排名排序
+                result[name].sort((a, b) => a.rank - b.rank);
+
               } catch (e) {
                 console.error(`Fetch ${name} failed:`, e.message);
-                result[name] = []; 
+                result[name] = oldData[name] || []; // 失败则保留旧数据
               }
-              
-              // 防止请求过快被封禁，间隔 5.5 秒
-              if (i < locationKeys.length - 1) await sleep(5500); 
+              if (name !== 'singapore') await sleep(5500); 
             }
-
-            // 7. 保存结果
+            
             fs.writeFileSync('trends.json', JSON.stringify(result, null, 2));
-            console.log('trends.json 生成完毕');
+            console.log('trends.json 生成完毕（已包含历史最高排名）');
           }
-
-          main();
+          fetchTrends();
           EOF
 
       - name: Commit and push
@@ -200,4 +120,4 @@ jobs:
           commit_message: 'Auto-update trends [skip ci]'
           file_pattern: trends.json
           commit_user_name: 'GitHub Action Bot'
-          commit_user_email: 'action@github.com'
+          commit_email: 'action@github.com'
