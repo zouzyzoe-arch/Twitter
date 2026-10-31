@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793467153342,
+  "lastUpdated": 1793470988069,
   "global": [
     {
       "rank": 1,
@@ -12,6 +12,10 @@
     {
       "rank": 1,
       "name": "Happy Halloween"
+    },
+    {
+      "rank": 2,
+      "name": "#FBvGOZ"
     },
     {
       "rank": 2,
@@ -28,6 +32,10 @@
     {
       "rank": 3,
       "name": "#超特急_神フィバ変身"
+    },
+    {
+      "rank": 4,
+      "name": "#azizyıldırımistifa"
     },
     {
       "rank": 4,
@@ -94,6 +102,10 @@
     },
     {
       "rank": 10,
+      "name": "Kerem"
+    },
+    {
+      "rank": 10,
       "name": "Amad"
     },
     {
@@ -110,11 +122,11 @@
     },
     {
       "rank": 12,
-      "name": "#FBvGOZ"
+      "name": "イタズラ"
     },
     {
-      "rank": 12,
-      "name": "イタズラ"
+      "rank": 13,
+      "name": "Göztepe"
     },
     {
       "rank": 13,
@@ -122,11 +134,15 @@
     },
     {
       "rank": 14,
-      "name": "ブライトン"
+      "name": "QAZI THE EPITOME OF BB20"
     },
     {
       "rank": 14,
       "name": "Man U"
+    },
+    {
+      "rank": 14,
+      "name": "ブライトン"
     },
     {
       "rank": 14,
@@ -156,8 +172,16 @@
     },
     {
       "rank": 16,
+      "name": "Kuyt"
+    },
+    {
+      "rank": 16,
       "name": "トリックオアトリート",
       "highestRank": 14
+    },
+    {
+      "rank": 17,
+      "name": "Skriniar"
     },
     {
       "rank": 17,
@@ -186,7 +210,7 @@
     },
     {
       "rank": 19,
-      "name": "QAZI THE EPITOME OF BB20"
+      "name": "Lukaku"
     },
     {
       "rank": 19,
@@ -231,12 +255,20 @@
     },
     {
       "rank": 25,
+      "name": "STAY STRONG SCOUT"
+    },
+    {
+      "rank": 25,
       "name": "ユナイテッド"
     },
     {
       "rank": 25,
       "name": "CHARLOTTE AFTER DARK",
       "highestRank": 16
+    },
+    {
+      "rank": 26,
+      "name": "Jobe"
     },
     {
       "rank": 26,
@@ -250,6 +282,10 @@
       "rank": 26,
       "name": "SAMA SAMA BINIYAHENG PINAS",
       "highestRank": 26
+    },
+    {
+      "rank": 27,
+      "name": "Navy"
     },
     {
       "rank": 27,
@@ -271,6 +307,10 @@
     },
     {
       "rank": 29,
+      "name": "Mateta"
+    },
+    {
+      "rank": 29,
       "name": "リサマル"
     },
     {
@@ -287,11 +327,11 @@
   "thailand": [
     {
       "rank": 1,
-      "name": "#MrFanboyEP10"
+      "name": "#เขมจิราตลอดกาลEP1"
     },
     {
       "rank": 1,
-      "name": "#เขมจิราตลอดกาลEP1"
+      "name": "#MrFanboyEP10"
     },
     {
       "rank": 1,
@@ -339,7 +379,7 @@
       "name": "#HaierFestival2026xBamBam"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "name": "NUNEW 2ND CON DAY1"
     },
     {
@@ -352,15 +392,15 @@
     },
     {
       "rank": 11,
-      "name": "Halloween"
-    },
-    {
-      "rank": 11,
       "name": "LINGORM SMOOTH E FUN DAY"
     },
     {
+      "rank": 11,
+      "name": "Halloween"
+    },
+    {
       "rank": 12,
-      "name": "2TEE BOO IN THE AIR"
+      "name": "JOONGDUNK OASIS MEMORIES"
     },
     {
       "rank": 12,
@@ -368,11 +408,11 @@
     },
     {
       "rank": 12,
-      "name": "HALLOWEEN x OUROAD DAY2"
+      "name": "2TEE BOO IN THE AIR"
     },
     {
-      "rank": 13,
-      "name": "JOONGDUNK OASIS MEMORIES"
+      "rank": 12,
+      "name": "HALLOWEEN x OUROAD DAY2"
     },
     {
       "rank": 13,
@@ -383,12 +423,20 @@
       "name": "Haier x BamBam 2026"
     },
     {
-      "rank": 15,
-      "name": "JUNIOR BSC LOCK IT FIT"
+      "rank": 14,
+      "name": "ENJOY ON COURT ROUND2"
     },
     {
       "rank": 15,
       "name": "SKYNANI TAIPEI FANDAY"
+    },
+    {
+      "rank": 15,
+      "name": "JUNIOR BSC LOCK IT FIT"
+    },
+    {
+      "rank": 16,
+      "name": "Time to Say Goodbye"
     },
     {
       "rank": 16,
@@ -402,10 +450,6 @@
     {
       "rank": 17,
       "name": "POOHPAVEL TRICK OR TREAT"
-    },
-    {
-      "rank": 17,
-      "name": "ENJOY ON COURT ROUND2"
     },
     {
       "rank": 17,
@@ -441,6 +485,10 @@
     },
     {
       "rank": 24,
+      "name": "Taste"
+    },
+    {
+      "rank": 24,
       "name": "TONLIEW WITH NIYOMJEANS",
       "highestRank": 9
     },
@@ -452,10 +500,6 @@
       "rank": 25,
       "name": "ADDA WITH KEEN IN SURIN",
       "highestRank": 12
-    },
-    {
-      "rank": 26,
-      "name": "Taste"
     },
     {
       "rank": 26,
@@ -473,11 +517,23 @@
     },
     {
       "rank": 28,
+      "name": "#ThirdPersonTheSeriesEP8"
+    },
+    {
+      "rank": 28,
       "name": "happy monster house x war"
     },
     {
       "rank": 29,
+      "name": "#เติ้ลเฟิร์สวัน"
+    },
+    {
+      "rank": 29,
       "name": "ALL THE WAY TO AOU 2M IG"
+    },
+    {
+      "rank": 30,
+      "name": "#DAOUOFFROADHALLOWEEND2"
     },
     {
       "rank": 30,
@@ -492,11 +548,11 @@
     },
     {
       "rank": 2,
-      "name": "MR FANBOY CHAPTER 10"
+      "name": "#MrFanboyEP10"
     },
     {
       "rank": 2,
-      "name": "#MrFanboyEP10"
+      "name": "MR FANBOY CHAPTER 10"
     },
     {
       "rank": 2,
@@ -536,15 +592,15 @@
     },
     {
       "rank": 7,
-      "name": "#อู่อู๋เซฟ"
-    },
-    {
-      "rank": 7,
       "name": "PERTHSANTA RALPHS CLUB POPUP"
     },
     {
       "rank": 7,
       "name": "Carrick"
+    },
+    {
+      "rank": 7,
+      "name": "#อู่อู๋เซฟ"
     },
     {
       "rank": 8,
@@ -588,11 +644,11 @@
     },
     {
       "rank": 14,
-      "name": "Episode 10"
+      "name": "Poland"
     },
     {
       "rank": 14,
-      "name": "Poland"
+      "name": "Episode 10"
     },
     {
       "rank": 14,
@@ -608,27 +664,31 @@
     },
     {
       "rank": 16,
-      "name": "Initial Agent Offering"
+      "name": "Dean"
     },
     {
-      "rank": 17,
-      "name": "Third and Wan"
+      "rank": 16,
+      "name": "Initial Agent Offering"
     },
     {
       "rank": 17,
       "name": "ORM BA LEAPMOTOR B03X"
     },
     {
+      "rank": 17,
+      "name": "Third and Wan"
+    },
+    {
       "rank": 18,
-      "name": "Manchester United"
+      "name": "LOVE HURTS"
     },
     {
       "rank": 18,
       "name": "LAVOJOY TONE UP X EMI"
     },
     {
-      "rank": 19,
-      "name": "Dean"
+      "rank": 18,
+      "name": "Manchester United"
     },
     {
       "rank": 19,
@@ -637,6 +697,10 @@
     {
       "rank": 19,
       "name": "North Korea"
+    },
+    {
+      "rank": 20,
+      "name": "Ocon"
     },
     {
       "rank": 20,
