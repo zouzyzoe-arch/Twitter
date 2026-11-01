@@ -1,6 +1,10 @@
 {
-  "lastUpdated": 1793514692296,
+  "lastUpdated": 1793519005444,
   "global": [
+    {
+      "rank": 1,
+      "name": "ダノンデサイル"
+    },
     {
       "rank": 1,
       "name": "マスカレードボール"
@@ -19,6 +23,10 @@
     },
     {
       "rank": 2,
+      "name": "ネブラディスク"
+    },
+    {
+      "rank": 2,
       "name": "クロワデュノール"
     },
     {
@@ -32,6 +40,10 @@
     {
       "rank": 2,
       "name": "#MrFanboyEP10"
+    },
+    {
+      "rank": 3,
+      "name": "レガレイラ"
     },
     {
       "rank": 3,
@@ -107,7 +119,7 @@
     },
     {
       "rank": 6,
-      "name": "ダノンデサイル"
+      "name": "天皇賞秋"
     },
     {
       "rank": 6,
@@ -124,7 +136,7 @@
     },
     {
       "rank": 7,
-      "name": "レガレイラ"
+      "name": "ルメール"
     },
     {
       "rank": 7,
@@ -145,7 +157,7 @@
     },
     {
       "rank": 8,
-      "name": "天皇賞秋"
+      "name": "乗車準備会"
     },
     {
       "rank": 8,
@@ -162,7 +174,7 @@
     },
     {
       "rank": 9,
-      "name": "乗車準備会"
+      "name": "ベリーベリーホース"
     },
     {
       "rank": 9,
@@ -202,6 +214,10 @@
     },
     {
       "rank": 11,
+      "name": "東京ドーム公演記念"
+    },
+    {
+      "rank": 11,
       "name": "シェイクユアハート"
     },
     {
@@ -222,6 +238,10 @@
     },
     {
       "rank": 12,
+      "name": "ダービー馬"
+    },
+    {
+      "rank": 12,
       "name": "#FoolInLove"
     },
     {
@@ -234,7 +254,7 @@
     },
     {
       "rank": 13,
-      "name": "東京ドーム公演記念"
+      "name": "タガノデュード"
     },
     {
       "rank": 13,
@@ -287,6 +307,10 @@
     },
     {
       "rank": 15,
+      "name": "入場者特典"
+    },
+    {
+      "rank": 15,
       "name": "パドック"
     },
     {
@@ -313,10 +337,6 @@
       "rank": 15,
       "name": "ボルゾイ",
       "highestRank": 15
-    },
-    {
-      "rank": 16,
-      "name": "入場者特典"
     },
     {
       "rank": 16,
@@ -373,6 +393,10 @@
     },
     {
       "rank": 18,
+      "name": "#BornToBeNuNewConcertD2"
+    },
+    {
+      "rank": 18,
       "name": "#全日本大学駅伝"
     },
     {
@@ -387,6 +411,10 @@
       "rank": 18,
       "name": "ピアノコンサート",
       "highestRank": 18
+    },
+    {
+      "rank": 19,
+      "name": "戸崎さん"
     },
     {
       "rank": 19,
@@ -408,6 +436,10 @@
       "rank": 19,
       "name": "ARMY UNITED FOR BTS",
       "highestRank": 19
+    },
+    {
+      "rank": 20,
+      "name": "戸崎騎手"
     },
     {
       "rank": 20,
@@ -453,15 +485,15 @@
     },
     {
       "rank": 22,
-      "name": "ネブラディスク"
-    },
-    {
-      "rank": 22,
       "name": "Fenerbahçe"
     },
     {
       "rank": 22,
       "name": "NUNEW 2ND CON DAY1"
+    },
+    {
+      "rank": 23,
+      "name": "NUNEW 2ND CON DAY2"
     },
     {
       "rank": 23,
@@ -487,6 +519,10 @@
       "rank": 23,
       "name": "はろうぃん",
       "highestRank": 23
+    },
+    {
+      "rank": 24,
+      "name": "#ObsessionOnJioHotstar"
     },
     {
       "rank": 24,
@@ -528,6 +564,10 @@
     },
     {
       "rank": 26,
+      "name": "ジャパンカップ"
+    },
+    {
+      "rank": 26,
       "name": "Texas State"
     },
     {
@@ -554,6 +594,10 @@
       "rank": 26,
       "name": "SAMA SAMA BINIYAHENG PINAS",
       "highestRank": 26
+    },
+    {
+      "rank": 27,
+      "name": "北村友一"
     },
     {
       "rank": 27,
@@ -620,6 +664,10 @@
     },
     {
       "rank": 30,
+      "name": "रामलीला मैदान"
+    },
+    {
+      "rank": 30,
       "name": "直樹の部屋"
     },
     {
@@ -651,6 +699,10 @@
     },
     {
       "rank": 2,
+      "name": "#BornToBeNuNewConcertD2"
+    },
+    {
+      "rank": 2,
       "name": "#ศึก12ราศีXชาล็อตออสตินEP1"
     },
     {
@@ -660,6 +712,10 @@
     {
       "rank": 2,
       "name": "KHEMJIRA WELCOME BACK"
+    },
+    {
+      "rank": 3,
+      "name": "NUNEW 2ND CON DAY2"
     },
     {
       "rank": 3,
@@ -711,6 +767,10 @@
     },
     {
       "rank": 8,
+      "name": "KNP THYCHEF MOMENT"
+    },
+    {
+      "rank": 8,
       "name": "UHR TICKET ON SALE NOW"
     },
     {
@@ -727,11 +787,15 @@
     },
     {
       "rank": 10,
-      "name": "ENGFA ALL ROUNDER01"
+      "name": "THE GRIM LOVER STORY BOOK"
     },
     {
       "rank": 10,
       "name": "LOVE HURTS"
+    },
+    {
+      "rank": 10,
+      "name": "ENGFA ALL ROUNDER01"
     },
     {
       "rank": 10,
@@ -740,6 +804,10 @@
     {
       "rank": 10,
       "name": "PERTHSANTA RALPHS CLUB POPUP"
+    },
+    {
+      "rank": 11,
+      "name": "SONEURO AT MAKRO HORECA"
     },
     {
       "rank": 11,
@@ -752,6 +820,10 @@
     {
       "rank": 11,
       "name": "Halloween"
+    },
+    {
+      "rank": 12,
+      "name": "ANDALOOKKAEW X MTKHONKAEN"
     },
     {
       "rank": 12,
@@ -780,6 +852,10 @@
     {
       "rank": 13,
       "name": "MARKJRTN AT RICHES BROW"
+    },
+    {
+      "rank": 14,
+      "name": "Dexx"
     },
     {
       "rank": 15,
@@ -847,10 +923,6 @@
       "name": "THE D DORM SITCOM EP 7"
     },
     {
-      "rank": 19,
-      "name": "#BornToBeNuNewConcertD2"
-    },
-    {
       "rank": 20,
       "name": "#OASISxJoongDunk"
     },
@@ -888,6 +960,10 @@
     },
     {
       "rank": 23,
+      "name": "#เขย่าMomentกับเก่งน้ําปิง"
+    },
+    {
+      "rank": 23,
       "name": "#กดบัตรFirstEPใต้เงาจันทรา"
     },
     {
@@ -918,6 +994,10 @@
       "rank": 24,
       "name": "TONLIEW WITH NIYOMJEANS",
       "highestRank": 9
+    },
+    {
+      "rank": 25,
+      "name": "#BookExpo2026xTheGrimLover"
     },
     {
       "rank": 25,
@@ -1166,11 +1246,11 @@
     },
     {
       "rank": 19,
-      "name": "Ocon"
+      "name": "North Korea"
     },
     {
       "rank": 19,
-      "name": "North Korea"
+      "name": "Ocon"
     },
     {
       "rank": 19,
