@@ -1,6 +1,10 @@
 {
-  "lastUpdated": 1793485290376,
+  "lastUpdated": 1793514692296,
   "global": [
+    {
+      "rank": 1,
+      "name": "マスカレードボール"
+    },
     {
       "rank": 1,
       "name": "Halloween"
@@ -15,6 +19,10 @@
     },
     {
       "rank": 2,
+      "name": "クロワデュノール"
+    },
+    {
+      "rank": 2,
       "name": "テーオーエルビス"
     },
     {
@@ -24,6 +32,10 @@
     {
       "rank": 2,
       "name": "#MrFanboyEP10"
+    },
+    {
+      "rank": 3,
+      "name": "Happy New Month"
     },
     {
       "rank": 3,
@@ -51,6 +63,10 @@
     },
     {
       "rank": 4,
+      "name": "#HBD_HAMIN_HappyCat"
+    },
+    {
+      "rank": 4,
       "name": "#CaneloMbilli"
     },
     {
@@ -64,6 +80,10 @@
     {
       "rank": 4,
       "name": "#CHEMUN"
+    },
+    {
+      "rank": 5,
+      "name": "#온세상이_빛하민으로_물든날"
     },
     {
       "rank": 5,
@@ -87,6 +107,10 @@
     },
     {
       "rank": 6,
+      "name": "ダノンデサイル"
+    },
+    {
+      "rank": 6,
       "name": "#StarAcademy"
     },
     {
@@ -97,6 +121,10 @@
       "rank": 6,
       "name": "#เปิดฤกษ์คืนขวัญเขมจิรา",
       "highestRank": 6
+    },
+    {
+      "rank": 7,
+      "name": "レガレイラ"
     },
     {
       "rank": 7,
@@ -117,6 +145,10 @@
     },
     {
       "rank": 8,
+      "name": "天皇賞秋"
+    },
+    {
+      "rank": 8,
       "name": "ディープモンスター"
     },
     {
@@ -127,6 +159,10 @@
       "rank": 8,
       "name": "#BornToBeNuNewConcertD1",
       "highestRank": 5
+    },
+    {
+      "rank": 9,
+      "name": "乗車準備会"
     },
     {
       "rank": 9,
@@ -150,6 +186,10 @@
     },
     {
       "rank": 10,
+      "name": "セイウンハーデス"
+    },
+    {
+      "rank": 10,
       "name": "Kerem"
     },
     {
@@ -159,6 +199,10 @@
     {
       "rank": 10,
       "name": "ぶいすぽっ"
+    },
+    {
+      "rank": 11,
+      "name": "シェイクユアハート"
     },
     {
       "rank": 11,
@@ -178,11 +222,19 @@
     },
     {
       "rank": 12,
+      "name": "#FoolInLove"
+    },
+    {
+      "rank": 12,
       "name": "كوليبالي"
     },
     {
       "rank": 12,
       "name": "イタズラ"
+    },
+    {
+      "rank": 13,
+      "name": "東京ドーム公演記念"
     },
     {
       "rank": 13,
@@ -195,6 +247,10 @@
     {
       "rank": 13,
       "name": "コスプレ"
+    },
+    {
+      "rank": 14,
+      "name": "#timeleszファミリア"
     },
     {
       "rank": 14,
@@ -231,6 +287,10 @@
     },
     {
       "rank": 15,
+      "name": "パドック"
+    },
+    {
+      "rank": 15,
       "name": "eileen"
     },
     {
@@ -256,6 +316,10 @@
     },
     {
       "rank": 16,
+      "name": "入場者特典"
+    },
+    {
+      "rank": 16,
       "name": "Rutgers"
     },
     {
@@ -266,6 +330,10 @@
       "rank": 16,
       "name": "トリックオアトリート",
       "highestRank": 14
+    },
+    {
+      "rank": 17,
+      "name": "May November"
     },
     {
       "rank": 17,
@@ -305,6 +373,10 @@
     },
     {
       "rank": 18,
+      "name": "#全日本大学駅伝"
+    },
+    {
+      "rank": 18,
       "name": "イングリッシュマン"
     },
     {
@@ -315,6 +387,10 @@
       "rank": 18,
       "name": "ピアノコンサート",
       "highestRank": 18
+    },
+    {
+      "rank": 19,
+      "name": "リアライズシリウス"
     },
     {
       "rank": 19,
@@ -335,6 +411,10 @@
     },
     {
       "rank": 20,
+      "name": "サンパーク"
+    },
+    {
+      "rank": 20,
       "name": "アスクイキゴミ"
     },
     {
@@ -349,6 +429,10 @@
       "rank": 20,
       "name": "ハピハロ",
       "highestRank": 20
+    },
+    {
+      "rank": 21,
+      "name": "Gabby Williams"
     },
     {
       "rank": 21,
@@ -369,11 +453,19 @@
     },
     {
       "rank": 22,
+      "name": "ネブラディスク"
+    },
+    {
+      "rank": 22,
       "name": "Fenerbahçe"
     },
     {
       "rank": 22,
       "name": "NUNEW 2ND CON DAY1"
+    },
+    {
+      "rank": 23,
+      "name": "レディネス"
     },
     {
       "rank": 23,
@@ -398,6 +490,10 @@
     },
     {
       "rank": 24,
+      "name": "MAJOR FANDOM LINGORM"
+    },
+    {
+      "rank": 24,
       "name": "異常震域"
     },
     {
@@ -408,6 +504,10 @@
       "rank": 24,
       "name": "ユージーン",
       "highestRank": 24
+    },
+    {
+      "rank": 25,
+      "name": "ミラプリコレクション"
     },
     {
       "rank": 25,
@@ -425,6 +525,10 @@
       "rank": 25,
       "name": "CHARLOTTE AFTER DARK",
       "highestRank": 16
+    },
+    {
+      "rank": 26,
+      "name": "Texas State"
     },
     {
       "rank": 26,
@@ -453,6 +557,10 @@
     },
     {
       "rank": 27,
+      "name": "Boise State"
+    },
+    {
+      "rank": 27,
       "name": "Moreira"
     },
     {
@@ -478,8 +586,16 @@
     },
     {
       "rank": 28,
+      "name": "Toluca"
+    },
+    {
+      "rank": 28,
       "name": "Initial Agent Offering",
       "highestRank": 15
+    },
+    {
+      "rank": 29,
+      "name": "Ohio State"
     },
     {
       "rank": 29,
@@ -504,6 +620,10 @@
     },
     {
       "rank": 30,
+      "name": "直樹の部屋"
+    },
+    {
+      "rank": 30,
       "name": "T O Elvis"
     },
     {
@@ -513,6 +633,10 @@
     }
   ],
   "thailand": [
+    {
+      "rank": 1,
+      "name": "#FoolInLove"
+    },
     {
       "rank": 1,
       "name": "#เขมจิราตลอดกาลEP1"
@@ -527,6 +651,10 @@
     },
     {
       "rank": 2,
+      "name": "#ศึก12ราศีXชาล็อตออสตินEP1"
+    },
+    {
+      "rank": 2,
       "name": "KHEMJIRA FOREVER EP1"
     },
     {
@@ -535,11 +663,19 @@
     },
     {
       "rank": 3,
+      "name": "#ที่รักสารวัตรเธียร์"
+    },
+    {
+      "rank": 3,
       "name": "#BornToBeNuNewConcertD1"
     },
     {
       "rank": 3,
       "name": "#PoliceinLoveEP8"
+    },
+    {
+      "rank": 4,
+      "name": "#CafeAmazonXBUS"
     },
     {
       "rank": 4,
@@ -555,7 +691,15 @@
     },
     {
       "rank": 5,
+      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
+    },
+    {
+      "rank": 5,
       "name": "#YouManiacSeriesFinalEP"
+    },
+    {
+      "rank": 6,
+      "name": "MAJOR FANDOM LINGORM"
     },
     {
       "rank": 6,
@@ -567,7 +711,15 @@
     },
     {
       "rank": 8,
+      "name": "UHR TICKET ON SALE NOW"
+    },
+    {
+      "rank": 8,
       "name": "NUNEW 2ND CON DAY1"
+    },
+    {
+      "rank": 9,
+      "name": "LINGLING EVERYDAY01"
     },
     {
       "rank": 9,
@@ -575,7 +727,7 @@
     },
     {
       "rank": 10,
-      "name": "HALLOWEEN x OUROAD DAY2"
+      "name": "ENGFA ALL ROUNDER01"
     },
     {
       "rank": 10,
@@ -583,7 +735,15 @@
     },
     {
       "rank": 10,
+      "name": "HALLOWEEN x OUROAD DAY2"
+    },
+    {
+      "rank": 10,
       "name": "PERTHSANTA RALPHS CLUB POPUP"
+    },
+    {
+      "rank": 11,
+      "name": "OOMBAM SHINING TOGETHER 01"
     },
     {
       "rank": 11,
@@ -607,6 +767,10 @@
     },
     {
       "rank": 13,
+      "name": "WARM EMBRACE CHARLOTTE01"
+    },
+    {
+      "rank": 13,
       "name": "ENJOY ON COURT ROUND2"
     },
     {
@@ -616,6 +780,10 @@
     {
       "rank": 13,
       "name": "MARKJRTN AT RICHES BROW"
+    },
+    {
+      "rank": 15,
+      "name": "MEDIHEAL FOURTH KOREA TRIP"
     },
     {
       "rank": 15,
@@ -656,11 +824,19 @@
     },
     {
       "rank": 17,
+      "name": "Insomnia Focus"
+    },
+    {
+      "rank": 17,
       "name": "#เติ้ลเฟิร์สวัน"
     },
     {
       "rank": 17,
       "name": "UHR THE RULES BEGIN"
+    },
+    {
+      "rank": 18,
+      "name": "#MCJwithMARKTUAN"
     },
     {
       "rank": 18,
@@ -671,8 +847,16 @@
       "name": "THE D DORM SITCOM EP 7"
     },
     {
+      "rank": 19,
+      "name": "#BornToBeNuNewConcertD2"
+    },
+    {
       "rank": 20,
       "name": "#OASISxJoongDunk"
+    },
+    {
+      "rank": 21,
+      "name": "#PoliceInLove"
     },
     {
       "rank": 21,
@@ -692,11 +876,19 @@
     },
     {
       "rank": 22,
+      "name": "#BeCupofYouIShine"
+    },
+    {
+      "rank": 22,
       "name": "#HAECHAN"
     },
     {
       "rank": 22,
       "name": "GULF​ X​ VIF​ IN​ CHIANG MAI"
+    },
+    {
+      "rank": 23,
+      "name": "#กดบัตรFirstEPใต้เงาจันทรา"
     },
     {
       "rank": 23,
@@ -716,12 +908,20 @@
     },
     {
       "rank": 24,
+      "name": "#GULFCLUB2026"
+    },
+    {
+      "rank": 24,
       "name": "#ALoveOtherThanYoursEp13"
     },
     {
       "rank": 24,
       "name": "TONLIEW WITH NIYOMJEANS",
       "highestRank": 9
+    },
+    {
+      "rank": 25,
+      "name": "#VogueTHxLenaMiu"
     },
     {
       "rank": 25,
@@ -742,6 +942,10 @@
     },
     {
       "rank": 26,
+      "name": "#SiamHalloween2026_Day3"
+    },
+    {
+      "rank": 26,
       "name": "#TeeXBellalinclinic"
     },
     {
@@ -752,6 +956,10 @@
       "rank": 26,
       "name": "MUAN JAI WITH TRE PERFECTA",
       "highestRank": 14
+    },
+    {
+      "rank": 27,
+      "name": "#makroHORECA2026xSonEuro"
     },
     {
       "rank": 27,
@@ -768,6 +976,10 @@
     },
     {
       "rank": 28,
+      "name": "#CHANELCruise"
+    },
+    {
+      "rank": 28,
       "name": "#JOHNNY"
     },
     {
@@ -780,11 +992,19 @@
     },
     {
       "rank": 29,
+      "name": "#matsuri_BANGKOK"
+    },
+    {
+      "rank": 29,
       "name": "#SiamHalloween2026_Day2"
     },
     {
       "rank": 29,
       "name": "ALL THE WAY TO AOU 2M IG"
+    },
+    {
+      "rank": 30,
+      "name": "#LaurierMyBrand"
     },
     {
       "rank": 30,
@@ -854,6 +1074,10 @@
     },
     {
       "rank": 8,
+      "name": "#เขมจิราตลอดกาลEP1"
+    },
+    {
+      "rank": 8,
       "name": "#BornToBeNuNewConcertD1"
     },
     {
@@ -869,12 +1093,12 @@
       "name": "#auautnp"
     },
     {
-      "rank": 10,
-      "name": "#LoversAndGangstersEP1"
+      "rank": 9,
+      "name": "KHEMJIRA FOREVER EP1"
     },
     {
       "rank": 10,
-      "name": "KHEMJIRA FOREVER EP1"
+      "name": "#LoversAndGangstersEP1"
     },
     {
       "rank": 10,
@@ -890,23 +1114,23 @@
     },
     {
       "rank": 11,
-      "name": "LINGORM SMOOTH E FUN DAY"
-    },
-    {
-      "rank": 11,
       "name": "KHEMJIRA WELCOME BACK"
     },
     {
-      "rank": 13,
-      "name": "FORCEBOOK LAG EP1"
+      "rank": 11,
+      "name": "LINGORM SMOOTH E FUN DAY"
+    },
+    {
+      "rank": 12,
+      "name": "Poland"
     },
     {
       "rank": 13,
       "name": "LOVE HURTS"
     },
     {
-      "rank": 14,
-      "name": "Poland"
+      "rank": 13,
+      "name": "FORCEBOOK LAG EP1"
     },
     {
       "rank": 14,
@@ -917,8 +1141,8 @@
       "name": "NUNEW 2ND CON DAY1"
     },
     {
-      "rank": 14,
-      "name": "#เขมจิราตลอดกาลEP1"
+      "rank": 15,
+      "name": "ORM BA LEAPMOTOR B03X"
     },
     {
       "rank": 16,
@@ -927,10 +1151,6 @@
     {
       "rank": 16,
       "name": "Initial Agent Offering"
-    },
-    {
-      "rank": 17,
-      "name": "ORM BA LEAPMOTOR B03X"
     },
     {
       "rank": 17,
@@ -946,15 +1166,15 @@
     },
     {
       "rank": 19,
-      "name": "Maguire"
-    },
-    {
-      "rank": 19,
       "name": "Ocon"
     },
     {
       "rank": 19,
       "name": "North Korea"
+    },
+    {
+      "rank": 19,
+      "name": "Maguire"
     },
     {
       "rank": 20,
@@ -966,15 +1186,15 @@
     },
     {
       "rank": 21,
+      "name": "Tusk"
+    },
+    {
+      "rank": 21,
       "name": "Trick or Treat",
       "highestRank": 19
     },
     {
       "rank": 22,
-      "name": "Tusk"
-    },
-    {
-      "rank": 23,
       "name": "Orm Kornnaphat"
     },
     {
@@ -1005,13 +1225,16 @@
     },
     {
       "rank": 28,
+      "name": "Haas"
+    },
+    {
+      "rank": 28,
       "name": "jeonghan",
       "highestRank": 28
     },
     {
       "rank": 29,
-      "name": "SIAM CENTER X KHOMKHLANG",
-      "highestRank": 29
+      "name": "SIAM CENTER X KHOMKHLANG"
     },
     {
       "rank": 30,
