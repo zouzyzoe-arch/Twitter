@@ -1,17 +1,21 @@
 {
-  "lastUpdated": 1793532054213,
+  "lastUpdated": 1793535934526,
   "global": [
+    {
+      "rank": 1,
+      "name": "#VIVANT"
+    },
     {
       "rank": 1,
       "name": "#豊臣兄弟"
     },
     {
       "rank": 1,
-      "name": "#カミガタフェスやってるで_生配信"
+      "name": "ダノンデサイル"
     },
     {
       "rank": 1,
-      "name": "ダノンデサイル"
+      "name": "#カミガタフェスやってるで_生配信"
     },
     {
       "rank": 1,
@@ -28,6 +32,10 @@
     {
       "rank": 1,
       "name": "Happy Halloween"
+    },
+    {
+      "rank": 2,
+      "name": "#GOスト"
     },
     {
       "rank": 2,
@@ -87,6 +95,10 @@
     },
     {
       "rank": 4,
+      "name": "#夏色まつり古神曲ライブ"
+    },
+    {
+      "rank": 4,
       "name": "NUNEW 2ND CON DAY2"
     },
     {
@@ -108,6 +120,10 @@
     {
       "rank": 4,
       "name": "#CHEMUN"
+    },
+    {
+      "rank": 5,
+      "name": "ジャミーン"
     },
     {
       "rank": 5,
@@ -181,7 +197,7 @@
     },
     {
       "rank": 8,
-      "name": "#夏色まつり古神曲ライブ"
+      "name": "乃木さん"
     },
     {
       "rank": 8,
@@ -203,6 +219,10 @@
       "rank": 8,
       "name": "#BornToBeNuNewConcertD1",
       "highestRank": 5
+    },
+    {
+      "rank": 9,
+      "name": "チンギス"
     },
     {
       "rank": 9,
@@ -258,6 +278,10 @@
     },
     {
       "rank": 11,
+      "name": "伊地知姉妹"
+    },
+    {
+      "rank": 11,
       "name": "東京ドーム公演記念"
     },
     {
@@ -279,6 +303,10 @@
     {
       "rank": 11,
       "name": "あなたの運勢"
+    },
+    {
+      "rank": 12,
+      "name": "ズルの流派"
     },
     {
       "rank": 12,
@@ -323,6 +351,10 @@
     {
       "rank": 13,
       "name": "コスプレ"
+    },
+    {
+      "rank": 14,
+      "name": "エアーマン"
     },
     {
       "rank": 14,
@@ -473,6 +505,10 @@
     },
     {
       "rank": 18,
+      "name": "bin dolar"
+    },
+    {
+      "rank": 18,
       "name": "#全日本大学駅伝"
     },
     {
@@ -487,6 +523,10 @@
       "rank": 18,
       "name": "ピアノコンサート",
       "highestRank": 18
+    },
+    {
+      "rank": 19,
+      "name": "ズル人間"
     },
     {
       "rank": 19,
@@ -552,6 +592,10 @@
     },
     {
       "rank": 21,
+      "name": "BTS NEEDS EVERY ARMY"
+    },
+    {
+      "rank": 21,
       "name": "理佐ちゃん"
     },
     {
@@ -593,6 +637,10 @@
     },
     {
       "rank": 23,
+      "name": "ぼざろ映画"
+    },
+    {
+      "rank": 23,
       "name": "ランダム表示"
     },
     {
@@ -619,6 +667,10 @@
       "rank": 23,
       "name": "はろうぃん",
       "highestRank": 23
+    },
+    {
+      "rank": 24,
+      "name": "Bad Apple"
     },
     {
       "rank": 24,
@@ -665,6 +717,10 @@
       "rank": 25,
       "name": "CHARLOTTE AFTER DARK",
       "highestRank": 16
+    },
+    {
+      "rank": 26,
+      "name": "すーじー"
     },
     {
       "rank": 26,
@@ -738,6 +794,10 @@
     },
     {
       "rank": 28,
+      "name": "トロッコ"
+    },
+    {
+      "rank": 28,
       "name": "クリスマスChu"
     },
     {
@@ -748,6 +808,10 @@
       "rank": 28,
       "name": "Initial Agent Offering",
       "highestRank": 15
+    },
+    {
+      "rank": 29,
+      "name": "YOKO WITH CHENPINSNACK"
     },
     {
       "rank": 29,
@@ -780,7 +844,7 @@
     },
     {
       "rank": 30,
-      "name": "トロッコ"
+      "name": "星のあしあと"
     },
     {
       "rank": 30,
@@ -847,11 +911,11 @@
     },
     {
       "rank": 4,
-      "name": "#GOWHOLESALExOffroad"
+      "name": "MAJOR FANDOM LINGORM"
     },
     {
       "rank": 4,
-      "name": "MAJOR FANDOM LINGORM"
+      "name": "#GOWHOLESALExOffroad"
     },
     {
       "rank": 4,
@@ -868,6 +932,10 @@
     {
       "rank": 4,
       "name": "#EnchantedFest2026xBUS"
+    },
+    {
+      "rank": 5,
+      "name": "#AdventureRouteMilanEP1"
     },
     {
       "rank": 5,
@@ -895,15 +963,15 @@
     },
     {
       "rank": 8,
-      "name": "#WeTVSendLovexPoliceInLoveLIVE"
-    },
-    {
-      "rank": 8,
       "name": "THE GRIM LOVER STORY BOOK"
     },
     {
       "rank": 8,
       "name": "KNP THYCHEF MOMENT"
+    },
+    {
+      "rank": 8,
+      "name": "#WeTVSendLovexPoliceInLoveLIVE"
     },
     {
       "rank": 8,
@@ -927,6 +995,10 @@
     },
     {
       "rank": 10,
+      "name": "LYKN FINAL ENERGY"
+    },
+    {
+      "rank": 10,
       "name": "NETJJ WITH SHOPEE HARMENSTONE"
     },
     {
@@ -944,6 +1016,10 @@
     {
       "rank": 10,
       "name": "PERTHSANTA RALPHS CLUB POPUP"
+    },
+    {
+      "rank": 11,
+      "name": "UNLEASH THE ALPHA"
     },
     {
       "rank": 11,
@@ -1060,6 +1136,10 @@
     },
     {
       "rank": 18,
+      "name": "Mark Tuan Owns It With MCJ"
+    },
+    {
+      "rank": 18,
       "name": "#MCJwithMARKTUAN"
     },
     {
@@ -1072,11 +1152,15 @@
     },
     {
       "rank": 19,
-      "name": "#AdventureRouteMilanEP1"
+      "name": "GULF CLUB 2026 IS CALLING"
     },
     {
       "rank": 20,
       "name": "#OASISxJoongDunk"
+    },
+    {
+      "rank": 21,
+      "name": "#IDOLENERGYSS2ep5"
     },
     {
       "rank": 21,
@@ -1177,6 +1261,10 @@
     },
     {
       "rank": 25,
+      "name": "#THETOYS"
+    },
+    {
+      "rank": 25,
       "name": "#BookExpo2026xTheCrowClub"
     },
     {
@@ -1210,6 +1298,10 @@
     },
     {
       "rank": 26,
+      "name": "#ProjectAlphaNewClanEP3"
+    },
+    {
+      "rank": 26,
       "name": "#MoshiMoshixWilliamEst"
     },
     {
@@ -1231,10 +1323,6 @@
     },
     {
       "rank": 27,
-      "name": "#THETOYS"
-    },
-    {
-      "rank": 27,
       "name": "#makroHORECA2026xSonEuro"
     },
     {
@@ -1249,6 +1337,10 @@
       "rank": 27,
       "name": "NAMTANFILM AT MAKRO HORECA",
       "highestRank": 17
+    },
+    {
+      "rank": 28,
+      "name": "#PEEMWASU"
     },
     {
       "rank": 28,
@@ -1302,11 +1394,11 @@
     },
     {
       "rank": 2,
-      "name": "#MrFanboyEP10"
+      "name": "MR FANBOY CHAPTER 10"
     },
     {
       "rank": 2,
-      "name": "MR FANBOY CHAPTER 10"
+      "name": "#MrFanboyEP10"
     },
     {
       "rank": 2,
@@ -1350,6 +1442,10 @@
     },
     {
       "rank": 7,
+      "name": "Liverpool"
+    },
+    {
+      "rank": 7,
       "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
     },
     {
@@ -1370,15 +1466,15 @@
     },
     {
       "rank": 8,
+      "name": "#เขมจิราตลอดกาลEP1"
+    },
+    {
+      "rank": 8,
       "name": "Binance"
     },
     {
       "rank": 8,
       "name": "Fofana"
-    },
-    {
-      "rank": 8,
-      "name": "#เขมจิราตลอดกาลEP1"
     },
     {
       "rank": 8,
@@ -1391,10 +1487,6 @@
     {
       "rank": 9,
       "name": "KHEMJIRA FOREVER EP1"
-    },
-    {
-      "rank": 10,
-      "name": "Liverpool"
     },
     {
       "rank": 10,
@@ -1422,11 +1514,11 @@
     },
     {
       "rank": 12,
-      "name": "Poland"
+      "name": "Arsenal"
     },
     {
-      "rank": 13,
-      "name": "Arsenal"
+      "rank": 12,
+      "name": "Poland"
     },
     {
       "rank": 13,
@@ -1490,11 +1582,11 @@
     },
     {
       "rank": 20,
-      "name": "Orm Kornnaphat"
+      "name": "CHARLOTTE AFTER DARK"
     },
     {
       "rank": 20,
-      "name": "CHARLOTTE AFTER DARK"
+      "name": "Orm Kornnaphat"
     },
     {
       "rank": 20,
@@ -1503,6 +1595,10 @@
     {
       "rank": 20,
       "name": "Rogers"
+    },
+    {
+      "rank": 21,
+      "name": "lavojoy tone up x emi"
     },
     {
       "rank": 21,
@@ -1515,11 +1611,15 @@
     },
     {
       "rank": 24,
+      "name": "Haas"
+    },
+    {
+      "rank": 24,
       "name": "JUNIORMARKMO GRAB MEGAGALE"
     },
     {
       "rank": 25,
-      "name": "Haas"
+      "name": "SIAM CENTER X KHOMKHLANG"
     },
     {
       "rank": 25,
@@ -1533,10 +1633,6 @@
       "rank": 26,
       "name": "AUAU SAVE LIVE WITH LINE MAN",
       "highestRank": 25
-    },
-    {
-      "rank": 27,
-      "name": "SIAM CENTER X KHOMKHLANG"
     },
     {
       "rank": 27,
