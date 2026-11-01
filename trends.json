@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793519005444,
+  "lastUpdated": 1793521953064,
   "global": [
     {
       "rank": 1,
@@ -40,6 +40,10 @@
     {
       "rank": 2,
       "name": "#MrFanboyEP10"
+    },
+    {
+      "rank": 3,
+      "name": "#カミガタフェスやってるで_生配信"
     },
     {
       "rank": 3,
@@ -92,6 +96,10 @@
     {
       "rank": 4,
       "name": "#CHEMUN"
+    },
+    {
+      "rank": 5,
+      "name": "#BornToBeNuNewConcertD2"
     },
     {
       "rank": 5,
@@ -171,6 +179,10 @@
       "rank": 8,
       "name": "#BornToBeNuNewConcertD1",
       "highestRank": 5
+    },
+    {
+      "rank": 9,
+      "name": "NUNEW 2ND CON DAY2"
     },
     {
       "rank": 9,
@@ -353,6 +365,10 @@
     },
     {
       "rank": 17,
+      "name": "#RamlilaMaidan"
+    },
+    {
+      "rank": 17,
       "name": "May November"
     },
     {
@@ -393,7 +409,7 @@
     },
     {
       "rank": 18,
-      "name": "#BornToBeNuNewConcertD2"
+      "name": "#Bharat_BulletTrain"
     },
     {
       "rank": 18,
@@ -436,6 +452,10 @@
       "rank": 19,
       "name": "ARMY UNITED FOR BTS",
       "highestRank": 19
+    },
+    {
+      "rank": 20,
+      "name": "रामलीला मैदान"
     },
     {
       "rank": 20,
@@ -493,7 +513,7 @@
     },
     {
       "rank": 23,
-      "name": "NUNEW 2ND CON DAY2"
+      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
     },
     {
       "rank": 23,
@@ -522,11 +542,11 @@
     },
     {
       "rank": 24,
-      "name": "#ObsessionOnJioHotstar"
+      "name": "MAJOR FANDOM LINGORM"
     },
     {
       "rank": 24,
-      "name": "MAJOR FANDOM LINGORM"
+      "name": "#ObsessionOnJioHotstar"
     },
     {
       "rank": 24,
@@ -664,10 +684,6 @@
     },
     {
       "rank": 30,
-      "name": "रामलीला मैदान"
-    },
-    {
-      "rank": 30,
       "name": "直樹の部屋"
     },
     {
@@ -681,6 +697,10 @@
     }
   ],
   "thailand": [
+    {
+      "rank": 1,
+      "name": "#BornToBeNuNewConcertD2"
+    },
     {
       "rank": 1,
       "name": "#FoolInLove"
@@ -699,7 +719,7 @@
     },
     {
       "rank": 2,
-      "name": "#BornToBeNuNewConcertD2"
+      "name": "NUNEW 2ND CON DAY2"
     },
     {
       "rank": 2,
@@ -715,10 +735,6 @@
     },
     {
       "rank": 3,
-      "name": "NUNEW 2ND CON DAY2"
-    },
-    {
-      "rank": 3,
       "name": "#ที่รักสารวัตรเธียร์"
     },
     {
@@ -728,6 +744,10 @@
     {
       "rank": 3,
       "name": "#PoliceinLoveEP8"
+    },
+    {
+      "rank": 4,
+      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
     },
     {
       "rank": 4,
@@ -747,7 +767,7 @@
     },
     {
       "rank": 5,
-      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
+      "name": "MAJOR FANDOM LINGORM"
     },
     {
       "rank": 5,
@@ -755,7 +775,7 @@
     },
     {
       "rank": 6,
-      "name": "MAJOR FANDOM LINGORM"
+      "name": "#BookExpo2026xTheGrimLover"
     },
     {
       "rank": 6,
@@ -764,6 +784,10 @@
     {
       "rank": 6,
       "name": "#HaierFestival2026xBamBam"
+    },
+    {
+      "rank": 8,
+      "name": "THE GRIM LOVER STORY BOOK"
     },
     {
       "rank": 8,
@@ -784,10 +808,6 @@
     {
       "rank": 9,
       "name": "#DAOUOFFROADHALLOWEEND2"
-    },
-    {
-      "rank": 10,
-      "name": "THE GRIM LOVER STORY BOOK"
     },
     {
       "rank": 10,
@@ -852,6 +872,10 @@
     {
       "rank": 13,
       "name": "MARKJRTN AT RICHES BROW"
+    },
+    {
+      "rank": 14,
+      "name": "DEXX"
     },
     {
       "rank": 14,
@@ -928,6 +952,10 @@
     },
     {
       "rank": 21,
+      "name": "#อกาลิโกโฮเทล"
+    },
+    {
+      "rank": 21,
       "name": "#PoliceInLove"
     },
     {
@@ -984,6 +1012,10 @@
     },
     {
       "rank": 24,
+      "name": "#ดูหนัง"
+    },
+    {
+      "rank": 24,
       "name": "#GULFCLUB2026"
     },
     {
@@ -997,7 +1029,7 @@
     },
     {
       "rank": 25,
-      "name": "#BookExpo2026xTheGrimLover"
+      "name": "#หนังไทย"
     },
     {
       "rank": 25,
@@ -1126,6 +1158,10 @@
     },
     {
       "rank": 6,
+      "name": "#BornToBeNuNewConcertD2"
+    },
+    {
+      "rank": 6,
       "name": "LENAMIU PLS LOVE FINAL EP"
     },
     {
@@ -1142,6 +1178,10 @@
     },
     {
       "rank": 7,
+      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
+    },
+    {
+      "rank": 7,
       "name": "PERTHSANTA RALPHS CLUB POPUP"
     },
     {
@@ -1154,11 +1194,7 @@
     },
     {
       "rank": 8,
-      "name": "#เขมจิราตลอดกาลEP1"
-    },
-    {
-      "rank": 8,
-      "name": "#BornToBeNuNewConcertD1"
+      "name": "MAJOR FANDOM LINGORM"
     },
     {
       "rank": 8,
@@ -1167,6 +1203,14 @@
     {
       "rank": 8,
       "name": "Fofana"
+    },
+    {
+      "rank": 8,
+      "name": "#เขมจิราตลอดกาลEP1"
+    },
+    {
+      "rank": 8,
+      "name": "#BornToBeNuNewConcertD1"
     },
     {
       "rank": 8,
@@ -1246,11 +1290,11 @@
     },
     {
       "rank": 19,
-      "name": "North Korea"
+      "name": "Ocon"
     },
     {
       "rank": 19,
-      "name": "Ocon"
+      "name": "North Korea"
     },
     {
       "rank": 19,
