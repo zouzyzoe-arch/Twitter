@@ -1,6 +1,10 @@
 {
-  "lastUpdated": 1793525315834,
+  "lastUpdated": 1793528697984,
   "global": [
+    {
+      "rank": 1,
+      "name": "#カミガタフェスやってるで_生配信"
+    },
     {
       "rank": 1,
       "name": "ダノンデサイル"
@@ -23,7 +27,7 @@
     },
     {
       "rank": 2,
-      "name": "#カミガタフェスやってるで_生配信"
+      "name": "#BornToBeNuNewConcertD2"
     },
     {
       "rank": 2,
@@ -44,10 +48,6 @@
     {
       "rank": 2,
       "name": "#MrFanboyEP10"
-    },
-    {
-      "rank": 3,
-      "name": "#BornToBeNuNewConcertD2"
     },
     {
       "rank": 3,
@@ -104,6 +104,10 @@
     {
       "rank": 4,
       "name": "#CHEMUN"
+    },
+    {
+      "rank": 5,
+      "name": "#鉄腕DASH"
     },
     {
       "rank": 5,
@@ -169,6 +173,10 @@
     },
     {
       "rank": 8,
+      "name": "#結束バンド"
+    },
+    {
+      "rank": 8,
       "name": "乗車準備会"
     },
     {
@@ -183,6 +191,10 @@
       "rank": 8,
       "name": "#BornToBeNuNewConcertD1",
       "highestRank": 5
+    },
+    {
+      "rank": 9,
+      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
     },
     {
       "rank": 9,
@@ -210,6 +222,10 @@
     },
     {
       "rank": 10,
+      "name": "MAJOR FANDOM LINGORM"
+    },
+    {
+      "rank": 10,
       "name": "#Bharat_BulletTrain"
     },
     {
@@ -227,10 +243,6 @@
     {
       "rank": 10,
       "name": "ぶいすぽっ"
-    },
-    {
-      "rank": 11,
-      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
     },
     {
       "rank": 11,
@@ -258,7 +270,7 @@
     },
     {
       "rank": 12,
-      "name": "MAJOR FANDOM LINGORM"
+      "name": "カウコン"
     },
     {
       "rank": 12,
@@ -295,6 +307,10 @@
     {
       "rank": 13,
       "name": "コスプレ"
+    },
+    {
+      "rank": 14,
+      "name": "रामलीला मैदान"
     },
     {
       "rank": 14,
@@ -372,6 +388,10 @@
     },
     {
       "rank": 16,
+      "name": "アンダルシア"
+    },
+    {
+      "rank": 16,
       "name": "Rutgers"
     },
     {
@@ -382,10 +402,6 @@
       "rank": 16,
       "name": "トリックオアトリート",
       "highestRank": 14
-    },
-    {
-      "rank": 17,
-      "name": "रामलीला मैदान"
     },
     {
       "rank": 17,
@@ -450,6 +466,10 @@
     },
     {
       "rank": 19,
+      "name": "エイシンフラッシュ"
+    },
+    {
+      "rank": 19,
       "name": "戸崎さん"
     },
     {
@@ -472,6 +492,10 @@
       "rank": 19,
       "name": "ARMY UNITED FOR BTS",
       "highestRank": 19
+    },
+    {
+      "rank": 20,
+      "name": "LYKN HALLOWEEN PET"
     },
     {
       "rank": 20,
@@ -500,6 +524,10 @@
     },
     {
       "rank": 21,
+      "name": "キラちゃん"
+    },
+    {
+      "rank": 21,
       "name": "Gabby Williams"
     },
     {
@@ -521,11 +549,19 @@
     },
     {
       "rank": 22,
+      "name": "Metin Öztürk"
+    },
+    {
+      "rank": 22,
       "name": "Fenerbahçe"
     },
     {
       "rank": 22,
       "name": "NUNEW 2ND CON DAY1"
+    },
+    {
+      "rank": 23,
+      "name": "ライバールーレット"
     },
     {
       "rank": 23,
@@ -551,6 +587,10 @@
       "rank": 23,
       "name": "はろうぃん",
       "highestRank": 23
+    },
+    {
+      "rank": 24,
+      "name": "ランダム表示"
     },
     {
       "rank": 24,
@@ -596,7 +636,7 @@
     },
     {
       "rank": 26,
-      "name": "エイシンフラッシュ"
+      "name": "FATQEEL X TIMEPHORIA"
     },
     {
       "rank": 26,
@@ -666,20 +706,12 @@
     },
     {
       "rank": 28,
-      "name": "ライバールーレット"
-    },
-    {
-      "rank": 28,
       "name": "Toluca"
     },
     {
       "rank": 28,
       "name": "Initial Agent Offering",
       "highestRank": 15
-    },
-    {
-      "rank": 29,
-      "name": "ランダム表示"
     },
     {
       "rank": 29,
@@ -705,6 +737,10 @@
       "rank": 29,
       "name": "神木くん",
       "highestRank": 29
+    },
+    {
+      "rank": 30,
+      "name": "クリスマスChu"
     },
     {
       "rank": 30,
@@ -771,6 +807,10 @@
     },
     {
       "rank": 4,
+      "name": "#GOWHOLESALExOffroad"
+    },
+    {
+      "rank": 4,
       "name": "MAJOR FANDOM LINGORM"
     },
     {
@@ -795,7 +835,7 @@
     },
     {
       "rank": 6,
-      "name": "#GOWHOLESALExOffroad"
+      "name": "#TOROxLYKNInChiangmai"
     },
     {
       "rank": 6,
@@ -810,8 +850,12 @@
       "name": "#HaierFestival2026xBamBam"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "name": "LYKN HALLOWEEN PET"
+    },
+    {
+      "rank": 8,
+      "name": "#DEXXth"
     },
     {
       "rank": 8,
@@ -887,6 +931,10 @@
     },
     {
       "rank": 13,
+      "name": "WIN SOLO FM IN TAIPEI"
+    },
+    {
+      "rank": 13,
       "name": "WARM EMBRACE CHARLOTTE01"
     },
     {
@@ -900,10 +948,6 @@
     {
       "rank": 13,
       "name": "MARKJRTN AT RICHES BROW"
-    },
-    {
-      "rank": 14,
-      "name": "WIN SOLO FM IN TAIPEI"
     },
     {
       "rank": 14,
@@ -980,15 +1024,11 @@
     },
     {
       "rank": 20,
-      "name": "#TOROxLYKNInChiangmai"
-    },
-    {
-      "rank": 20,
       "name": "#OASISxJoongDunk"
     },
     {
       "rank": 21,
-      "name": "#DEXXth"
+      "name": "#WeTVSendLovexPoliceInLoveLIVE"
     },
     {
       "rank": 21,
@@ -1013,6 +1053,10 @@
     {
       "rank": 21,
       "name": "HAPPY MONSTER HOUSE X WAR"
+    },
+    {
+      "rank": 22,
+      "name": "#ออฟโรด"
     },
     {
       "rank": 22,
@@ -1066,6 +1110,10 @@
       "rank": 24,
       "name": "TONLIEW WITH NIYOMJEANS",
       "highestRank": 9
+    },
+    {
+      "rank": 25,
+      "name": "#BookExpo2026xTheCrowClub"
     },
     {
       "rank": 25,
@@ -1178,11 +1226,11 @@
     },
     {
       "rank": 2,
-      "name": "#MrFanboyEP10"
+      "name": "MR FANBOY CHAPTER 10"
     },
     {
       "rank": 2,
-      "name": "MR FANBOY CHAPTER 10"
+      "name": "#MrFanboyEP10"
     },
     {
       "rank": 2,
@@ -1298,6 +1346,10 @@
     },
     {
       "rank": 13,
+      "name": "yeonjun"
+    },
+    {
+      "rank": 13,
       "name": "LOVE HURTS"
     },
     {
@@ -1306,15 +1358,15 @@
     },
     {
       "rank": 14,
+      "name": "ORM BA LEAPMOTOR B03X"
+    },
+    {
+      "rank": 14,
       "name": "Episode 10"
     },
     {
       "rank": 14,
       "name": "NUNEW 2ND CON DAY1"
-    },
-    {
-      "rank": 15,
-      "name": "ORM BA LEAPMOTOR B03X"
     },
     {
       "rank": 16,
@@ -1350,7 +1402,7 @@
     },
     {
       "rank": 20,
-      "name": "Tusk"
+      "name": "Orm Kornnaphat"
     },
     {
       "rank": 20,
@@ -1358,11 +1410,11 @@
     },
     {
       "rank": 20,
-      "name": "Rogers"
+      "name": "Tusk"
     },
     {
-      "rank": 21,
-      "name": "Orm Kornnaphat"
+      "rank": 20,
+      "name": "Rogers"
     },
     {
       "rank": 21,
@@ -1379,6 +1431,10 @@
     },
     {
       "rank": 25,
+      "name": "Haas"
+    },
+    {
+      "rank": 25,
       "name": "Man Utd"
     },
     {
@@ -1387,21 +1443,17 @@
     },
     {
       "rank": 26,
-      "name": "Haas"
-    },
-    {
-      "rank": 26,
       "name": "AUAU SAVE LIVE WITH LINE MAN",
       "highestRank": 25
     },
     {
       "rank": 27,
-      "name": "Jinki",
-      "highestRank": 27
+      "name": "SIAM CENTER X KHOMKHLANG"
     },
     {
-      "rank": 28,
-      "name": "SIAM CENTER X KHOMKHLANG"
+      "rank": 27,
+      "name": "Jinki",
+      "highestRank": 27
     },
     {
       "rank": 28,
