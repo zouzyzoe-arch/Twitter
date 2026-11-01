@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1793521953064,
+  "lastUpdated": 1793525315834,
   "global": [
     {
       "rank": 1,
@@ -23,6 +23,10 @@
     },
     {
       "rank": 2,
+      "name": "#カミガタフェスやってるで_生配信"
+    },
+    {
+      "rank": 2,
       "name": "ネブラディスク"
     },
     {
@@ -43,15 +47,15 @@
     },
     {
       "rank": 3,
-      "name": "#カミガタフェスやってるで_生配信"
-    },
-    {
-      "rank": 3,
-      "name": "レガレイラ"
+      "name": "#BornToBeNuNewConcertD2"
     },
     {
       "rank": 3,
       "name": "Happy New Month"
+    },
+    {
+      "rank": 3,
+      "name": "レガレイラ"
     },
     {
       "rank": 3,
@@ -79,6 +83,10 @@
     },
     {
       "rank": 4,
+      "name": "NUNEW 2ND CON DAY2"
+    },
+    {
+      "rank": 4,
       "name": "#HBD_HAMIN_HappyCat"
     },
     {
@@ -96,10 +104,6 @@
     {
       "rank": 4,
       "name": "#CHEMUN"
-    },
-    {
-      "rank": 5,
-      "name": "#BornToBeNuNewConcertD2"
     },
     {
       "rank": 5,
@@ -182,10 +186,6 @@
     },
     {
       "rank": 9,
-      "name": "NUNEW 2ND CON DAY2"
-    },
-    {
-      "rank": 9,
       "name": "ベリーベリーホース"
     },
     {
@@ -210,6 +210,10 @@
     },
     {
       "rank": 10,
+      "name": "#Bharat_BulletTrain"
+    },
+    {
+      "rank": 10,
       "name": "セイウンハーデス"
     },
     {
@@ -223,6 +227,10 @@
     {
       "rank": 10,
       "name": "ぶいすぽっ"
+    },
+    {
+      "rank": 11,
+      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
     },
     {
       "rank": 11,
@@ -250,6 +258,10 @@
     },
     {
       "rank": 12,
+      "name": "MAJOR FANDOM LINGORM"
+    },
+    {
+      "rank": 12,
       "name": "ダービー馬"
     },
     {
@@ -263,6 +275,10 @@
     {
       "rank": 12,
       "name": "イタズラ"
+    },
+    {
+      "rank": 13,
+      "name": "#ロイヤルサロン"
     },
     {
       "rank": 13,
@@ -319,6 +335,10 @@
     },
     {
       "rank": 15,
+      "name": "直樹の部屋"
+    },
+    {
+      "rank": 15,
       "name": "入場者特典"
     },
     {
@@ -365,11 +385,15 @@
     },
     {
       "rank": 17,
-      "name": "#RamlilaMaidan"
+      "name": "रामलीला मैदान"
     },
     {
       "rank": 17,
       "name": "May November"
+    },
+    {
+      "rank": 17,
+      "name": "#RamlilaMaidan"
     },
     {
       "rank": 17,
@@ -406,10 +430,6 @@
     {
       "rank": 17,
       "name": "Maguire"
-    },
-    {
-      "rank": 18,
-      "name": "#Bharat_BulletTrain"
     },
     {
       "rank": 18,
@@ -452,10 +472,6 @@
       "rank": 19,
       "name": "ARMY UNITED FOR BTS",
       "highestRank": 19
-    },
-    {
-      "rank": 20,
-      "name": "रामलीला मैदान"
     },
     {
       "rank": 20,
@@ -513,10 +529,6 @@
     },
     {
       "rank": 23,
-      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
-    },
-    {
-      "rank": 23,
       "name": "レディネス"
     },
     {
@@ -542,10 +554,6 @@
     },
     {
       "rank": 24,
-      "name": "MAJOR FANDOM LINGORM"
-    },
-    {
-      "rank": 24,
       "name": "#ObsessionOnJioHotstar"
     },
     {
@@ -560,6 +568,10 @@
       "rank": 24,
       "name": "ユージーン",
       "highestRank": 24
+    },
+    {
+      "rank": 25,
+      "name": "ジャパンカップ"
     },
     {
       "rank": 25,
@@ -584,7 +596,7 @@
     },
     {
       "rank": 26,
-      "name": "ジャパンカップ"
+      "name": "エイシンフラッシュ"
     },
     {
       "rank": 26,
@@ -614,6 +626,10 @@
       "rank": 26,
       "name": "SAMA SAMA BINIYAHENG PINAS",
       "highestRank": 26
+    },
+    {
+      "rank": 27,
+      "name": "GAUTAM FOR RNF VICTORY"
     },
     {
       "rank": 27,
@@ -650,12 +666,20 @@
     },
     {
       "rank": 28,
+      "name": "ライバールーレット"
+    },
+    {
+      "rank": 28,
       "name": "Toluca"
     },
     {
       "rank": 28,
       "name": "Initial Agent Offering",
       "highestRank": 15
+    },
+    {
+      "rank": 29,
+      "name": "ランダム表示"
     },
     {
       "rank": 29,
@@ -681,10 +705,6 @@
       "rank": 29,
       "name": "神木くん",
       "highestRank": 29
-    },
-    {
-      "rank": 30,
-      "name": "直樹の部屋"
     },
     {
       "rank": 30,
@@ -735,6 +755,10 @@
     },
     {
       "rank": 3,
+      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
+    },
+    {
+      "rank": 3,
       "name": "#ที่รักสารวัตรเธียร์"
     },
     {
@@ -747,7 +771,7 @@
     },
     {
       "rank": 4,
-      "name": "#ธี่หยดสมิงเขาขวางxหลิงออม"
+      "name": "MAJOR FANDOM LINGORM"
     },
     {
       "rank": 4,
@@ -767,11 +791,11 @@
     },
     {
       "rank": 5,
-      "name": "MAJOR FANDOM LINGORM"
+      "name": "#YouManiacSeriesFinalEP"
     },
     {
-      "rank": 5,
-      "name": "#YouManiacSeriesFinalEP"
+      "rank": 6,
+      "name": "#GOWHOLESALExOffroad"
     },
     {
       "rank": 6,
@@ -784,6 +808,10 @@
     {
       "rank": 6,
       "name": "#HaierFestival2026xBamBam"
+    },
+    {
+      "rank": 8,
+      "name": "LYKN HALLOWEEN PET"
     },
     {
       "rank": 8,
@@ -875,6 +903,10 @@
     },
     {
       "rank": 14,
+      "name": "WIN SOLO FM IN TAIPEI"
+    },
+    {
+      "rank": 14,
       "name": "DEXX"
     },
     {
@@ -948,7 +980,15 @@
     },
     {
       "rank": 20,
+      "name": "#TOROxLYKNInChiangmai"
+    },
+    {
+      "rank": 20,
       "name": "#OASISxJoongDunk"
+    },
+    {
+      "rank": 21,
+      "name": "#DEXXth"
     },
     {
       "rank": 21,
@@ -1029,6 +1069,10 @@
     },
     {
       "rank": 25,
+      "name": "#หวยงวดนี้"
+    },
+    {
+      "rank": 25,
       "name": "#หนังไทย"
     },
     {
@@ -1085,6 +1129,10 @@
       "rank": 27,
       "name": "NAMTANFILM AT MAKRO HORECA",
       "highestRank": 17
+    },
+    {
+      "rank": 28,
+      "name": "#ตรวจหวย"
     },
     {
       "rank": 28,
@@ -1290,15 +1338,19 @@
     },
     {
       "rank": 19,
-      "name": "Ocon"
-    },
-    {
-      "rank": 19,
       "name": "North Korea"
     },
     {
       "rank": 19,
+      "name": "Ocon"
+    },
+    {
+      "rank": 19,
       "name": "Maguire"
+    },
+    {
+      "rank": 20,
+      "name": "Tusk"
     },
     {
       "rank": 20,
@@ -1310,16 +1362,12 @@
     },
     {
       "rank": 21,
-      "name": "Tusk"
+      "name": "Orm Kornnaphat"
     },
     {
       "rank": 21,
       "name": "Trick or Treat",
       "highestRank": 19
-    },
-    {
-      "rank": 22,
-      "name": "Orm Kornnaphat"
     },
     {
       "rank": 23,
@@ -1339,6 +1387,10 @@
     },
     {
       "rank": 26,
+      "name": "Haas"
+    },
+    {
+      "rank": 26,
       "name": "AUAU SAVE LIVE WITH LINE MAN",
       "highestRank": 25
     },
@@ -1349,16 +1401,12 @@
     },
     {
       "rank": 28,
-      "name": "Haas"
+      "name": "SIAM CENTER X KHOMKHLANG"
     },
     {
       "rank": 28,
       "name": "jeonghan",
       "highestRank": 28
-    },
-    {
-      "rank": 29,
-      "name": "SIAM CENTER X KHOMKHLANG"
     },
     {
       "rank": 30,
