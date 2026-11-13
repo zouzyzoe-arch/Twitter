@@ -1,6 +1,10 @@
 {
-  "lastUpdated": 1794578379118,
+  "lastUpdated": 1794581244873,
   "global": [
+    {
+      "rank": 1,
+      "name": "#มหาฤกษ์กินดองพ่อครูน้องเขม"
+    },
     {
       "rank": 1,
       "name": "#侍ジャパン"
@@ -51,7 +55,7 @@
     },
     {
       "rank": 2,
-      "name": "#มหาฤกษ์กินดองพ่อครูน้องเขม"
+      "name": "KHEMJIRA THE WEDDING DAY"
     },
     {
       "rank": 2,
@@ -95,7 +99,7 @@
     },
     {
       "rank": 3,
-      "name": "KHEMJIRA THE WEDDING DAY"
+      "name": "#FondaAraOdemeYALANI"
     },
     {
       "rank": 3,
@@ -148,6 +152,10 @@
     {
       "rank": 3,
       "name": "#超特急_神フィバ変身"
+    },
+    {
+      "rank": 4,
+      "name": "#LOST10"
     },
     {
       "rank": 4,
@@ -243,6 +251,10 @@
     },
     {
       "rank": 6,
+      "name": "#ساعه_استجابه"
+    },
+    {
+      "rank": 6,
       "name": "ホームラン"
     },
     {
@@ -293,10 +305,6 @@
       "rank": 6,
       "name": "#เปิดฤกษ์คืนขวัญเขมจิรา",
       "highestRank": 6
-    },
-    {
-      "rank": 7,
-      "name": "#LOST10"
     },
     {
       "rank": 7,
@@ -362,6 +370,10 @@
     },
     {
       "rank": 9,
+      "name": "FORCEBOOK LAG EP3"
+    },
+    {
+      "rank": 9,
       "name": "作法クイズ"
     },
     {
@@ -391,6 +403,10 @@
     {
       "rank": 9,
       "name": "KHEMJIRA WELCOME BACK"
+    },
+    {
+      "rank": 10,
+      "name": "Friday the 13th"
     },
     {
       "rank": 10,
@@ -590,10 +606,6 @@
     },
     {
       "rank": 14,
-      "name": "Friday the 13th"
-    },
-    {
-      "rank": 14,
       "name": "NAMTANFILM GLAM NIGHT"
     },
     {
@@ -741,10 +753,6 @@
     },
     {
       "rank": 17,
-      "name": "FORCEBOOK LAG EP3"
-    },
-    {
-      "rank": 17,
       "name": "蛙化度100"
     },
     {
@@ -834,6 +842,10 @@
     },
     {
       "rank": 19,
+      "name": "JEOLEE THREE BILLION VIEWS"
+    },
+    {
+      "rank": 19,
       "name": "モアナ2"
     },
     {
@@ -892,6 +904,10 @@
       "rank": 19,
       "name": "ARMY UNITED FOR BTS",
       "highestRank": 19
+    },
+    {
+      "rank": 20,
+      "name": "Watch Debate On 14November"
     },
     {
       "rank": 20,
@@ -993,7 +1009,7 @@
     },
     {
       "rank": 22,
-      "name": "Watch Debate On 14November"
+      "name": "DUSTIN AS ROMMEL"
     },
     {
       "rank": 22,
@@ -1103,7 +1119,7 @@
     },
     {
       "rank": 25,
-      "name": "JEOLEE THREE BILLION VIEWS"
+      "name": "Signal"
     },
     {
       "rank": 25,
@@ -1149,6 +1165,10 @@
       "rank": 25,
       "name": "CHARLOTTE AFTER DARK",
       "highestRank": 16
+    },
+    {
+      "rank": 26,
+      "name": "楽園追放"
     },
     {
       "rank": 26,
@@ -1279,10 +1299,6 @@
     },
     {
       "rank": 29,
-      "name": "Signal"
-    },
-    {
-      "rank": 29,
       "name": "Steve Jobs"
     },
     {
@@ -1321,6 +1337,10 @@
       "rank": 29,
       "name": "神木くん",
       "highestRank": 29
+    },
+    {
+      "rank": 30,
+      "name": "GEHLEE CLOSER ON SET"
     },
     {
       "rank": 30,
@@ -1419,6 +1439,10 @@
     },
     {
       "rank": 3,
+      "name": "#LoversAndGangstersEP3"
+    },
+    {
+      "rank": 3,
       "name": "#GoldenZebraJeansXPNB"
     },
     {
@@ -1444,6 +1468,10 @@
     {
       "rank": 3,
       "name": "#PoliceinLoveEP8"
+    },
+    {
+      "rank": 4,
+      "name": "FORCEBOOK LAG EP3"
     },
     {
       "rank": 4,
@@ -1476,10 +1504,6 @@
     {
       "rank": 4,
       "name": "#EnchantedFest2026xBUS"
-    },
-    {
-      "rank": 5,
-      "name": "#LoversAndGangstersEP3"
     },
     {
       "rank": 5,
@@ -1528,10 +1552,6 @@
     {
       "rank": 6,
       "name": "#HaierFestival2026xBamBam"
-    },
-    {
-      "rank": 7,
-      "name": "FORCEBOOK LAG EP3"
     },
     {
       "rank": 7,
@@ -1615,6 +1635,10 @@
     },
     {
       "rank": 10,
+      "name": "CHEER FOR MANGxDAOU AT ESCA"
+    },
+    {
+      "rank": 10,
       "name": "FOURTH x SENKA GLOWTOPIA"
     },
     {
@@ -1644,10 +1668,6 @@
     {
       "rank": 10,
       "name": "PERTHSANTA RALPHS CLUB POPUP"
-    },
-    {
-      "rank": 11,
-      "name": "CHEER FOR MANGxDAOU AT ESCA"
     },
     {
       "rank": 11,
@@ -1684,6 +1704,10 @@
     {
       "rank": 11,
       "name": "Halloween"
+    },
+    {
+      "rank": 12,
+      "name": "GREATBRIGHT LAG EP3"
     },
     {
       "rank": 12,
@@ -1751,10 +1775,6 @@
     },
     {
       "rank": 14,
-      "name": "GREATBRIGHT LAG EP3"
-    },
-    {
-      "rank": 14,
       "name": "JENO AT TAILS OF TALES"
     },
     {
@@ -1764,6 +1784,10 @@
     {
       "rank": 14,
       "name": "Dexx"
+    },
+    {
+      "rank": 15,
+      "name": "ICONSIAM FESTIVE x POOHPAVEL"
     },
     {
       "rank": 15,
@@ -1803,7 +1827,7 @@
     },
     {
       "rank": 16,
-      "name": "ICONSIAM FESTIVE x POOHPAVEL"
+      "name": "TANYUYU LOVE ME TO HURT ME EP2"
     },
     {
       "rank": 16,
@@ -1988,6 +2012,10 @@
     },
     {
       "rank": 23,
+      "name": "WARM EMBRACE CHARLOTTE13"
+    },
+    {
+      "rank": 23,
       "name": "HUG E LHEE Q12"
     },
     {
@@ -2065,11 +2093,11 @@
     },
     {
       "rank": 25,
-      "name": "uppoom japan 2nd fm"
+      "name": "UPPOOM JAPAN 2nd FM"
     },
     {
       "rank": 25,
-      "name": "UPPOOM JAPAN 2nd FM"
+      "name": "uppoom japan 2nd fm"
     },
     {
       "rank": 25,
@@ -2147,7 +2175,7 @@
     },
     {
       "rank": 27,
-      "name": "WARM EMBRACE CHARLOTTE13"
+      "name": "ENGFA ALL ROUNDER13"
     },
     {
       "rank": 27,
@@ -2169,6 +2197,10 @@
       "rank": 27,
       "name": "NAMTANFILM AT MAKRO HORECA",
       "highestRank": 17
+    },
+    {
+      "rank": 28,
+      "name": "#NamtanFilmFanconD1"
     },
     {
       "rank": 28,
@@ -2204,7 +2236,7 @@
     },
     {
       "rank": 29,
-      "name": "ENGFA ALL ROUNDER13"
+      "name": "#SENKAxFourth"
     },
     {
       "rank": 29,
@@ -2232,7 +2264,7 @@
     },
     {
       "rank": 30,
-      "name": "#NamtanFilmFanconD1"
+      "name": "#MANGXDAOU_EUROVISIONASIA"
     },
     {
       "rank": 30,
@@ -2326,6 +2358,10 @@
     },
     {
       "rank": 6,
+      "name": "#GMMTVPOPUPSTOREINSINGAPORE"
+    },
+    {
+      "rank": 6,
       "name": "KHEMJIRA THE WEDDING DAY"
     },
     {
@@ -2366,7 +2402,7 @@
     },
     {
       "rank": 7,
-      "name": "#GMMTVPOPUPSTOREINSINGAPORE"
+      "name": "ORM NOURISHING TABLE"
     },
     {
       "rank": 7,
@@ -2402,11 +2438,15 @@
     },
     {
       "rank": 8,
-      "name": "#มหาฤกษ์กินดองพ่อครูน้องเขม"
+      "name": "#LolaneChinaxORM"
     },
     {
       "rank": 8,
       "name": "$NVDA"
+    },
+    {
+      "rank": 8,
+      "name": "#มหาฤกษ์กินดองพ่อครูน้องเขม"
     },
     {
       "rank": 8,
@@ -2434,15 +2474,11 @@
     },
     {
       "rank": 9,
-      "name": "ORM NOURISHING TABLE"
+      "name": "#LoversAndGangstersEP3"
     },
     {
       "rank": 9,
       "name": "KHEMJIRA FOREVER EP1"
-    },
-    {
-      "rank": 10,
-      "name": "#LolaneChinaxORM"
     },
     {
       "rank": 10,
@@ -2490,15 +2526,19 @@
     },
     {
       "rank": 12,
+      "name": "FORCEBOOK LAG EP3"
+    },
+    {
+      "rank": 12,
       "name": "Bybit"
     },
     {
       "rank": 12,
-      "name": "Colette Kress"
+      "name": "GF MEGA GALE x FRIENDS"
     },
     {
       "rank": 12,
-      "name": "GF MEGA GALE x FRIENDS"
+      "name": "Colette Kress"
     },
     {
       "rank": 12,
@@ -2566,15 +2606,15 @@
     },
     {
       "rank": 17,
+      "name": "Paraguay"
+    },
+    {
+      "rank": 17,
       "name": "Poch"
     },
     {
       "rank": 17,
       "name": "Third and Wan"
-    },
-    {
-      "rank": 18,
-      "name": "Paraguay"
     },
     {
       "rank": 18,
@@ -2755,6 +2795,10 @@
       "rank": 28,
       "name": "jeonghan",
       "highestRank": 28
+    },
+    {
+      "rank": 29,
+      "name": "CUDA"
     },
     {
       "rank": 29,
