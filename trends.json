@@ -1,17 +1,21 @@
 {
-  "lastUpdated": 1795611311949,
+  "lastUpdated": 1795615622335,
   "global": [
+    {
+      "rank": 1,
+      "name": "#ポリティカルパン"
+    },
     {
       "rank": 1,
       "name": "#あわてんぼうのACEesとクリパ"
     },
     {
       "rank": 1,
-      "name": "#プロセカ放送局"
+      "name": "ベストナイン"
     },
     {
       "rank": 1,
-      "name": "ベストナイン"
+      "name": "#プロセカ放送局"
     },
     {
       "rank": 1,
@@ -68,6 +72,10 @@
     {
       "rank": 1,
       "name": "Happy Halloween"
+    },
+    {
+      "rank": 2,
+      "name": "#水曜日のダウンタウン"
     },
     {
       "rank": 2,
@@ -128,6 +136,10 @@
     {
       "rank": 2,
       "name": "#MrFanboyEP10"
+    },
+    {
+      "rank": 3,
+      "name": "WILLIAMEST WESLEY YIPENG"
     },
     {
       "rank": 3,
@@ -203,6 +215,10 @@
     },
     {
       "rank": 4,
+      "name": "#OrmAtBvlgariVN"
+    },
+    {
+      "rank": 4,
       "name": "SHEEP RAINY DAY TleFirstone"
     },
     {
@@ -267,11 +283,11 @@
     },
     {
       "rank": 5,
-      "name": "#ニノなのに"
+      "name": "ORM BVLGARI HANOI OPENING"
     },
     {
       "rank": 5,
-      "name": "#OrmAtBvlgariVN"
+      "name": "#ニノなのに"
     },
     {
       "rank": 5,
@@ -332,10 +348,6 @@
     {
       "rank": 5,
       "name": "Chelsea"
-    },
-    {
-      "rank": 6,
-      "name": "ORM BVLGARI HANOI OPENING"
     },
     {
       "rank": 6,
@@ -405,6 +417,10 @@
       "rank": 6,
       "name": "#เปิดฤกษ์คืนขวัญเขมจิรา",
       "highestRank": 6
+    },
+    {
+      "rank": 7,
+      "name": "#ELLEMENStyleAwards2026"
     },
     {
       "rank": 7,
@@ -550,6 +566,10 @@
     },
     {
       "rank": 10,
+      "name": "漂流教室"
+    },
+    {
+      "rank": 10,
       "name": "メルブラ"
     },
     {
@@ -686,6 +706,10 @@
     },
     {
       "rank": 12,
+      "name": "ドラゴン桜"
+    },
+    {
+      "rank": 12,
       "name": "やわしゅん"
     },
     {
@@ -727,6 +751,10 @@
     {
       "rank": 12,
       "name": "イタズラ"
+    },
+    {
+      "rank": 13,
+      "name": "Happy Thanksgiving Eve"
     },
     {
       "rank": 13,
@@ -787,6 +815,10 @@
     {
       "rank": 13,
       "name": "コスプレ"
+    },
+    {
+      "rank": 14,
+      "name": "玉矢総理"
     },
     {
       "rank": 14,
@@ -936,6 +968,10 @@
     },
     {
       "rank": 16,
+      "name": "全権委任法"
+    },
+    {
+      "rank": 16,
       "name": "AOUTHIRD X DRPONG LIVE"
     },
     {
@@ -978,6 +1014,10 @@
       "rank": 16,
       "name": "トリックオアトリート",
       "highestRank": 14
+    },
+    {
+      "rank": 17,
+      "name": "ニッポニア"
     },
     {
       "rank": 17,
@@ -1038,6 +1078,10 @@
     {
       "rank": 17,
       "name": "Maguire"
+    },
+    {
+      "rank": 18,
+      "name": "デスノート"
     },
     {
       "rank": 18,
@@ -1102,7 +1146,7 @@
     },
     {
       "rank": 19,
-      "name": "Happy Thanksgiving Eve"
+      "name": "双子の日"
     },
     {
       "rank": 19,
@@ -1184,6 +1228,10 @@
       "rank": 19,
       "name": "ARMY UNITED FOR BTS",
       "highestRank": 19
+    },
+    {
+      "rank": 20,
+      "name": "YOKO NEKO X MOO TO GO"
     },
     {
       "rank": 20,
@@ -1475,10 +1523,6 @@
     },
     {
       "rank": 25,
-      "name": "WILLIAMEST WESLEY YIPENG"
-    },
-    {
-      "rank": 25,
       "name": "私の心理性別の比重"
     },
     {
@@ -1540,7 +1584,7 @@
     },
     {
       "rank": 26,
-      "name": "双子の日"
+      "name": "청룡영화상"
     },
     {
       "rank": 26,
@@ -1731,6 +1775,10 @@
     },
     {
       "rank": 29,
+      "name": "BIL SERIES EP6"
+    },
+    {
+      "rank": 29,
       "name": "右京さん"
     },
     {
@@ -1780,6 +1828,10 @@
     {
       "rank": 29,
       "name": "リサマル"
+    },
+    {
+      "rank": 30,
+      "name": "Core PCE"
     },
     {
       "rank": 30,
@@ -1926,6 +1978,10 @@
     },
     {
       "rank": 3,
+      "name": "WILLIAMEST WESLEY YIPENG"
+    },
+    {
+      "rank": 3,
       "name": "#CharlotteXDrSkinneLive1125"
     },
     {
@@ -1963,6 +2019,10 @@
     {
       "rank": 3,
       "name": "#PoliceinLoveEP8"
+    },
+    {
+      "rank": 4,
+      "name": "#OrmAtBvlgariVN"
     },
     {
       "rank": 4,
@@ -2007,10 +2067,6 @@
     {
       "rank": 4,
       "name": "#EnchantedFest2026xBUS"
-    },
-    {
-      "rank": 5,
-      "name": "#OrmAtBvlgariVN"
     },
     {
       "rank": 5,
@@ -2079,6 +2135,10 @@
     {
       "rank": 6,
       "name": "#HaierFestival2026xBamBam"
+    },
+    {
+      "rank": 7,
+      "name": "#ScarletHeartUllaveeEP7"
     },
     {
       "rank": 7,
@@ -2174,6 +2234,10 @@
     },
     {
       "rank": 9,
+      "name": "BIL SERIES EP6"
+    },
+    {
+      "rank": 9,
       "name": "TOMAFOX BONCHON X HONEKRAPONG"
     },
     {
@@ -2202,11 +2266,11 @@
     },
     {
       "rank": 10,
-      "name": "AOUTHIRD X DRPONG LIVE"
+      "name": "SHEEP X RAINY LIMITED EDITION"
     },
     {
       "rank": 10,
-      "name": "SHEEP X RAINY LIMITED EDITION"
+      "name": "AOUTHIRD X DRPONG LIVE"
     },
     {
       "rank": 10,
@@ -2247,10 +2311,6 @@
     {
       "rank": 10,
       "name": "PERTHSANTA RALPHS CLUB POPUP"
-    },
-    {
-      "rank": 11,
-      "name": "WILLIAMEST WESLEY YIPENG"
     },
     {
       "rank": 11,
@@ -2298,6 +2358,10 @@
     },
     {
       "rank": 12,
+      "name": "MY THIRD SECRET"
+    },
+    {
+      "rank": 12,
       "name": "PEARL x ELLEMEN AWARDS 2026"
     },
     {
@@ -2339,6 +2403,10 @@
     {
       "rank": 12,
       "name": "CHARLOTTE AFTER DARK"
+    },
+    {
+      "rank": 13,
+      "name": "FORCE PHA WIANG SHULV EP7"
     },
     {
       "rank": 13,
@@ -2487,10 +2555,6 @@
     },
     {
       "rank": 17,
-      "name": "MY THIRD SECRET"
-    },
-    {
-      "rank": 17,
       "name": "HBD LENA MIU OUR SUNSHINE"
     },
     {
@@ -2556,6 +2620,10 @@
     {
       "rank": 18,
       "name": "THE D DORM SITCOM EP 7"
+    },
+    {
+      "rank": 19,
+      "name": "YOKO NEKO X MOO TO GO"
     },
     {
       "rank": 19,
@@ -2655,6 +2723,10 @@
     },
     {
       "rank": 22,
+      "name": "THE CROW CLUB AT FLEX"
+    },
+    {
+      "rank": 22,
       "name": "OFFGUN X ELLEMEN"
     },
     {
@@ -2703,7 +2775,7 @@
     },
     {
       "rank": 23,
-      "name": "YOKO NEKO X MOO TO GO"
+      "name": "MUEANG FAH GENTLE SIDE"
     },
     {
       "rank": 23,
@@ -2751,10 +2823,6 @@
     },
     {
       "rank": 24,
-      "name": "THE CROW CLUB AT FLEX"
-    },
-    {
-      "rank": 24,
       "name": "BTS POP-UP"
     },
     {
@@ -2793,6 +2861,10 @@
       "rank": 24,
       "name": "TONLIEW WITH NIYOMJEANS",
       "highestRank": 9
+    },
+    {
+      "rank": 25,
+      "name": "MOTHERLAND BREAKPOINT"
     },
     {
       "rank": 25,
@@ -2975,6 +3047,10 @@
     },
     {
       "rank": 29,
+      "name": "MEW ELLE MEW AWARDS"
+    },
+    {
+      "rank": 29,
       "name": "Hook Your Heart Trailer"
     },
     {
@@ -3049,11 +3125,11 @@
     },
     {
       "rank": 1,
-      "name": "#RockfishWeatherwearTHxJJJ"
+      "name": "Jensen"
     },
     {
       "rank": 1,
-      "name": "Jensen"
+      "name": "#RockfishWeatherwearTHxJJJ"
     },
     {
       "rank": 1,
@@ -3062,6 +3138,10 @@
     {
       "rank": 1,
       "name": "Halloween"
+    },
+    {
+      "rank": 2,
+      "name": "WILLIAMEST WESLEY YIPENG"
     },
     {
       "rank": 2,
@@ -3117,6 +3197,10 @@
     },
     {
       "rank": 4,
+      "name": "GARNIER GLOW WITH TEE JUMMO"
+    },
+    {
+      "rank": 4,
       "name": "nanon naughty out now"
     },
     {
@@ -3141,6 +3225,10 @@
     },
     {
       "rank": 5,
+      "name": "#GarnierClinicalSerumxTeeJummo"
+    },
+    {
+      "rank": 5,
       "name": "#MissUniverse2026"
     },
     {
@@ -3153,11 +3241,11 @@
     },
     {
       "rank": 6,
-      "name": "#LoyKrathongICONSIAMxLenaMiu"
+      "name": "Mitch"
     },
     {
       "rank": 6,
-      "name": "Mitch"
+      "name": "#LoyKrathongICONSIAMxLenaMiu"
     },
     {
       "rank": 6,
@@ -3449,11 +3537,15 @@
     },
     {
       "rank": 17,
-      "name": "Hamas"
+      "name": "hug e lhee q13"
     },
     {
       "rank": 17,
       "name": "Ansem"
+    },
+    {
+      "rank": 17,
+      "name": "Hamas"
     },
     {
       "rank": 17,
@@ -3469,11 +3561,15 @@
     },
     {
       "rank": 18,
-      "name": "jeno"
+      "name": "TESHOWPING 1YEAR OF US"
     },
     {
       "rank": 18,
       "name": "Tokenized"
+    },
+    {
+      "rank": 18,
+      "name": "jeno"
     },
     {
       "rank": 18,
@@ -3526,10 +3622,6 @@
     {
       "rank": 19,
       "name": "Maguire"
-    },
-    {
-      "rank": 20,
-      "name": "TESHOWPING 1YEAR OF US"
     },
     {
       "rank": 20,
@@ -3595,6 +3687,10 @@
     {
       "rank": 23,
       "name": "Chelsea"
+    },
+    {
+      "rank": 24,
+      "name": "GIWA"
     },
     {
       "rank": 24,
@@ -3705,6 +3801,10 @@
     },
     {
       "rank": 29,
+      "name": "WALL-OSS-1.0"
+    },
+    {
+      "rank": 29,
       "name": "eBPF"
     },
     {
@@ -3726,10 +3826,6 @@
     {
       "rank": 29,
       "name": "Connor"
-    },
-    {
-      "rank": 30,
-      "name": "WALL-OSS-1.0"
     },
     {
       "rank": 30,
