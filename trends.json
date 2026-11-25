@@ -1,6 +1,10 @@
 {
-  "lastUpdated": 1794598830350,
+  "lastUpdated": 1795600615940,
   "global": [
+    {
+      "rank": 1,
+      "name": "ベストナイン"
+    },
     {
       "rank": 1,
       "name": "#FondaAraOdemeYALANI"
@@ -59,6 +63,10 @@
     },
     {
       "rank": 2,
+      "name": "石田三成"
+    },
+    {
+      "rank": 2,
       "name": "Friday the 13th"
     },
     {
@@ -104,6 +112,10 @@
     {
       "rank": 2,
       "name": "#MrFanboyEP10"
+    },
+    {
+      "rank": 3,
+      "name": "神木くん"
     },
     {
       "rank": 3,
@@ -171,6 +183,10 @@
     },
     {
       "rank": 4,
+      "name": "#WeWantPBBLivestream"
+    },
+    {
+      "rank": 4,
       "name": "#السعوديه_كوريا_الجنوبيه"
     },
     {
@@ -220,6 +236,10 @@
     {
       "rank": 4,
       "name": "#CHEMUN"
+    },
+    {
+      "rank": 5,
+      "name": "#PinoyBigBoycott"
     },
     {
       "rank": 5,
@@ -276,6 +296,10 @@
     {
       "rank": 5,
       "name": "Chelsea"
+    },
+    {
+      "rank": 6,
+      "name": "#CancelPBBExtra"
     },
     {
       "rank": 6,
@@ -344,6 +368,10 @@
     },
     {
       "rank": 7,
+      "name": "#三成のうた"
+    },
+    {
+      "rank": 7,
       "name": "Pitso"
     },
     {
@@ -378,6 +406,10 @@
       "rank": 7,
       "name": "#OASISxJoongDunk",
       "highestRank": 7
+    },
+    {
+      "rank": 8,
+      "name": "#มนต์รักฮักอีหลีQ14"
     },
     {
       "rank": 8,
@@ -422,6 +454,10 @@
     },
     {
       "rank": 9,
+      "name": "HUG E LHEE Q14"
+    },
+    {
+      "rank": 9,
       "name": "Odemeler Eksik AnaPara Yok"
     },
     {
@@ -459,6 +495,10 @@
     {
       "rank": 9,
       "name": "KHEMJIRA WELCOME BACK"
+    },
+    {
+      "rank": 10,
+      "name": "STAND FOR TRANSPARENCY MAYA"
     },
     {
       "rank": 10,
@@ -530,6 +570,10 @@
     },
     {
       "rank": 11,
+      "name": "Pete Edochie"
+    },
+    {
+      "rank": 11,
       "name": "Tolu Arokodare"
     },
     {
@@ -582,6 +626,10 @@
     },
     {
       "rank": 12,
+      "name": "グラコロ"
+    },
+    {
+      "rank": 12,
       "name": "Barış Alper"
     },
     {
@@ -619,6 +667,10 @@
     {
       "rank": 12,
       "name": "イタズラ"
+    },
+    {
+      "rank": 13,
+      "name": "神木隆之介"
     },
     {
       "rank": 13,
@@ -671,6 +723,10 @@
     {
       "rank": 13,
       "name": "コスプレ"
+    },
+    {
+      "rank": 14,
+      "name": "イッテラッシャイ"
     },
     {
       "rank": 14,
@@ -739,6 +795,10 @@
     },
     {
       "rank": 15,
+      "name": "浦和記念"
+    },
+    {
+      "rank": 15,
       "name": "ناصر ماهر"
     },
     {
@@ -804,6 +864,10 @@
     },
     {
       "rank": 16,
+      "name": "ORM BVLGARI HANOI OPENING"
+    },
+    {
+      "rank": 16,
       "name": "Remedios de Escalada"
     },
     {
@@ -838,6 +902,10 @@
       "rank": 16,
       "name": "トリックオアトリート",
       "highestRank": 14
+    },
+    {
+      "rank": 17,
+      "name": "大河ドラマ"
     },
     {
       "rank": 17,
@@ -897,6 +965,10 @@
     },
     {
       "rank": 18,
+      "name": "メイちゃん"
+    },
+    {
+      "rank": 18,
       "name": "Makhanya"
     },
     {
@@ -943,6 +1015,10 @@
       "rank": 18,
       "name": "ピアノコンサート",
       "highestRank": 18
+    },
+    {
+      "rank": 19,
+      "name": "ナルカミ"
     },
     {
       "rank": 19,
@@ -1019,6 +1095,10 @@
     },
     {
       "rank": 20,
+      "name": "あなたの適正エージェント"
+    },
+    {
+      "rank": 20,
       "name": "Mokoena"
     },
     {
@@ -1073,6 +1153,10 @@
       "rank": 20,
       "name": "ハピハロ",
       "highestRank": 20
+    },
+    {
+      "rank": 21,
+      "name": "エフフォーリア"
     },
     {
       "rank": 21,
@@ -1137,6 +1221,10 @@
     },
     {
       "rank": 22,
+      "name": "新人特別賞"
+    },
+    {
+      "rank": 22,
       "name": "AvaYaman"
     },
     {
@@ -1166,6 +1254,10 @@
     {
       "rank": 22,
       "name": "NUNEW 2ND CON DAY1"
+    },
+    {
+      "rank": 23,
+      "name": "スキン大会"
     },
     {
       "rank": 23,
@@ -1230,6 +1322,10 @@
     },
     {
       "rank": 24,
+      "name": "JJJ ROCKFISH NEW STORE"
+    },
+    {
+      "rank": 24,
       "name": "画像20枚"
     },
     {
@@ -1264,6 +1360,10 @@
       "rank": 24,
       "name": "ユージーン",
       "highestRank": 24
+    },
+    {
+      "rank": 25,
+      "name": "私の心理性別の比重"
     },
     {
       "rank": 25,
@@ -1324,6 +1424,10 @@
     },
     {
       "rank": 26,
+      "name": "くら寿司"
+    },
+    {
+      "rank": 26,
       "name": "Syndicate Files"
     },
     {
@@ -1374,6 +1478,10 @@
       "rank": 26,
       "name": "SAMA SAMA BINIYAHENG PINAS",
       "highestRank": 26
+    },
+    {
+      "rank": 27,
+      "name": "BBS GEHLEE"
     },
     {
       "rank": 27,
@@ -1434,6 +1542,10 @@
     },
     {
       "rank": 28,
+      "name": "竹丸新人王"
+    },
+    {
+      "rank": 28,
       "name": "Gazze Felaketi Yaşıyor"
     },
     {
@@ -1483,6 +1595,10 @@
     },
     {
       "rank": 29,
+      "name": "ラッコちゃん"
+    },
+    {
+      "rank": 29,
       "name": "バックパス"
     },
     {
@@ -1526,9 +1642,8 @@
       "name": "リサマル"
     },
     {
-      "rank": 29,
-      "name": "神木くん",
-      "highestRank": 29
+      "rank": 30,
+      "name": "優勝補正"
     },
     {
       "rank": 30,
@@ -1575,6 +1690,10 @@
   "thailand": [
     {
       "rank": 1,
+      "name": "#มนต์รักฮักอีหลีQ14"
+    },
+    {
+      "rank": 1,
       "name": "#มหาฤกษ์กินดองพ่อครูน้องเขม"
     },
     {
@@ -1611,6 +1730,10 @@
     },
     {
       "rank": 2,
+      "name": "HUG E LHEE Q14"
+    },
+    {
+      "rank": 2,
       "name": "KHEMJIRA THE WEDDING DAY"
     },
     {
@@ -1639,6 +1762,10 @@
     },
     {
       "rank": 3,
+      "name": "#KengHarit"
+    },
+    {
+      "rank": 3,
       "name": "#GoldenZebraJeansXPNB"
     },
     {
@@ -1664,6 +1791,10 @@
     {
       "rank": 3,
       "name": "#PoliceinLoveEP8"
+    },
+    {
+      "rank": 4,
+      "name": "#ตี๋ตี๋ติ๊กฟ้า"
     },
     {
       "rank": 4,
@@ -1703,6 +1834,10 @@
     },
     {
       "rank": 5,
+      "name": "#บอนชอนฟ้อกไปโหนกระป๋อง"
+    },
+    {
+      "rank": 5,
       "name": "#BIGASSคอนเสิร์ตใหญ่ก่อนตาย"
     },
     {
@@ -1735,6 +1870,10 @@
     },
     {
       "rank": 6,
+      "name": "#RockfishWeatherwearTHxJJJ"
+    },
+    {
+      "rank": 6,
       "name": "#CODE_NUMBER_IN_BANGKOK"
     },
     {
@@ -1759,6 +1898,10 @@
     },
     {
       "rank": 7,
+      "name": "JJJ ROCKFISH NEW STORE"
+    },
+    {
+      "rank": 7,
       "name": "THE CROW CLUB EP9"
     },
     {
@@ -1772,6 +1915,10 @@
     {
       "rank": 7,
       "name": "#ProjectAlphaNewClanEP3"
+    },
+    {
+      "rank": 8,
+      "name": "ORM BVLGARI HANOI OPENING"
     },
     {
       "rank": 8,
@@ -1831,6 +1978,10 @@
     },
     {
       "rank": 9,
+      "name": "TOMAFOX BONCHON X HONEKRAPONG"
+    },
+    {
+      "rank": 9,
       "name": "#satangtytan"
     },
     {
@@ -1848,6 +1999,10 @@
     {
       "rank": 9,
       "name": "#DAOUOFFROADHALLOWEEND2"
+    },
+    {
+      "rank": 10,
+      "name": "SHEEP X RAINY LIMITED EDITION"
     },
     {
       "rank": 10,
@@ -1891,6 +2046,10 @@
     },
     {
       "rank": 11,
+      "name": "SAFEGUARD PICKS WONBIN"
+    },
+    {
+      "rank": 11,
       "name": "BOOK X INNISFREE SP LIVE"
     },
     {
@@ -1924,6 +2083,10 @@
     {
       "rank": 11,
       "name": "Halloween"
+    },
+    {
+      "rank": 12,
+      "name": "Happy Birthday Bible"
     },
     {
       "rank": 12,
@@ -1963,6 +2126,10 @@
     },
     {
       "rank": 13,
+      "name": "PUDDARN OF INNONGSA"
+    },
+    {
+      "rank": 13,
       "name": "NO MATTER OST MR FANBOY"
     },
     {
@@ -1995,6 +2162,10 @@
     },
     {
       "rank": 14,
+      "name": "HONGSEN KLOOKFOON Q48"
+    },
+    {
+      "rank": 14,
       "name": "JENO AT TAILS OF TALES"
     },
     {
@@ -2004,6 +2175,10 @@
     {
       "rank": 14,
       "name": "Dexx"
+    },
+    {
+      "rank": 15,
+      "name": "ELIOT BORN TO SHINE"
     },
     {
       "rank": 15,
@@ -2051,6 +2226,10 @@
     },
     {
       "rank": 16,
+      "name": "1ST YEAR GROWING WITH DEWTEE"
+    },
+    {
+      "rank": 16,
       "name": "MYSTERIOUS SOUNDS EP9"
     },
     {
@@ -2080,6 +2259,10 @@
     },
     {
       "rank": 17,
+      "name": "HBD LENA MIU OUR SUNSHINE"
+    },
+    {
+      "rank": 17,
       "name": "ZIYU MEETS MACAU"
     },
     {
@@ -2097,6 +2280,10 @@
     {
       "rank": 17,
       "name": "UHR THE RULES BEGIN"
+    },
+    {
+      "rank": 18,
+      "name": "PIL Break Game EP11"
     },
     {
       "rank": 18,
@@ -2132,6 +2319,10 @@
     },
     {
       "rank": 19,
+      "name": "DITTO READY FOR TAKE OFF Q22"
+    },
+    {
+      "rank": 19,
       "name": "Central x Auau Save"
     },
     {
@@ -2152,6 +2343,10 @@
     },
     {
       "rank": 20,
+      "name": "WARM EMBRACE CHARLOTTE25"
+    },
+    {
+      "rank": 20,
       "name": "THOMASKONG YSJP IN BKK"
     },
     {
@@ -2161,6 +2356,10 @@
     {
       "rank": 20,
       "name": "#OASISxJoongDunk"
+    },
+    {
+      "rank": 21,
+      "name": "ALAN BLACK NOFFEE"
     },
     {
       "rank": 21,
@@ -2212,6 +2411,10 @@
     },
     {
       "rank": 22,
+      "name": "TESHOWPING 1YEAR OF US"
+    },
+    {
+      "rank": 22,
       "name": "HAPPY PARIYA DAY"
     },
     {
@@ -2245,6 +2448,10 @@
     {
       "rank": 22,
       "name": "GULF​ X​ VIF​ IN​ CHIANG MAI"
+    },
+    {
+      "rank": 23,
+      "name": "ENGFA ALL ROUNDER25"
     },
     {
       "rank": 23,
@@ -2288,6 +2495,10 @@
     },
     {
       "rank": 24,
+      "name": "BTS POP-UP"
+    },
+    {
+      "rank": 24,
       "name": "Microsoft"
     },
     {
@@ -2322,6 +2533,10 @@
       "rank": 24,
       "name": "TONLIEW WITH NIYOMJEANS",
       "highestRank": 9
+    },
+    {
+      "rank": 25,
+      "name": "#เก่งน้ําปิง"
     },
     {
       "rank": 25,
@@ -2378,6 +2593,10 @@
     },
     {
       "rank": 26,
+      "name": "#KengNamping"
+    },
+    {
+      "rank": 26,
       "name": "#สตางค์ไทแทน"
     },
     {
@@ -2415,6 +2634,10 @@
     },
     {
       "rank": 27,
+      "name": "#OrmAtBvlgariVN"
+    },
+    {
+      "rank": 27,
       "name": "#DoctorXEp11"
     },
     {
@@ -2441,6 +2664,10 @@
       "rank": 27,
       "name": "NAMTANFILM AT MAKRO HORECA",
       "highestRank": 17
+    },
+    {
+      "rank": 28,
+      "name": "#WontechSummit2026xATLAS"
     },
     {
       "rank": 28,
@@ -2484,6 +2711,10 @@
     },
     {
       "rank": 29,
+      "name": "#SHEEPxRainyLanyardCharm"
+    },
+    {
+      "rank": 29,
       "name": "#UNSEENEP3xBamBam"
     },
     {
@@ -2516,6 +2747,10 @@
     },
     {
       "rank": 30,
+      "name": "#OrmFriendOfBvlgari"
+    },
+    {
+      "rank": 30,
       "name": "#รักเท่ากับร้ายFinMeeting"
     },
     {
@@ -2542,6 +2777,10 @@
   "singapore": [
     {
       "rank": 1,
+      "name": "#RockfishWeatherwearTHxJJJ"
+    },
+    {
+      "rank": 1,
       "name": "Jensen"
     },
     {
@@ -2551,6 +2790,10 @@
     {
       "rank": 1,
       "name": "Halloween"
+    },
+    {
+      "rank": 2,
+      "name": "JJJ ROCKFISH NEW STORE"
     },
     {
       "rank": 2,
@@ -2582,6 +2825,10 @@
     },
     {
       "rank": 3,
+      "name": "#NaughtyNANONmv"
+    },
+    {
+      "rank": 3,
       "name": "#NamtanFilmFanconD1"
     },
     {
@@ -2591,6 +2838,10 @@
     {
       "rank": 3,
       "name": "Dow Protocol"
+    },
+    {
+      "rank": 4,
+      "name": "NANON NAUGHTY OUT NOW"
     },
     {
       "rank": 4,
@@ -2606,11 +2857,23 @@
     },
     {
       "rank": 5,
+      "name": "#MissUniverse2026"
+    },
+    {
+      "rank": 5,
       "name": "#XiaomiClip"
     },
     {
       "rank": 5,
       "name": "#OASISxJoongDunk"
+    },
+    {
+      "rank": 6,
+      "name": "#LoyKrathongICONSIAMxLenaMiu"
+    },
+    {
+      "rank": 6,
+      "name": "Mitch"
     },
     {
       "rank": 6,
@@ -2642,10 +2905,6 @@
     },
     {
       "rank": 6,
-      "name": "Mitch"
-    },
-    {
-      "rank": 6,
       "name": "LENAMIU PLS LOVE FINAL EP"
     },
     {
@@ -2655,6 +2914,10 @@
     {
       "rank": 6,
       "name": "JOONGDUNK OASIS MEMORIES"
+    },
+    {
+      "rank": 7,
+      "name": "wall-api-1.0"
     },
     {
       "rank": 7,
@@ -2702,6 +2965,10 @@
     },
     {
       "rank": 8,
+      "name": "#mynameisnanon"
+    },
+    {
+      "rank": 8,
       "name": "#มหาฤกษ์กินดองพ่อครูน้องเขม"
     },
     {
@@ -2742,11 +3009,19 @@
     },
     {
       "rank": 9,
+      "name": "Thanksgiving"
+    },
+    {
+      "rank": 9,
       "name": "#NewFinancialPlatform"
     },
     {
       "rank": 9,
       "name": "KHEMJIRA FOREVER EP1"
+    },
+    {
+      "rank": 10,
+      "name": "LNM NOPPAMAS ICONSIAM"
     },
     {
       "rank": 10,
@@ -2790,6 +3065,10 @@
     },
     {
       "rank": 12,
+      "name": "PPP FAMILY YIPENG 2026"
+    },
+    {
+      "rank": 12,
       "name": "FORCEBOOK LAG EP3"
     },
     {
@@ -2810,6 +3089,10 @@
     },
     {
       "rank": 13,
+      "name": "Shenzhou-24"
+    },
+    {
+      "rank": 13,
       "name": "POR ACNE STUDIOS MOMENT"
     },
     {
@@ -2823,6 +3106,10 @@
     {
       "rank": 13,
       "name": "FORCEBOOK LAG EP1"
+    },
+    {
+      "rank": 14,
+      "name": "Tiangong"
     },
     {
       "rank": 14,
@@ -2846,6 +3133,10 @@
     },
     {
       "rank": 15,
+      "name": "Muhammad Zeeshan Ali"
+    },
+    {
+      "rank": 15,
       "name": "Bible"
     },
     {
@@ -2855,6 +3146,10 @@
     {
       "rank": 15,
       "name": "orm ba leapmotor b03x"
+    },
+    {
+      "rank": 16,
+      "name": "HUG E LHEE Q13"
     },
     {
       "rank": 16,
@@ -2870,6 +3165,10 @@
     },
     {
       "rank": 17,
+      "name": "Ansem"
+    },
+    {
+      "rank": 17,
       "name": "Paraguay"
     },
     {
@@ -2879,6 +3178,10 @@
     {
       "rank": 17,
       "name": "Third and Wan"
+    },
+    {
+      "rank": 18,
+      "name": "Tokenized"
     },
     {
       "rank": 18,
@@ -2895,6 +3198,10 @@
     {
       "rank": 18,
       "name": "Manchester United"
+    },
+    {
+      "rank": 19,
+      "name": "Tamil Nadu"
     },
     {
       "rank": 19,
@@ -2930,6 +3237,10 @@
     },
     {
       "rank": 20,
+      "name": "time to open bakery q1"
+    },
+    {
+      "rank": 20,
       "name": "Coachella"
     },
     {
@@ -2950,6 +3261,10 @@
     },
     {
       "rank": 21,
+      "name": "Pakistani"
+    },
+    {
+      "rank": 21,
       "name": "Haas"
     },
     {
@@ -2959,11 +3274,19 @@
     },
     {
       "rank": 22,
+      "name": "JUMMO DRALLY SUNSCREEN LIVE"
+    },
+    {
+      "rank": 22,
       "name": "Gemini 4 Hydrogen"
     },
     {
       "rank": 22,
       "name": "Wilcox"
+    },
+    {
+      "rank": 23,
+      "name": "Amber"
     },
     {
       "rank": 23,
@@ -2980,6 +3303,10 @@
     {
       "rank": 23,
       "name": "Chelsea"
+    },
+    {
+      "rank": 24,
+      "name": "Dortmund"
     },
     {
       "rank": 24,
@@ -3000,6 +3327,10 @@
     {
       "rank": 24,
       "name": "JUNIORMARKMO GRAB MEGAGALE"
+    },
+    {
+      "rank": 25,
+      "name": "JJJ X DESTINY CLINIC"
     },
     {
       "rank": 25,
@@ -3032,6 +3363,10 @@
     },
     {
       "rank": 27,
+      "name": "Champions League"
+    },
+    {
+      "rank": 27,
       "name": "APASRA PUCCI PALIO"
     },
     {
@@ -3046,6 +3381,10 @@
       "rank": 27,
       "name": "Jinki",
       "highestRank": 27
+    },
+    {
+      "rank": 28,
+      "name": "Hamas"
     },
     {
       "rank": 28,
@@ -3066,6 +3405,10 @@
     },
     {
       "rank": 29,
+      "name": "eBPF"
+    },
+    {
+      "rank": 29,
       "name": "NFTs"
     },
     {
@@ -3083,6 +3426,10 @@
     {
       "rank": 29,
       "name": "Connor"
+    },
+    {
+      "rank": 30,
+      "name": "WALL-OSS-1.0"
     },
     {
       "rank": 30,
