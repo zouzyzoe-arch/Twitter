@@ -1,6 +1,10 @@
 {
-  "lastUpdated": 1795600615940,
+  "lastUpdated": 1795607213643,
   "global": [
+    {
+      "rank": 1,
+      "name": "#プロセカ放送局"
+    },
     {
       "rank": 1,
       "name": "ベストナイン"
@@ -63,6 +67,10 @@
     },
     {
       "rank": 2,
+      "name": "#あたなる1stライブ"
+    },
+    {
+      "rank": 2,
       "name": "石田三成"
     },
     {
@@ -112,6 +120,10 @@
     {
       "rank": 2,
       "name": "#MrFanboyEP10"
+    },
+    {
+      "rank": 3,
+      "name": "#timelesz_ほんこと"
     },
     {
       "rank": 3,
@@ -183,6 +195,10 @@
     },
     {
       "rank": 4,
+      "name": "#ビリまほジャパンプレミアご招待"
+    },
+    {
+      "rank": 4,
       "name": "#WeWantPBBLivestream"
     },
     {
@@ -236,6 +252,10 @@
     {
       "rank": 4,
       "name": "#CHEMUN"
+    },
+    {
+      "rank": 5,
+      "name": "#OrmAtBvlgariVN"
     },
     {
       "rank": 5,
@@ -296,6 +316,10 @@
     {
       "rank": 5,
       "name": "Chelsea"
+    },
+    {
+      "rank": 6,
+      "name": "ORM BVLGARI HANOI OPENING"
     },
     {
       "rank": 6,
@@ -454,6 +478,10 @@
     },
     {
       "rank": 9,
+      "name": "TLE INTRODUCING PRETEND"
+    },
+    {
+      "rank": 9,
       "name": "HUG E LHEE Q14"
     },
     {
@@ -495,6 +523,10 @@
     {
       "rank": 9,
       "name": "KHEMJIRA WELCOME BACK"
+    },
+    {
+      "rank": 10,
+      "name": "グラコロ"
     },
     {
       "rank": 10,
@@ -626,7 +658,7 @@
     },
     {
       "rank": 12,
-      "name": "グラコロ"
+      "name": "SHEEP RAINY DAY TleFirstone"
     },
     {
       "rank": 12,
@@ -667,6 +699,10 @@
     {
       "rank": 12,
       "name": "イタズラ"
+    },
+    {
+      "rank": 13,
+      "name": "SKYNANI EAT BONCHON LIVE"
     },
     {
       "rank": 13,
@@ -723,6 +759,10 @@
     {
       "rank": 13,
       "name": "コスプレ"
+    },
+    {
+      "rank": 14,
+      "name": "ベストドレッサー賞"
     },
     {
       "rank": 14,
@@ -795,6 +835,10 @@
     },
     {
       "rank": 15,
+      "name": "オフサイド"
+    },
+    {
+      "rank": 15,
       "name": "浦和記念"
     },
     {
@@ -864,7 +908,7 @@
     },
     {
       "rank": 16,
-      "name": "ORM BVLGARI HANOI OPENING"
+      "name": "チアフル"
     },
     {
       "rank": 16,
@@ -965,6 +1009,10 @@
     },
     {
       "rank": 18,
+      "name": "等身大パネル"
+    },
+    {
+      "rank": 18,
       "name": "メイちゃん"
     },
     {
@@ -1015,6 +1063,10 @@
       "rank": 18,
       "name": "ピアノコンサート",
       "highestRank": 18
+    },
+    {
+      "rank": 19,
+      "name": "ラプラスショコラ"
     },
     {
       "rank": 19,
@@ -1092,6 +1144,10 @@
       "rank": 19,
       "name": "ARMY UNITED FOR BTS",
       "highestRank": 19
+    },
+    {
+      "rank": 20,
+      "name": "宮守文学さん"
     },
     {
       "rank": 20,
@@ -1221,6 +1277,10 @@
     },
     {
       "rank": 22,
+      "name": "AOUTHIRD X DRPONG LIVE"
+    },
+    {
+      "rank": 22,
       "name": "新人特別賞"
     },
     {
@@ -1254,6 +1314,10 @@
     {
       "rank": 22,
       "name": "NUNEW 2ND CON DAY1"
+    },
+    {
+      "rank": 23,
+      "name": "ボストン"
     },
     {
       "rank": 23,
@@ -1424,6 +1488,10 @@
     },
     {
       "rank": 26,
+      "name": "ELLEMEN STYLE X DUNK"
+    },
+    {
+      "rank": 26,
       "name": "くら寿司"
     },
     {
@@ -1478,6 +1546,10 @@
       "rank": 26,
       "name": "SAMA SAMA BINIYAHENG PINAS",
       "highestRank": 26
+    },
+    {
+      "rank": 27,
+      "name": "BVAC FINALE EPISODE"
     },
     {
       "rank": 27,
@@ -1542,6 +1614,10 @@
     },
     {
       "rank": 28,
+      "name": "AsrinSoygunuVatanaihanet"
+    },
+    {
+      "rank": 28,
       "name": "竹丸新人王"
     },
     {
@@ -1595,6 +1671,10 @@
     },
     {
       "rank": 29,
+      "name": "双子の日"
+    },
+    {
+      "rank": 29,
       "name": "ラッコちゃん"
     },
     {
@@ -1640,6 +1720,10 @@
     {
       "rank": 29,
       "name": "リサマル"
+    },
+    {
+      "rank": 30,
+      "name": "SPARCKLES IN CAPKRYS AFTERGLOW"
     },
     {
       "rank": 30,
@@ -1690,6 +1774,10 @@
   "thailand": [
     {
       "rank": 1,
+      "name": "#TLETitleDrop"
+    },
+    {
+      "rank": 1,
       "name": "#มนต์รักฮักอีหลีQ14"
     },
     {
@@ -1730,6 +1818,10 @@
     },
     {
       "rank": 2,
+      "name": "TLE INTRODUCING PRETEND"
+    },
+    {
+      "rank": 2,
       "name": "HUG E LHEE Q14"
     },
     {
@@ -1762,6 +1854,10 @@
     },
     {
       "rank": 3,
+      "name": "#GOLDENCONCEPTxBankArtit"
+    },
+    {
+      "rank": 3,
       "name": "#KengHarit"
     },
     {
@@ -1791,6 +1887,10 @@
     {
       "rank": 3,
       "name": "#PoliceinLoveEP8"
+    },
+    {
+      "rank": 4,
+      "name": "#SHEEPxTFORAINYDAY"
     },
     {
       "rank": 4,
@@ -1834,6 +1934,10 @@
     },
     {
       "rank": 5,
+      "name": "SHEEP RAINY DAY TleFirstone"
+    },
+    {
+      "rank": 5,
       "name": "#บอนชอนฟ้อกไปโหนกระป๋อง"
     },
     {
@@ -1870,6 +1974,10 @@
     },
     {
       "rank": 6,
+      "name": "#OrmAtBvlgariVN"
+    },
+    {
+      "rank": 6,
       "name": "#RockfishWeatherwearTHxJJJ"
     },
     {
@@ -1898,6 +2006,10 @@
     },
     {
       "rank": 7,
+      "name": "#DICERED_สอนที_MV"
+    },
+    {
+      "rank": 7,
       "name": "JJJ ROCKFISH NEW STORE"
     },
     {
@@ -1915,6 +2027,10 @@
     {
       "rank": 7,
       "name": "#ProjectAlphaNewClanEP3"
+    },
+    {
+      "rank": 8,
+      "name": "SKYNANI EAT BONCHON LIVE"
     },
     {
       "rank": 8,
@@ -2002,6 +2118,10 @@
     },
     {
       "rank": 10,
+      "name": "AOUTHIRD X DRPONG LIVE"
+    },
+    {
+      "rank": 10,
       "name": "SHEEP X RAINY LIMITED EDITION"
     },
     {
@@ -2046,6 +2166,10 @@
     },
     {
       "rank": 11,
+      "name": "THOMASKONG AT ELLEMENAW26"
+    },
+    {
+      "rank": 11,
       "name": "SAFEGUARD PICKS WONBIN"
     },
     {
@@ -2086,6 +2210,10 @@
     },
     {
       "rank": 12,
+      "name": "PEARL x ELLEMEN AWARDS 2026"
+    },
+    {
+      "rank": 12,
       "name": "Happy Birthday Bible"
     },
     {
@@ -2123,6 +2251,10 @@
     {
       "rank": 12,
       "name": "CHARLOTTE AFTER DARK"
+    },
+    {
+      "rank": 13,
+      "name": "NAMTANFILM AT PALOYSTUDIO"
     },
     {
       "rank": 13,
@@ -2178,6 +2310,10 @@
     },
     {
       "rank": 15,
+      "name": "DAOUOFFROAD ELLE MEN 2026"
+    },
+    {
+      "rank": 15,
       "name": "ELIOT BORN TO SHINE"
     },
     {
@@ -2226,6 +2362,10 @@
     },
     {
       "rank": 16,
+      "name": "Orm Kornnaphat"
+    },
+    {
+      "rank": 16,
       "name": "1ST YEAR GROWING WITH DEWTEE"
     },
     {
@@ -2259,6 +2399,10 @@
     },
     {
       "rank": 17,
+      "name": "ELLE​MEN​ AWARDS​ X​ GULF"
+    },
+    {
+      "rank": 17,
       "name": "HBD LENA MIU OUR SUNSHINE"
     },
     {
@@ -2280,6 +2424,10 @@
     {
       "rank": 17,
       "name": "UHR THE RULES BEGIN"
+    },
+    {
+      "rank": 18,
+      "name": "NETJJ YEE PENG FESTIVAL 2026"
     },
     {
       "rank": 18,
@@ -2316,6 +2464,10 @@
     {
       "rank": 18,
       "name": "THE D DORM SITCOM EP 7"
+    },
+    {
+      "rank": 19,
+      "name": "ELLEMEN STYLE X DUNK"
     },
     {
       "rank": 19,
@@ -2408,6 +2560,10 @@
     {
       "rank": 21,
       "name": "HAPPY MONSTER HOUSE X WAR"
+    },
+    {
+      "rank": 22,
+      "name": "Vietnam"
     },
     {
       "rank": 22,
@@ -2634,10 +2790,6 @@
     },
     {
       "rank": 27,
-      "name": "#OrmAtBvlgariVN"
-    },
-    {
-      "rank": 27,
       "name": "#DoctorXEp11"
     },
     {
@@ -2777,6 +2929,10 @@
   "singapore": [
     {
       "rank": 1,
+      "name": "#OrmAtBvlgariVN"
+    },
+    {
+      "rank": 1,
       "name": "#RockfishWeatherwearTHxJJJ"
     },
     {
@@ -2790,6 +2946,10 @@
     {
       "rank": 1,
       "name": "Halloween"
+    },
+    {
+      "rank": 2,
+      "name": "#NaughtyNANONmv"
     },
     {
       "rank": 2,
@@ -2825,10 +2985,6 @@
     },
     {
       "rank": 3,
-      "name": "#NaughtyNANONmv"
-    },
-    {
-      "rank": 3,
       "name": "#NamtanFilmFanconD1"
     },
     {
@@ -2838,6 +2994,10 @@
     {
       "rank": 3,
       "name": "Dow Protocol"
+    },
+    {
+      "rank": 4,
+      "name": "Orm Kornnaphat"
     },
     {
       "rank": 4,
@@ -3065,6 +3225,10 @@
     },
     {
       "rank": 12,
+      "name": "Tiangong"
+    },
+    {
+      "rank": 12,
       "name": "PPP FAMILY YIPENG 2026"
     },
     {
@@ -3106,10 +3270,6 @@
     {
       "rank": 13,
       "name": "FORCEBOOK LAG EP1"
-    },
-    {
-      "rank": 14,
-      "name": "Tiangong"
     },
     {
       "rank": 14,
@@ -3237,6 +3397,10 @@
     },
     {
       "rank": 20,
+      "name": "Hamas"
+    },
+    {
+      "rank": 20,
       "name": "time to open bakery q1"
     },
     {
@@ -3250,10 +3414,6 @@
     {
       "rank": 20,
       "name": "CHARLOTTE AFTER DARK"
-    },
-    {
-      "rank": 20,
-      "name": "Orm Kornnaphat"
     },
     {
       "rank": 20,
@@ -3363,6 +3523,10 @@
     },
     {
       "rank": 27,
+      "name": "Matthew"
+    },
+    {
+      "rank": 27,
       "name": "Champions League"
     },
     {
@@ -3384,10 +3548,6 @@
     },
     {
       "rank": 28,
-      "name": "Hamas"
-    },
-    {
-      "rank": 28,
       "name": "SpaceX"
     },
     {
@@ -3402,6 +3562,10 @@
       "rank": 28,
       "name": "jeonghan",
       "highestRank": 28
+    },
+    {
+      "rank": 29,
+      "name": "ATLAS"
     },
     {
       "rank": 29,
